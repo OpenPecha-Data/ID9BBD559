@@ -1,0 +1,481 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Bibliotheca Polyglotta</title>
+<link rel='stylesheet' type='text/css' href='css/bp.css'>
+<link rel='stylesheet' type='text/css' href='css/diac_doc.css'>
+
+<link rel='stylesheet' type='text/css' href='css/imageGallery.css'>
+<link rel='stylesheet' type='text/css' href='css/ss.css'>
+	      <link rel='stylesheet' type='text/css' href='css/tree_menu.css'>
+<script type="text/javascript" src="js/jquery-1.3.2.js"></script>
+<!--  <script type="text/javascript" src="js/jqModal.js"></script>-->
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/tree_menu.js"></script>
+<!-- <script src="js/analytics_tracking.js" type="text/javascript"></script> -->
+
+
+<!-- <script type="text/javascript" src="js/popupDivhandling.js"></script> -->
+<!--  <script type="text/javascript" src="jquery-latest.js"></script>
+<script type="text/javascript" src="js/jquery-imagegallery.js"></script>-->
+</head>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//vrtx.uio.no/js/analytics/v2/analytics.js','ga');
+
+ga('create', 'UA-86407471-1', 'auto');
+ga(function(tracker) {
+
+	// Modifies sendHitTask to hit ipproxy instead of http://www.google-analytics.com directly
+	tracker.set('sendHitTask', function(model) {
+		payload = model.get('hitPayload');
+		var xhr = new XMLHttpRequest();
+		xhr.open('GET', '//w3prod-ipproxy.uio.no/collect' +'?' + payload, true);
+		xhr.send();
+	});
+		ga('send', 'pageview');
+});
+</script>
+<body><div class='banner'></div><!-- banner --><div class='uiologo'>
+<a href='http://www.hf.uio.no/'><img src='https://www2.hf.uio.no/polyglotta/hfe.png' border='0'></a></div><!-- uiologo --><div class='clear'></div>
+<div class='smule_tittel'>
+<div class='brodsmuleboks'>You are here: <a href='/polyglotta/index.php' accesskey='1'> BP HOME</a> >  <a href='/polyglotta/index.php?page=library&amp;bid=2' accesskey='1'>TLB</a> > <a href='/polyglotta/index.php
+	?page=volume&amp;vid=1131' accesskey='1'>Asaṅga/Maitreya: Mahāyānasūtrālaṃkāra</a> > fulltext</div><div class='clear'></div>
+<div class='headline'>Asaṅga/Maitreya: Mahāyānasūtrālaṃkāra<div class='clear'></div></div><!-- headline -->
+</div><!-- smule_tittel -->
+<!--<div>-->
+
+<h2 class="trigger" id="tr_lang"><a  href="#">Choose languages</a></h2>
+<h2 class="trigger" id="tr_img"><a  href="#">Choose images, etc.</a></h2>
+
+
+<div id="toggle_container_lan">
+
+<form  id="tr"  name="Sprakvalg2" action="inc/set_cookie_lan.php" method="POST">
+
+<div style="float:left; width:auto; text-align:left; margin-left:20px;">
+<h5>Choose languages</h5>
+<ul>
+<input value="Choose all" type="button" onClick="markAll('tr')"><input value="Uncheck all" type="button" onClick="markNone('tr')">
+
+	<li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1131[5695]" value="5695" id="lancheckbox" checked >Sanskrit: San: Lévi (1907)</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1131[5696]" value="5696" id="lancheckbox" checked >Chinese: Chi: T. 1604</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1131[5697]" value="5697" id="lancheckbox" checked >Tibetan: Tib: Tg sems tsam phi</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1131[5698]" value="5698" id="lancheckbox" checked >French: Fre: Lévi (1911)</label></li><div style="clear:both"></div>
+<input type='submit' name='set_cookie' value='Save view'>
+<div style="clear:both"></div>
+
+</ul>
+<input type="hidden" name="vid" value="1131">
+<input type="hidden" name="page" value="fulltext">
+</form>
+</div>
+</div>
+
+<div id="toggle_container_img">
+<form  id="tr"  name="Sprakvalg2" action="inc/set_cookie_img.php" method="POST">
+
+<div style="float:left; width:auto; text-align: left;">
+<h5>Choose display</h5>
+<ul>
+		
+	<li> 
+		<input type='checkbox' name='bilder' checked="checked" > Enable images
+	</li>
+	<li> 
+	<input type='checkbox' onclick="onOffCheckbox();" name='fotnoter' checked="checked"> Enable footnotes
+	<div id="pff" style="display:block" >
+	<ul>
+	<li><input type='radio' name='fotnote_valg'  value='show_a' checked> Show all footnotes</li>
+	<li><input type='radio' name='fotnote_valg'  value='show_h'  > Minimize footnotes</li>
+	</ul>
+	</li>
+	
+	</div>
+	<div style="float:left; width:20em; text-align: left; margin-left:120px ">
+	<div style="clear:both"></div>
+	<input type='submit' name='set_cookie' value='Save view'>
+	<div style="clear:both"></div>
+	</div>
+	
+</ul>
+<input type="hidden" name="vid" value="1131">
+<input type="hidden" name="page" value="fulltext">
+</form>
+</div>
+	
+
+
+
+</div>
+</div>
+
+<div class='sok'><form name='Sok' id='FormBlock' action='/polyglotta/index.php' method='get'>
+<input type='hidden' name='page' value='search'>
+<input type='hidden' name='bid' value='2'>
+<input type='hidden' name='vid' value='1131'>
+<div class='sokeboks'>
+<input name='sokefelt' id='sokeboks' type='text' size='30' value=''>
+<input type='submit' name='Sok' value='Search' id='nsubmit'>
+<div class='clear'></div><a class="diacbutton" id="diacbutton" href="#">Diacritica</a><a id="diac2button" class="diac2button"  href="#">Diacritica-help</a><a class="s2button" href="https://wiki.uio.no/hf/dmlf/index.php/Kategori:Polyglotta:Documentation:SearchHelp">Search-help</a><div class='diacritical' id='diacritical_sign'><div style="text-align: left; ">
+<table class = 'diacritica' width="200" border="1" cellpadding="1" cellspacing="1" id="diacritical">
+    <tbody>
+        <tr>
+            <td style="text-align: center; ">ā</td>
+            <td style="text-align: center; ">ī</td>
+            <td style="text-align: center; ">ū</td>
+            <td style="text-align: center; ">ṛ</td>
+            <td style="text-align: center; ">ṝ</td>
+            <td style="text-align: center; ">ḷ</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">ḹ</td>
+            <td style="text-align: center; ">&rsquo;</td>
+            <td style="text-align: center; ">ṃ</td>
+            <td style="text-align: center; ">ḥ</td>
+            <td style="text-align: center; ">ṅ</td>
+            <td style="text-align: center; ">&ntilde;</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">ṭ</td>
+            <td style="text-align: center; ">ḍ</td>
+            <td style="text-align: center; ">ṇ</td>
+            <td style="text-align: center; ">ṣ</td>
+            <td style="text-align: center; ">ś</td>
+            <td style="text-align: center; ">ź</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">&scaron;</td>
+            <td style="text-align: center; ">č</td>
+            <td style="text-align: center; ">ǰ</td>
+            <td style="text-align: center; ">&gamma;</td>
+            <td style="text-align: center; ">&nbsp;</td>
+            <td style="text-align: center; ">&nbsp;</td>
+        </tr>
+    </tbody>
+</table>
+</div></div><!-- diacritical --><div id="ex3a" class="jqmDialog"><div>
+	<span style="font-size:12px;">Note on the transliteration:</span></div>
+<div>
+	<span style="font-size:12px;">The transliteration system of the BP/TLB is based on the Unicode/UTF-8 system. However, there may be difficulties with some of the letters &ndash; particularly on PC/Windows-based systems, but not so much on the Mac. We have chosen the most accepted older and traditional systems of transliteration against, e.g, Wylie for Tibetan, since with Unicode it is possible, in Sanskrit and Tibetan, etc., to represent one sound with one letter in almost all the cases (excepting Sanskrit and Tibetan aspirated letters, and Tibetan tsa, tsha, dza). We thus do not use the Wylie system which widely employs two letters for one sound (ng, ny, sh, zh etc.).</span></div>
+<div>
+	&nbsp;</div>
+<div>
+	<span style="font-size:12px;">Important:</span></div>
+<div>
+	<span style="font-size:12px;">We ask you in particular to note the use of the &rsquo; apostrophe and not the &#39; representing the avagrāha in Sanskrit, and most important the &rsquo;a-chuṅ in Tibetan. On the Mac the &rsquo; is Alt-M.</span></div>
+<div>
+	&nbsp;</div>
+<div>
+	<span style="font-size:12px;">If you cannot find the letters on your key-board, you may click on the link &quot;Diacritica&quot; to access it for your search.</span></div>
+</div><!-- diacritical_doc --><div class='clear'></div><select name='searchmode'><option selected value='phrase'>Search for exact phrase</option>
+<option  value='phraseregex'>Search for exact phrase (regex)</option>
+<option  value='word'>Search for every word in one record</option>
+<option  value='free'>Search for every word fragment in one record</option>
+</select>
+<select name='context'>
+<option ($_GET[context]=="a" ? "selected" : "") value="a"> Search in all libraries</option><option selected value="bTLB">Search in TLB</option><option selected value="v1131">Search in Asaṅga/Maitreya: Mahāyānasūtrālaṃkāra</option></select><div class='clear'></div><a class='sbutton' href='/polyglotta/index.php?page=asearch&amp;bid=2&amp;vid=1131'>Choose specific texts..</a><div class='clear'></div></div></form></div><!-- sok --><div class='clear'></div><!-- clear --><div id='dcr' class='divControlRead'><div class='venstrefulltekstfelt'><div class='bverknavn'><a href='/polyglotta/index.php?page=volume&amp;vid=1131'>Asaṅga/Maitreya: Mahāyānasūtrālaṃkāra</a></div><table class="tlvl2">
+					<tr>
+						<td bgcolor="#ffffff"> &nbsp; &nbsp;
+						<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_7627.Verses41-58" border=0 hspace=2>
+						<a href="/polyglotta/index.php?page=fulltext&amp;view=fulltext&amp;vid=1131" class="ajax_tree0">Complete text</a>
+						</td>
+					</tr>
+				  </table><input type="hidden" name="tree_top_options" id="tree_top_options" value="135128.Title|135129.Preface|135130.ChapterI|135132.ChapterII|135133.ChapterIII|135134.ChapterIV|135135.ChapterV|135136.ChapterVI|135137.ChapterVII|135138.ChapterVIII|135139.ChapterIX|135140.ChapterX|135141.ChapterXI|135142.ChapterXII|135143.ChapterXIII|135144.ChapterXIV|135145.ChapterXV|135146.ChapterXVI|135147.ChapterXVII|135148.ChapterXVIII|135149.ChapterXIX|135150.ChapterXX-XXI|135151.Colophon|">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135128.Title" border=0 hspace=2><a id="href_135128.Title" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1945667&level=1&cid=845779" class="ajax_tree0">Title
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135129.Preface" border=0 hspace=2><a id="href_135129.Preface" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1945668&level=1&cid=845780" class="ajax_tree0">Preface
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<a href="javascript:;" onclick="Expand('135130.ChapterI','0','1')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_135130.ChapterI" border=0 hspace=2><a id="href_135130.ChapterI" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1945669&level=1&cid=845781" class="ajax_tree0">Chapter I
+</td></tr></table>
+<div style="display:none;"  id="div_135130.ChapterI">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135131.Verses21-40" border=0 hspace=2><a id="href_135131.Verses21-40" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1945708&level=2&cid=845820" class="ajax_tree1">Verses 21-40
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135132.ChapterII" border=0 hspace=2><a id="href_135132.ChapterII" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1945711&level=1&cid=845823" class="ajax_tree0">Chapter II
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135133.ChapterIII" border=0 hspace=2><a id="href_135133.ChapterIII" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1945737&level=1&cid=845849" class="ajax_tree0">Chapter III
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135134.ChapterIV" border=0 hspace=2><a id="href_135134.ChapterIV" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1945765&level=1&cid=845877" class="ajax_tree0">Chapter IV
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135135.ChapterV" border=0 hspace=2><a id="href_135135.ChapterV" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1945808&level=1&cid=845920" class="ajax_tree0">Chapter V
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135136.ChapterVI" border=0 hspace=2><a id="href_135136.ChapterVI" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1945830&level=1&cid=845942" class="ajax_tree0">Chapter VI
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135137.ChapterVII" border=0 hspace=2><a id="href_135137.ChapterVII" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1945848&level=1&cid=845960" class="ajax_tree0">Chapter VII
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135138.ChapterVIII" border=0 hspace=2><a id="href_135138.ChapterVIII" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1945870&level=1&cid=845982" class="ajax_tree0">Chapter VIII
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135139.ChapterIX" border=0 hspace=2><a id="href_135139.ChapterIX" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1945915&level=1&cid=846027" class="ajax_tree0">Chapter IX
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135140.ChapterX" border=0 hspace=2><a id="href_135140.ChapterX" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1946076&level=1&cid=846188" class="ajax_tree0">Chapter X
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135141.ChapterXI" border=0 hspace=2><a id="href_135141.ChapterXI" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1946104&level=1&cid=846216" class="ajax_tree0">Chapter XI
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135142.ChapterXII" border=0 hspace=2><a id="href_135142.ChapterXII" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1946255&level=1&cid=846367" class="ajax_tree0">Chapter XII
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135143.ChapterXIII" border=0 hspace=2><a id="href_135143.ChapterXIII" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1946299&level=1&cid=846411" class="ajax_tree0">Chapter XIII
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135144.ChapterXIV" border=0 hspace=2><a id="href_135144.ChapterXIV" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1946348&level=1&cid=846460" class="ajax_tree0">Chapter XIV
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135145.ChapterXV" border=0 hspace=2><a id="href_135145.ChapterXV" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1946424&level=1&cid=846536" class="ajax_tree0">Chapter XV
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135146.ChapterXVI" border=0 hspace=2><a id="href_135146.ChapterXVI" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1946435&level=1&cid=846547" class="ajax_tree0">Chapter XVI
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135147.ChapterXVII" border=0 hspace=2><a id="href_135147.ChapterXVII" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1946577&level=1&cid=846689" class="ajax_tree0">Chapter XVII
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135148.ChapterXVIII" border=0 hspace=2><a id="href_135148.ChapterXVIII" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1946715&level=1&cid=846827" class="ajax_tree0">Chapter XVIII
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135149.ChapterXIX" border=0 hspace=2><a id="href_135149.ChapterXIX" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1946966&level=1&cid=847078" class="ajax_tree0">Chapter XIX
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135150.ChapterXX-XXI" border=0 hspace=2><a id="href_135150.ChapterXX-XXI" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1947102&level=1&cid=847214" class="ajax_tree0">Chapter XX-XXI
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135151.Colophon" border=0 hspace=2><a id="href_135151.Colophon" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1947214&level=1&cid=847326" class="ajax_tree0">Colophon
+</td></tr></table>
+<script language=javascript>test('135135.ChapterV|')</script><div class='bverknavn'><a href='/polyglotta/index.php?page=library&amp;bid=2'>Back to library</a></div></div><!-- venstrefulltekstfelt --><div class="clear"></div><!-- clear --><div id="nav-menu"><ul>
+  		  <li  id="nav-1"><a class="tabValgt" href="/polyglotta/index.php?page=record&amp;view=record&amp;vid=1131&amp;mid=1945808&amp;level=1">Sentence by sentence view</a></li>
+  		  <li  id="nav-2"><a  href="/polyglotta/index.php?page=fulltext&amp;view=fulltext&amp;vid=1131&amp;cid=845920&amp;mid=1945808&amp;level=1">Continuous text view</a></li>
+ 		<li  id="nav-3"><a  href="/polyglotta/admin/index.php?page=fulltext&amp;view=fulltext&amp;vid=1131&amp;cid=845920&amp;mid=1945808&amp;level=1">View in admin</a></li>
+
+  		  </ul></div><div class='clear'></div><!-- clear -->			<script language="javascript" type="text/javascript">
+			var kilderef = '';
+			var tekstid = 0;
+			var tekstid_bilder = 0;
+			var filsti = '';
+			var thumbnail = '';
+			</script>
+		<div class='infofulltekstfelt'><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><div class='kilderef' id='7869696'></div><div class='clear'></div><span id='7869696bi' class='paragraph'>
+							pañcamo ’dhikāraḥ&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><div class='kilderef' id='7871244'></div><div class='clear'></div><span id='7871244bi' class='paragraph'>
+							(17)大乘莊嚴經論二利品第六&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><div class='kilderef' id='7872792'></div><div class='clear'></div><span id='7872792bi' class='paragraph'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><div class='kilderef' id='7874340'></div><div class='clear'></div><span id='7874340bi' class='paragraph'>
+							CHAPITRE V<br />L’INITIATIVE&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869697bi' class='paragraph'>
+							pratipattilakṣaṇe ślokaḥ |<br />mahāśrayārambhaphalodayātmikā jinātmajānāṃ pratipattir iṣyate |<br />sadā mahādānamahādhivāsanā mahārthasaṃpādanakṛtyakārikā || 1 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871245bi' class='paragraph'>
+							(18)釋曰。已説發心。次説依此發心隨順修行自(19)他利行。偈曰<br />(20)大依及大行 大果次第説<br />(21)大取及大忍 大義三事成&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872793bi' class='paragraph'>
+							sgrub pa’i mtshan ñid kyi tshigs su bcad pa |<br />gnas rtsom ’bras bu ’byuṅ ba che bdag ñid || rgyal sras (3) rnams kyi sgrub pa yin par ’dod |<br />| rtag tu len pa che daṅ bzod pa che || don chen yaṅ dag sgrub ba’i bya ba byed ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874341bi' class='paragraph'>
+							Indice de l’initiative, en un vers.<br />1. Grand Fond, grande entreprise, grand lever de fruits; telle est l’Initiatives chez les fils des Vainqueurs; et aussi, grand ressort, grande acceptation, accomplissement des devoirs en exécution du grand Sens.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869698bi' class='paragraph'>
+							tatra <b>mahāśraya</b>cittotpādāśrayatvāt | mahā_<b>ārambhā</b>svaparārthārambhāt | <b>mahāphalodayā</b> mahābodhiphalatvāt | ata eva yathākramaṃ <b>mahādānā</b> sarvasatvopādānāt | <b>mahādhivāsanā</b> sarvaduḥkhādhivāsanāt | <b>mahārthasaṃpādanakṛtyakārikā</b> vipulasatvārthasaṃpādanāt | svaparārthanirviśeṣatve ślokaḥ |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871246bi' class='paragraph'>
+							(22)釋曰。大依者。依止大菩提而發心故。大行者。(23)爲利自他而發行故。大果者。令得無上菩提(24)故。如其次第。大取者。發心時攝一切衆生故。(25)大忍者。發行時忍一切大苦故。大義者。得果(26)時廣利一切衆生業成就故。已説次第。次説(27)自他無差別。偈曰&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872794bi' class='paragraph'>
+							de la gnas chen po ni sems pa skyed pa la gnas pa’i phyir ro || rtsom pa chen po ni raṅ daṅ gźan gyi don rtsom pa’i phyir ro || ’bras bu ’byuṅ ba chen po ni ’bras bu byaṅ chub (4) chen po ’thob pa yin pa’i phyir ro || de ñid kyi phyir go rims bźin du len pa che ba ste | sems can thams cad ñe bar len pa’i phyir ro || bzod pa che ba ste | sdug bsṅal thams cad daṅ du len pa’i phyir ro || don chen yaṅ dag sgrub pa’i bya ba byed pa ste | sems can maṅ po’i don (5) yaṅ dag par sgrub pa’i phyir ro || raṅ daṅ gźan gyi don khyad par med par tshigs su bcad pa |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874342bi' class='paragraph'>
+							Grand Fond, car la Production de Pensée en est le Fond; grande entreprise, car elle entreprend le Sens de soi et d’autrui; grand lever de fruits, car le fruit en est la Grande Illumination. Et conséquemment, en rapport respectif; grand ressort, car elle a dans son ressort toutes les créatures; grande acceptation, car elle accepte toutes les douleurs; accomplissement des devoirs en exécution du grand Sens, car elle accomplit le grand Sens des créatures.<br />Pas de différence entre le Sens de soi et d’autrui; un vers.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869699bi' class='paragraph'>
+							paratralabdhvātmasamānacittatāṃ svato ’dhi vā śreṣṭhatareṣṭatāṃ pare |<br />tathātmano ’nyārthaviśiṣṭasaṃjñinaḥ svakārthatā kā katamā parārthatā || 2 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871247bi' class='paragraph'>
+							(28)他自心平等 愛則於彼勝<br />(29)如是有勝相 二利何差別&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872795bi' class='paragraph'>
+							gźan daṅ bdag tu mñam pa’i sems ñid dam || bdag pas gźan ches sdug pa rñed nas ni |<br />| de ltar bdag pas gźan don mchog tu śes || raṅ gi don gaṅ gźan gyi don gaṅ (6) yin ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874343bi' class='paragraph'>
+							2. Si on est arrivé à l’égalité de pensée pour soi et pour autrui, ou même à préférer autrui à soi-même, une fois qu’on désigne le Sens d’autrui comme supérieur à soi, qu’est-ce que le Sens de soi? qu’est-ce que le Sens d’autrui?&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869700bi' class='paragraph'>
+							<b>paratrātmasamānacittatāṃ</b> labdhvā ’dhimuktito vā sāṃketikacittotpādalābhe jñānato vā pāramārthikacittotpādalābhe | ātmato vā punaḥ paratra viśiṣṭatarām iṣṭatāṃ labdhvā tenaiva ca kāraṇenātmanaḥ parārthe <b>viśiṣṭasaṃjñino</b> bodhisatvasya kaḥ svārthaḥ parārtho vā | nirviśeṣaṃ hi tasyobhayamityarthaḥ | parārthaviśeṣaṇe ślokaḥ |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871248bi' class='paragraph'>
+							(597c1)釋曰。菩薩得他自心平等。或由信得。謂世(2)俗發心時。或由智得。謂第一義發心時。菩(3)薩雖有此心。然愛他身則勝自身。於他既有(4)如此勝想。則不復分別何者爲自利何者爲(5)他利。倶無別故。已説無差別。次説＊他利勝。(6)偈曰&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872796bi' class='paragraph'>
+							gźan daṅ bdag mñam pa’i sems ñid brda las byuṅ ba’i sems bskyed pa rñed pa’i cho mos pa’i sgo nas sam | don dam pa’i sems bskyed pa rñed pa’i tshe | śes pa’i sgo nas rñed nas sam | yaṅ na bdag pas gźan ches śin tu sdug bsṅal ba rñed nas rgyu de ñid kyis (7) bdag pas gźan gyi don la khyad par ’phags par ’du śes pa’i byaṅ chub sems dpa’i la raṅ gi don ni gaṅ źig yin la gźan gyi don gaṅ źig yin te | de la gñis ka khyad par med do źes bya ba’i tha tshig go || gźan gyi don khyad par du bya bar tshigs su bcad pa |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874344bi' class='paragraph'>
+							Arrivé à légalité de pensée pour soi et autrui, soit par la Croyance, quand on arrive à la Production de Pensée contingente, soit par le Savoir, quand on arrive à la Production de Pensée transcendante, Ou bien encore, arrivé à préférer autrui à soi-même, et pour cette raison, à désigner le Sens d’autrui comme supérieur à soi; alors, pour le Bodhisattva, quel est le Sens de soi? ou quel est le Sens d’autrui?<br />Excellence du Sens d’autrui; un vers.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869701bi' class='paragraph'>
+							paratra loko na tathātinirdayaḥ pravartate tāpanakarmaṇā ripau |<br />yathā parārthaṃ bhṛśaduḥkhatāpane kṛpātmakaḥ svātmani saṃpravartate || 3 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871249bi' class='paragraph'>
+							(7)於世無怨業 利彼恒自苦<br />(8)悲性自然起 是故利他勝&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872797bi' class='paragraph'>
+							ji ltar sñiṅ (143b1) rje’i bdag ñid gźan gyi don gyi phyir || bdag la sdug bsṅal mi bzad gduṅ par rab byed pa |<br />| de ltar ’jig rten gduṅ ba’i las kyis gźan dgra la || śin tu brtse ba med par rab tu ’jug ma yin ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874345bi' class='paragraph'>
+							3. Le monde n’agit pas avec autant de dureté à l’égard d’autrui, quand il y a lieu de torturer un ennemi, que le Compatissant agit à l’égard de soi-même, quand il v a lieu de se torturer par d’atroces douleurs pour le Sens d’autrui.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869702bi' class='paragraph'>
+							yathā svātmanaḥ parārtho viśiṣyate tat sādhayati parārtham ātmano ’tyarthaṃ saṃtāpanāt | parārthaprattipattivibhāge dvau ślokau |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871250bi' class='paragraph'>
+							(9)釋曰。菩薩於諸世間久絶怨業。是故恒爲成(10)就他利。自身受諸勤苦。由大悲爲體自然起(11)故。由此道理則利他爲勝。問如是利他云何(12)隨順。偈曰&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872798bi' class='paragraph'>
+							ji ltar ’di’i gźan gyi don bdag ñid gyi don las khyad par du ’phags pa de sgrub (2) par byed de | gźan gyi don du bdag ñid la śin tu gduṅ bar byed ba’i phyir ro || gźan gyi don sgrub par rnam par dbye bar tshigs su bcad pa gñis te |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874346bi' class='paragraph'>
+							Les tortures intenses qu’il s’impose pour le Sens d’autrui démontrent que le Sens d’autrui est supérieur au Sens de soi.<br />Répartition de l’Initiative pour le Sens d’autrui, en deux vers.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869703bi' class='paragraph'>
+							nikṛṣṭamadhyotttamadharmatāsthite sudeśanāvarjanatā ’vatāraṇā |<br />vinītir arthe paripācanā śubhe tathāvavādasthitibuddhimuktayaḥ || 4 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871251bi' class='paragraph'>
+							(13)善説令歸向 令入亦令調<br />(14)令成亦令住 令覺令解脱&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872799bi' class='paragraph'>
+							tha dad ’briṅ daṅ mchog chos ñid gnas la || legs par ston daṅ mgu byed ’jug pa daṅ |<br />| don la rnam ṅes dge la (3) yoṅs smin byed || de bźin gdams ṅag gnas daṅ blo rnams grol ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874347bi' class='paragraph'>
+							4. A l’égard d’un être installé dans une Idéalité infime, moyenne, supérieure, la bonne prédication, l’attraction, l’Introduction, la Discipline en fait de Sens, la per-maturation en bien, le Conseil, la Halte, la Délivrance de la Raison,&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869704bi' class='paragraph'>
+							guṇair viśiṣṭaiḥ samudāgamas tathā kulodayo vyākaraṇābhiṣiktatā |<br />tathāgatajñānam anuttaraṃ padaṃ parārtha eṣa tryadhiko daśātmakaḥ || 5 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871252bi' class='paragraph'>
+							(15)集徳及生家 得記并受職<br />(16)至成如來智 以是利群生&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872800bi' class='paragraph'>
+							yon tan khyad par can ’grub de bźin du || rigs su skye daṅ luṅ bstan dbaṅ bskur daṅ |<br />| de bźin gśegs mkhyen bla med go ’phaṅ ste || bcu gsum bdag ñid ’di ni gźan gyi don ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874348bi' class='paragraph'>
+							5. la Réussite par des vertus excellentes, la naissance dans la Famille, la Prédiction, le Sacre, le Savoir d’un Tathâgata, point suprême; voilà le Sens d’autrui en treize.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869705bi' class='paragraph'>
+							trividhe satvanikāye hīnamadhyaviśiṣṭagotrasthe trayodaśavidho bodhisatvasya parārthaḥ | sudeśanā ’nuśāsanyādeśanāpratihāryābhyāṃ | āvarjanā ṛddhiprātihāryeṇa | avatāraṇā śāsanābhyupagamanāt | <b>vinītir arthe</b> ’vatīrṇānāṃ saṃśayacchedanaṃ | <b>paripācanā</b> kuśale | <b>avavādaś</b> cittasthitiḥ | prajñā vimuktiḥ abhijñādibhir viśeṣakair guṇaiḥ | <b>samudāgamaḥ</b> | tathāgata<b>kule</b> janma | aṣṭamyāṃ bhūbhau vyākaraṇaṃ daśamyām abhiśekaś ca | saha <b>tathāgatajñānena</b>_ity eṣa triṣu gotrastheṣu yathāyogaṃ trayodaśavidhaḥ parārtho bodhisatvasya | parārthapratipattisaṃpattau slokaḥ |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871253bi' class='paragraph'>
+							(17)釋曰。三種衆生。謂住下中上性。菩薩如其所(18)住而攝取之。以十三種隨順利益。一者善説。(19)由隨教及記心故。二者令歸向。由神通力(20)故。三者令入。由向已能令信受正教故。四(21)者令調。由入已斷其疑故。五者令成。由成(22)熟善根故。六者令住。由教授令心住故。七(23)者令覺。由得智慧故。八者令解。脱由得神通(24)等諸勝功徳故。九者集徳。由遍集福智故。十(25)者生家。由生佛家故。十一者得記。由八地受(26)記故。十二者受職。由十地受職故。十三者(27)得如來智。由入佛地故。問如此隨順云何成(28)立。偈曰&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872801bi' class='paragraph'>
+							sems can (4) gyi ris rnam pa gsum po rigs dman pa daṅ ’briṅ daṅ khyad par can la gnas pa la byaṅ chub sems dpa’i gźan gyi don rnam pa bcu gsum ste | rjes su bstan pa daṅ | kun brjod pa’i cho ’phrul dag gis legs par ston pa daṅ | rdzu ’phrul gyi cho ’phrul gyis mgu bar byed pa daṅ | bstan (5) pa khas len du gźug pa’i phyir ’jug pa daṅ | źugs pa rnams kyi the tshom gtsod pa’i phyir don la rnam par ṅes par byed daṅ | dge ba’i rtsab yoṅs su smin par byed pa daṅ | ’doms pa daṅ | sems gnas par byed pa daṅ | śes rab rnam par grol bar byed pa daṅ | mṅon bar śes (6) pa la sogs pa yon tan khyad par can rnams yaṅ dag par ’grub par byed pa daṅ | de bźin gśegs pa’i rigs su skye ba daṅ | sa brgyad pa la luṅ bstan pa daṅ | sa bcu pa la dbaṅ bskur ba daṅ | de bźin gśegs pa’i ye śes daṅ ldan pa’o || rnam pa bcu gsum po ’di dag (7) ni ci rigs par rigs la gnas pa gsum byaṅ chub sems dpa’i don yin no || gźan gyi don sgrub pa phun sum tshogs par tshigs su bcad pa |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874349bi' class='paragraph'>
+							A l’égard des trois catégories de créatures situées dans la Famille infime, moyenne, supérieure, le Sens d’autrui a treize parties chez le Bodhisattva. La bonne prédication, par les deux miracles de la Leçon et de la Prédication Intégrale. L’attraction, par le miracle de la Magie. L’Introduction, en faisant adhérer à la Religion. La discipline en fait de Sens qui consiste, après l’Introduction faite, à trancher les doutes. La per-maturation dans le Bien. Le Conseil. La Halte de la Pensée. La Délivrance de Sapience. La Réussite par des vertus excellentes, Super-savoirs, etc. La naissance dans la famille d’un Tathâgata. La Prédiction, à la Huitième Terre. Le Sacre, à la Dixième. Et en même temps le Savoir d’un Tathâgata. Tel est, a l’égard des trois Familles respectivement, le Sens d’autrui en treize divisions chez le Bodhisattva.<br />Plénitude de l’initiative pour le sens d’autrui; un vers.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869706bi' class='paragraph'>
+							janānurūpāviparītadeśanā nirunnatā cāpy amamā vicakṣaṇā |<br />kṣamā ca dāntā ca sudūragā ’kṣayā jinātmajānāṃ pratipattir uttamā || 6 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871254bi' class='paragraph'>
+							(29)不倒及不高 無著亦通達<br />(598a1)能忍及調順 遠去亦無盡<br />(2)應知此八義 成就彼十三(3)&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872802bi' class='paragraph'>
+							skye bo daṅ mthun phyin ci ma log ’chad || mi ’gyiṅ ba daṅ bdag gi med la mkhas |<br />| bzod dul śin tu riṅ soṅ mi bzad pa || rgyal sras (144a1) rnams kyi sgrub pa mchog yin no ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874350bi' class='paragraph'>
+							6. Adaptée aux gens et sans rien à rebours dans la prédication, sans morgue, sans égoïsme, clairvoyante, patiente, maîtrisée. capable de longues distances, inépuisable est la suprême Initiative des fils des vainqueurs.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869707bi' class='paragraph'>
+							yathā ’sau parārthapratipattiḥ saṃpannā bhavati tathā saṃdarśayati | kathaṃ cāsau saṃpannā bhavati | yadi gotrastha<b>janānurūpā ’viparītā ca deśanā</b> bhavati | <b>anunnatā</b> cāvarjanā | <b>amamā</b> cāvatāraṇā | na ṛddhā manyate na cāvatāritān satvān mamāyati | <b>vicakṣaṇā</b> cārthe vinītipratipattir bhavati | <b>kṣamā</b> ca śubhe paripācanāpratipattiḥ | <b>dāntā</b> cāvavādādipratipattiḥ | na hy adāntā ’vavādādiṣu pareṣāṃ samarthaḥ | <b>sudūragā</b> ca kulodayādipratipattiḥ | na hy adūragatayā pratipattyā kulodayādayaḥ pareṣāṃ kartuṃ śakyāḥ | sarvā caiṣā parārthapratipattir bodhisatvānām <b>akṣayā</b> bhavaty abhyupagatasatvākṣayatvād ato ’pi saṃpannā veditavyā | <b>pratipatti</b>viśeṣaṇe dvau ślokau |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871255bi' class='paragraph'>
+							釋曰。不倒者。若人已住於性。菩薩隨機而爲(4)説法不妄授故。不高者。彼歸向時不恃神通(5)而自高故。無著者。彼入正法時不染衆生故。(6)通達者。斷彼疑網故。能忍者。善成熟彼故。調(7)順者。隨順教授非不調教授故。遠去者。隨順(8)生家等非不遠去令他能作故。無盡者。菩薩(9)利益衆生一切時願無盡故。是名成就應知。(10)問此隨順云何勝差別。偈曰&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872803bi' class='paragraph'>
+							’dis ni gźan gyi don sgrub pa ’di phun sum tshogs pa yin pa de ston to || ’di ji ltar phun sum tshogs pa yin źen | gal te rigs la gnas pa’i skye bo daṅ mthun źiṅ | phyin ci ma log par ’chad par ’gyur ba daṅ | ’gyiṅ ba (2) med par mgu bar ’gyur ba daṅ | mi mthun pa mi byed pas bdag gi ba med par ’jug pa ste | rdzu ’phrul gyis mi rlom źiṅ sems can źugs pa rnams la bdag gi bar ’dzin pa med pa daṅ | don rnam par ṅe bya ba la mkhas pa’i sgrub pa yin te | dge ba yoṅs su smin par bya ba la (3) bzod pa’i sgrub pa yin | dul bas ’doms pa la sogs pa’i sgrub pa yin te | ma dul bas ni gźan dag la gdams pa la sogs bstan par mi nus so || rigs su skyes pa la sogs pa śin tu riṅ du soṅ ba’i sgrub pa yin no || riṅ du ma soṅ ba’i sgrub pas ni | gźan dag rigs su (4) skyes pa la sogs par bya bar mi nus so || byaṅ chub sems dpa’i sgrub pa ’di dag thams cad kyaṅ khas blaṅs pa’i sems can mi zad pa’i phyir mi zad pa yin te | de’i phyir yaṅ phun sum tshogs pa yin par rig par bya’o || sgrub pa khyad par du bya bar tshigs su bcad pa gñis te |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874351bi' class='paragraph'>
+							Il montre comment cette Initiative pour le Sens d’autrui atteint sa plénitude. Comment l’atteint-elle? Si la prédication est adaptée aux gens qui sont de la Famille et n’a rien à rebours. Si l’attraction est sans morgue; et l’introduction sans égoïsme; c’est-à-dire s’il ne tire pas vanité de sa Magie et s’il ne s’approprie i pas les créatures introduites. Si l’Initiative de Discipline en fait de Sens est clairvoyante. Si l’Initiative de per-maturation en Bien est patiente. Si l’Initiative de Conseil, etc. est maîtrisée; car sans maîtrise de soi, il est incapable en fait de Conseil, etc. à autrui. Si l’Initiative de naissance dans la Famille, etc. est capable de longue distance: car si l’Initiative ne va pas loin, elle ne peut pas assurer à autrui la naissance dans la Famille, etc. Et toute cette Initiative pour le Sens d’autrui est inépuisable chez les Bodhisattvas, parce que la quantité des créatures adhérentes est inépuisable. Par suite encore, elle a sa plénitude.<br />Deux vers sur l’excellence de l’Initiative.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869708bi' class='paragraph'>
+							mahābhaye kāmijanaḥ pravartate cale viparyāsasukhe bhavapriyaḥ |<br />pratisvam ādhipraśame śamapriyaḥ sadā tu sarvādhigame kṛpātmakaḥ || 7 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871256bi' class='paragraph'>
+							(11)習欲大可畏 有愛動而倒<br />(12)樂滅斷煩惱 大悲求佛法&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872804bi' class='paragraph'>
+							(5) ’dod ldan skye bo ’jigs pa che la ’jug || srid dga’ phyin ci log bde g-yo ba la |<br />| źi dga’ raṅ gi len par rab źi la || sñiṅ rje’i bdag ñid len kun źi la rtag ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874352bi' class='paragraph'>
+							7. Les amoureux vont à de grands dangers; les amis de l’existence, à u n bonheur à rebours et qui est instable; les amis de la Paix, à la Pacification des souffrances en ce qui les touche; mais les Compatissants vont toujours à l’Acquis total.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869709bi' class='paragraph'>
+							jano vimūḍhaḥ svasukhārtham udyataḥ sadā tad aprāpya paraiti duḥkhatām |<br />sadā tu dhīro hi parārtham udyato dvayārtham ādhāya paraiti nirvṛtim || 8 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871257bi' class='paragraph'>
+							(20)世間求自樂 不樂恒極苦<br />(21)菩薩勤樂他 二利成上樂&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872805bi' class='paragraph'>
+							skye bo rmoṅs pa raṅ gi bde don brtson || rtag tu de ma thob par sdug bsṅal ’gyur |<br />| brtan pa rtag tu gźan don (6) brtson pa ni || gñi ga’i don byas mya ṅan ’da’ bar ’gyur ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874353bi' class='paragraph'>
+							8. Le fou, qui ne travaille que dans le Sens de son bonheur, le manque et aboutit au malheur; mais le Sage qui travaille toujours dans le Sens d’autrui réussit dans les deux Sens et aboutit à la Béatitude.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869710bi' class='paragraph'>
+							tatra kāmānāṃ <b>mahābhaya</b>tvaṃ bahukāyikacaitasikaduḥkhadurgatigamanahetutvāt | calaṃ <b>viparyāsasukhaṃ</b> rūparūpyabhavapriyāṇām anityatvāt paramārthaduḥkhatvāc ca saṃskāraduḥkhatayā | ādhayaḥ kleśā veditavyā duḥkhādhānāt | <b>vimūḍho janaḥ sadā svasukhārthaṃ</b> pratipannaḥ sukhaṃ nāpnoti duḥkham evāpnoti | bodhisatvas tu parārthaṃ pratipannaḥ svaparārthaṃ saṃpādya nirvṛtisukhaṃ prāpnoty ayam asyāparaḥ pratipattiviśeṣaḥ | gocarapariṇāmane ślokaḥ |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871258bi' class='paragraph'>
+							(13)釋曰。習欲者。謂欲界人。大可畏者。身心苦多(14)及向惡趣故。有愛者。謂色無色界人。動而倒(15)者。彼樂無常故動。行苦故倒。樂滅者。謂自利(16)人。斷煩惱者。由煩惱所持則苦不斷爲離苦(17)故。自斷煩惱而求寂滅。大悲者。謂利他人。求(18)佛法者。此人常求一切佛法。擬利一切衆生(19)故。偈曰(Verse avove)<br />(22)釋曰。世間愚癡常求自樂。而不得樂反得極(23)苦。菩薩不爾。常勤樂他而二利成就。更得(24)第一大涅槃樂。此是菩薩勝隨順差別。已説(25)利他隨順。次以此行迴向衆生。偈曰&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872806bi' class='paragraph'>
+							de la ’dod pa rnams ’jigs pa chen po ñid yin pa ni lus daṅ sems kyi sdug bsṅal maṅ po daṅ | ṅan ’gror ’gro ba’i rgyu yin pa’i phyir ro || phyin ci log gi bde ba g-yo ba ni gzugs daṅ gzugs daṅ gzugs med pa’i srid (7) pa’i dga’ ba rnams mi rtag pa ñid kyi phyir daṅ | ’du byed kyi sdug bsṅal gyis don dam par sdug bsṅal ba’i phyir ro || len pa dag ni ñon moṅs pa rnams su rig par bya ste | sdug bsṅal len pa’i phyir ro || skye bo rmoṅs pa rtag tu raṅ bde ba’i don du źugs pa ni bde ba mi (144b1) ’thob kyi | sdug bsṅal kho na ’thob bo || byaṅ chub sems dpa’ gźan gyi don du źugs pa ni | raṅ daṅ gźan gyi don bsgrubs nas mya ṅan las ’das pa’i bde ba ’thob ste | ’di ni sgrub pa’i khyad par gźan yin no || spyod yul yoṅs su bsṅo bar tshigs su bcad pa |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874354bi' class='paragraph'>
+							L’amour est plein de grands dangers puisqu’il cause tant de douleurs de corps et d’esprit et qu’il conduit aux Mauvaises Destinations. Le bonheur des amis de l’existence, existence dans le Formel ou I-lors-du-Formel, est instable et à rebours, car il est impermanent; il est au Sens transcendant la douleur, puisque les Opérants sont douleur. Les souffrances signifient: les Souillures, parce que les Souillures sont germes de douleur. Le fou qui prend toujours l’Initiative clans le Sens de soi-même n’atteint pas le bonheur; c’est le malheur qu’il atteint. Mais le Bodhisattva, qui prend l’Initiative dans le Sens d’autrui, accomplit totalement le Sens de soi et d’autrui et arrive au bonheur de la Béatitude. Et c’est là encore une autre excellence de son Initiative.<br />Un vers sur la Per-flexion du Domaine.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869711bi' class='paragraph'>
+							yathā yathā hy akṣavicitragocare pravartate cāragato jinātmajaḥ |<br />tathā tathā yuktasamānatāpadair hitāya satveṣv abhisaṃskaroti tat || 9 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871259bi' class='paragraph'>
+							(26)異根於異處 異作有異行<br />(27)凡是諸所作 迴以利衆生&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872807bi' class='paragraph'>
+							rgyal sras (2) spyod tshe ji lta ji lta bur || dbaṅ po’i spyod yul sna tshogs ’jug ’gyur ba |<br />| de lta de ltar rigs śiṅ mthun tshig gis || sems can phan phyir de mṅon ’du byed do ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874355bi' class='paragraph'>
+							9. De quelque manière que le fils des Vainqueurs fonctionne en circulant dans le Domaine varié des veux, il sur-opère symétriquement pour les créatures, pour leur salut, avec des termes bien appliqués et de même mesure.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869712bi' class='paragraph'>
+							yena yena prakāreṇa cakṣurādīndriyagocare vicitre bodhisatvaḥ pravartate | īryāpathavyāpāracāre vartamānas tena tena prakāreṇa saṃbaddhasādṛśyavacanair <b>hitārthaṃ satveṣu tat sarvam abhisaṃskaroti</b> | yathā gocarapariśuddhisūtre vistareṇa nirdiṣṭaṃ | satveṣv akṣāntipratiṣedhe ślokaḥ |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871260bi' class='paragraph'>
+							(28)釋曰。菩薩迴向隨眼等諸根行種種處作種(29)種威儀業行利益衆生。凡是諸行。若事相應(598b1)及以相似。彼皆迴向一切衆生。如行清淨經(2)中廣説。已説迴向心。次遮不忍心。偈曰&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872808bi' class='paragraph'>
+							byaṅ chub sems dpa’ spyod lam byed pa’i spyod pa la ’jug pa na rnam pa gaṅ daṅ gaṅ gis mig la sogs pa’i dbaṅ po’i (3) spyod yul sna tshogs la ’jug pa’i rnam pa de daṅ der ’brel źiṅ ’dra ba’i tshig gis sems can rnams la phan par bya ba’i phyir de thams cad ji ltar spyod yul yoṅs su dag pa’i mdo las rgyas par bstan pa bźin mṅon par ’du byed do || sems can rnams la mi bzod pa dgag par (4) tshigs su bcad pa |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874356bi' class='paragraph'>
+							De quelque manière que le Bodhisattva fonctionne dans le Domaine varié des Organes: Feux, etc., lorsqu’il est en train de circuler dans les occupations des Attitudes, d’une manière correspondante il sur-opère tout cela pour les créatures, clans le Sens du salut, par des propos de comparaisons appropriées. Comme le Gocara-pariçuddhi sûtra l’expose en détail.<br />Un vers pour exclure le manque de Patience envers les créatures.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869713bi' class='paragraph'>
+							sadā ’svatantrīkṛtadoṣacetane jane na saṃdoṣam upaiti buddhimān |<br />akāmakāreṇa hi viprapattayo jane bhavantīti kṛpāvivṛddhitaḥ || 10 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871261bi' class='paragraph'>
+							(3)衆生不自在 常作諸惡業<br />(4)忍彼増悲故 無惱亦無違&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872809bi' class='paragraph'>
+							rtag tu ñes pas raṅ dbaṅ med par byas sems kyis || skye bo na ni blo ldan ñes par mi ’dzin te |<br />| mi ’dod bźin du log par sgrub par ’gyur ro źes || skye bo dag la sñiṅ rje rnam par ’phel phyir ro ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874357bi' class='paragraph'>
+							10. Puisque les créatures ont un État de pensée vicieux et qui n’est jamais libre, le Sage ne pèche pas à leur propos; il se dit: Ce n’est pas volontairement qu’ils prennent l’Initiative à rebours, – et sa pitié grandit.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869714bi' class='paragraph'>
+							sadā kleśair <b>asvatantrī</b>kṛta<b>cetane jane na saṃdoṣam upaiti</b> bodhisatvaḥ | kiṃ kāraṇaṃ | <b>akāmakārenaiṣāṃ vipratipattayo bhavantīti</b> viditva karuṇāvṛddhigamanāt | pratipattimāhātmye ślokaḥ |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871262bi' class='paragraph'>
+							(5)釋曰。衆生爲煩惱所惱心不自在。是故作諸(6)惡業。菩薩智慧於彼常起大忍増長大悲。是(7)故於彼不起惱心。亦不欲作不隨順事。已遮(8)不忍心。次顯隨順大。偈曰&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872810bi' class='paragraph'>
+							rtag tu ñon moṅs pa rnams kyis raṅ dbaṅ med par byas pa’i (5) sems daṅ ldan pa’i skye bo la byaṅ chub sems dpa’ ñes par mi ’dzin to || de ci’i phyir źe na | ’di dag ni mi ’dod bźin du log par sgrub pa dag tu ’gyur ro źes bya bar rig gnas sñiṅ rje ’phel bar ’gyur ba’i phyir ro || sgrub pa’i che ba ñid kyi tshigs su bcad pa |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874358bi' class='paragraph'>
+							Les Souillures ne laissent jamais libre l’esprit des créatures; aussi le sage ne se mite pas à leur propos. Et pourquoi? C’est qu’il sait que les créatures ne prennent pas volontairement l’Initiative à rebours, et sa compassion augmente.<br />Un vers pour magnifier l’Initiative.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869715bi' class='paragraph'>
+							bhavagati sakalābhibhūyagantrī paramaśamānugatā prapattir eva |<br />vividhaguṇagaṇair vivardhamānā jagad upaguhya sadā kṛpāśayena || 11 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871263bi' class='paragraph'>
+							(9)勝出與寂靜 功徳及利物<br />(10)次第依四義 説大有四種&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872811bi' class='paragraph'>
+							sgrub pa ’di ni srid daṅ (6) ’gro ba kun || zil gyis mnan ’gro źi ba mchog daṅ ldan |<br />| yon tan sna tshogs tshogs kyis rnam par ’phel || byams pa’i bsam pas rtag tu ’gro ba sdud ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874359bi' class='paragraph'>
+							11. L’Initiative va surmontant toutes les existences et les Destinations, escortée de la Pacification par excellence, s’accroissant de toutes sortes de troupes de vertus, embrassant toujours le monde avec une Tendance de compassion.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869716bi' class='paragraph'>
+							caturvidhaṃ māhātmyaṃ saṃdarśayati | abhibhavamāhātmyaṃ <b>sakalaṃ</b> bhavatrayaṃ gatiṃ ca pañcavidhām abhibhayagamanāt | yathoktaṃ prajñāpārāmitāyāṃ | rūpaṃ cet subhūta bhāvo ’bhaviṣyan nābhāvā nadaṃ mahāyānaṃ sadevamānuṣāsuralokam abhibhūya niryāsyatīti vistaraḥ | nirvṛtimāhātmyam apratiṣṭhanirvāṇānugatatvāt | guṇavṛddhimāhātmyaṃ satvāparityāgamāhātmyaṃ ceti |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871264bi' class='paragraph'>
+							(11)釋曰。諸菩薩有四種隨順大。一者勝出大。於(12)三有五趣中而勝出故。如般若波羅蜜經説。(13)須菩提。若色有法非無法者是摩訶衍。不(14)能勝出一切世間天人阿修羅故。二者寂靜(15)大。隨向無住處涅槃故。三者功徳大。福智(16)二聚増長故。四者利物大。常依大悲不捨衆(17)生故&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872812bi' class='paragraph'>
+							che ba ñid ni rnam pa bźi ste | zil gyis gnod pa’i che ba ñid ni | srid pa gsum daṅ ’gro ba lṅa po thams cad zil gyis (7) mnan nas ’gro ba’i phyir te | ji skad du | śes rab kyi pha rol tu phyin pa las | rab ’byor gal te gzugs dṅos por ’gyur gyi | dṅos po med pa ma yin na śes rab kyi pha rol tu phyin pa ’dis lha daṅ mi daṅ lha ma yin du bcas pa’i ’jig rten zil gyis mnan nas ṅes par ’byuṅ bar mi (145a1) ’gyur źes bya ba la sogs pa rgyas par gsuṅs pa lta bu’o || mya ṅan las ’das pa’i che ba ñid ni mi gnas pa’i mya ṅan las ’das pa daṅ ldan pa’i phyir ro || yon tan gyi che ba ñid daṅ | sems can yoṅs su mi gtoṅ ba’i che ba ñid ni yon tan gyis ’phel ba (2) pa daṅ | ’gro ba sdud pa’i phyir ro ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874360bi' class='paragraph'>
+							Il montre là quatre sortes de grandeur. Grandeur de dépassement, puisqu’elle va surpassant les trois Existences et les cinq Destinations. Comme il est dit dans la Prajnâ-Pâramitâ: “Si la Forme, ô Subhûti! était ce qui est, et non pas ce qui n’est pas, alors ce Grand Véhicule n’arriverait pas à l’Évasion en surmontant le monde avec les Dieux, les hommes, les Asuras...” et ainsi de suite. Grandeur de Béatitude, puisqu’elle est escortée du Nirvâṇa-qui-n’est-pas-l’arrêt. Grandeur d’accroissement de vertus. Grandeur de non-abandon des créatures.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869717bi' class='paragraph'>
+							mahāyānasūtrālaṃkāre pratipattyadhikāraḥ pañcamaḥ&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "7869696";
+							kilderef = "Msa San: Lévi (1907)  5.0 - San: Lévi (1907) 12";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871265bi' class='paragraph'>
+							二利品究竟&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "7871244";
+							kilderef = "Msa Chi: T. 1604  597b17 - Chi: T. 1604 598b17";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872813bi' class='paragraph'>
+							sgrub pa’i skabs rdzogs so | || |&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "7872792";
+							kilderef = "Msa Tib: Tg sems tsam phi  143a2 - Tib: Tg sems tsam phi 145a2";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874361bi' class='paragraph'>
+							12 &nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "7874340";
+							kilderef = "Msa Fre: Lévi (1911)  - Fre: Lévi (1911) ";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'></div><div class='textvar' style='width:24%;'></div><div class='textvar' style='width:24%;'></div><div class='textvar' style='width:24%;'></div></div><div class='clear'></div><div class="fontboks"><a onClick=onOffdiv('permlink') name="permlink" href="#permlink">Permanent link</a></div><div class='clear'></div><div class='perm_felt' id='permlink'>http://www2.hf.uio.no/common/apps/permlink/permlink.php?app=polyglotta&amp;context=ctext&amp;uid=8f544928-6e5a-11e0-be58-001cc4df1abe</div></div></div><!-- infofelt --></div><!-- divControl --><div class="clear"></div>
+<div style="clear:both"></div><div class="signatur"><div class="signatur_left">
+		<a href="https://wiki.uio.no/hf/dmlf/index.php/Kategori:Polyglotta:Documentation">Go to Wiki Documentation</a></br>Enhet: <a HREF=http://www.hf.uio.no>Det humanistiske fakultet</a> &nbsp; Utviklet av: <a href="http://www.hf.uio.no/tjenester/it">IT-seksjonen ved HF</a></div><!--signatur_left -->
+		<div class="signatur_right"><a href="/polyglotta/admin/index.php">Login</a></div>
+		<div style="clear:both"></div></div>
+</body></html><SCRIPT LANGUAGE="JAVASCRIPT">
+	
+	$("#tr_IA").click(function(){
+	    if ($("#toggle_container_IA").is(':hidden'))
+	    	$("#toggle_container_IA").show();
+	    else{
+	        $("#toggle_container_IA").hide();
+	    }
+	    return false;
+		});
+
+	$("#tr_lang").click(function(){
+	    if ($("#toggle_container_lan").is(':hidden'))
+	    	$("#toggle_container_lan").show();
+	    else{
+	        $("#toggle_container_lan").hide();
+	    }
+	    return false;
+	});
+
+	$("#tr_img").click(function(){
+	    if ($("#toggle_container_img").is(':hidden'))
+	    	$("#toggle_container_img").show();
+	    else{
+	        $("#toggle_container_img").hide();
+	    }
+	    return false;
+	});
+
+	$("#diac2button").click(function(){
+	   if ($("#ex3a").is(':hidden')){
+		   $("#ex3a").show();
+	       $("#diac2button").html("Hide&#32Diacritica-help");
+	   }else{
+	       $("#ex3a").hide();
+	       $("#diac2button").html("Diacritica-help");
+	   }
+	   return false;
+	});
+
+	$("#diacbutton").click(function(){
+	   if ($("#diacritical_sign").is(':hidden')){
+		   	$("#diacritical_sign").show();
+	      	$("#diacbutton").html("Hide&#32diacritica");
+	   }else{
+	        $("#diacritical_sign").hide();
+	        $("#diacbutton").html("Diacritica");
+	   }
+	   return false;
+    });
+
+	$('#toggle_container_IA').click(function(e) {
+	   e.stopPropagation();
+	});
+
+	$('#toggle_container_lan').click(function(e) {
+        e.stopPropagation();
+    });
+
+	$('#toggle_container_img').click(function(e) {
+        e.stopPropagation();
+    });
+
+	$('#ex3a').click(function(e) {
+	    e.stopPropagation();
+	});
+
+	$('#diacritical_sign').click(function(e) {
+        e.stopPropagation();
+    });
+
+	//Kode for å sette inn diakritiske tegn
+	$('#diacritical > tbody > tr > td').click(function() {
+	  	//alert('red');
+		$("#sokeboks").val($("#sokeboks").val() + $(this).text());
+	});
+
+	$('.diac2button').text(($('.diacbutton').text() == 'Diacritica-help') ? 'Hide Diacritica-help' : 'Diacritica-help');
+	
+	//Lukker alle åpnede pop'uper ved klikk på siden
+	$(document).click(function() {
+		$('#toggle_container_IA').hide();
+	    
+        $('#toggle_container_lan').hide();
+    
+        $('#toggle_container_img').hide();
+   
+   		$('#diacritical_sign').hide();
+   		$("#diacbutton").html("Diacritica");
+   
+       	$('#ex3a').hide();
+       	$("#diac2button").html("Diacritica-help");
+   });
+	</SCRIPT>

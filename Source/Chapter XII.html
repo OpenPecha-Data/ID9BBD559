@@ -1,0 +1,569 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Bibliotheca Polyglotta</title>
+<link rel='stylesheet' type='text/css' href='css/bp.css'>
+<link rel='stylesheet' type='text/css' href='css/diac_doc.css'>
+
+<link rel='stylesheet' type='text/css' href='css/imageGallery.css'>
+<link rel='stylesheet' type='text/css' href='css/ss.css'>
+	      <link rel='stylesheet' type='text/css' href='css/tree_menu.css'>
+<script type="text/javascript" src="js/jquery-1.3.2.js"></script>
+<!--  <script type="text/javascript" src="js/jqModal.js"></script>-->
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/tree_menu.js"></script>
+<!-- <script src="js/analytics_tracking.js" type="text/javascript"></script> -->
+
+
+<!-- <script type="text/javascript" src="js/popupDivhandling.js"></script> -->
+<!--  <script type="text/javascript" src="jquery-latest.js"></script>
+<script type="text/javascript" src="js/jquery-imagegallery.js"></script>-->
+</head>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//vrtx.uio.no/js/analytics/v2/analytics.js','ga');
+
+ga('create', 'UA-86407471-1', 'auto');
+ga(function(tracker) {
+
+	// Modifies sendHitTask to hit ipproxy instead of http://www.google-analytics.com directly
+	tracker.set('sendHitTask', function(model) {
+		payload = model.get('hitPayload');
+		var xhr = new XMLHttpRequest();
+		xhr.open('GET', '//w3prod-ipproxy.uio.no/collect' +'?' + payload, true);
+		xhr.send();
+	});
+		ga('send', 'pageview');
+});
+</script>
+<body><div class='banner'></div><!-- banner --><div class='uiologo'>
+<a href='http://www.hf.uio.no/'><img src='https://www2.hf.uio.no/polyglotta/hfe.png' border='0'></a></div><!-- uiologo --><div class='clear'></div>
+<div class='smule_tittel'>
+<div class='brodsmuleboks'>You are here: <a href='/polyglotta/index.php' accesskey='1'> BP HOME</a> >  <a href='/polyglotta/index.php?page=library&amp;bid=2' accesskey='1'>TLB</a> > <a href='/polyglotta/index.php
+	?page=volume&amp;vid=1131' accesskey='1'>Asaṅga/Maitreya: Mahāyānasūtrālaṃkāra</a> > fulltext</div><div class='clear'></div>
+<div class='headline'>Asaṅga/Maitreya: Mahāyānasūtrālaṃkāra<div class='clear'></div></div><!-- headline -->
+</div><!-- smule_tittel -->
+<!--<div>-->
+
+<h2 class="trigger" id="tr_lang"><a  href="#">Choose languages</a></h2>
+<h2 class="trigger" id="tr_img"><a  href="#">Choose images, etc.</a></h2>
+
+
+<div id="toggle_container_lan">
+
+<form  id="tr"  name="Sprakvalg2" action="inc/set_cookie_lan.php" method="POST">
+
+<div style="float:left; width:auto; text-align:left; margin-left:20px;">
+<h5>Choose languages</h5>
+<ul>
+<input value="Choose all" type="button" onClick="markAll('tr')"><input value="Uncheck all" type="button" onClick="markNone('tr')">
+
+	<li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1131[5695]" value="5695" id="lancheckbox" checked >Sanskrit: San: Lévi (1907)</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1131[5696]" value="5696" id="lancheckbox" checked >Chinese: Chi: T. 1604</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1131[5697]" value="5697" id="lancheckbox" checked >Tibetan: Tib: Tg sems tsam phi</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1131[5698]" value="5698" id="lancheckbox" checked >French: Fre: Lévi (1911)</label></li><div style="clear:both"></div>
+<input type='submit' name='set_cookie' value='Save view'>
+<div style="clear:both"></div>
+
+</ul>
+<input type="hidden" name="vid" value="1131">
+<input type="hidden" name="page" value="fulltext">
+</form>
+</div>
+</div>
+
+<div id="toggle_container_img">
+<form  id="tr"  name="Sprakvalg2" action="inc/set_cookie_img.php" method="POST">
+
+<div style="float:left; width:auto; text-align: left;">
+<h5>Choose display</h5>
+<ul>
+		
+	<li> 
+		<input type='checkbox' name='bilder' checked="checked" > Enable images
+	</li>
+	<li> 
+	<input type='checkbox' onclick="onOffCheckbox();" name='fotnoter' checked="checked"> Enable footnotes
+	<div id="pff" style="display:block" >
+	<ul>
+	<li><input type='radio' name='fotnote_valg'  value='show_a' checked> Show all footnotes</li>
+	<li><input type='radio' name='fotnote_valg'  value='show_h'  > Minimize footnotes</li>
+	</ul>
+	</li>
+	
+	</div>
+	<div style="float:left; width:20em; text-align: left; margin-left:120px ">
+	<div style="clear:both"></div>
+	<input type='submit' name='set_cookie' value='Save view'>
+	<div style="clear:both"></div>
+	</div>
+	
+</ul>
+<input type="hidden" name="vid" value="1131">
+<input type="hidden" name="page" value="fulltext">
+</form>
+</div>
+	
+
+
+
+</div>
+</div>
+
+<div class='sok'><form name='Sok' id='FormBlock' action='/polyglotta/index.php' method='get'>
+<input type='hidden' name='page' value='search'>
+<input type='hidden' name='bid' value='2'>
+<input type='hidden' name='vid' value='1131'>
+<div class='sokeboks'>
+<input name='sokefelt' id='sokeboks' type='text' size='30' value=''>
+<input type='submit' name='Sok' value='Search' id='nsubmit'>
+<div class='clear'></div><a class="diacbutton" id="diacbutton" href="#">Diacritica</a><a id="diac2button" class="diac2button"  href="#">Diacritica-help</a><a class="s2button" href="https://wiki.uio.no/hf/dmlf/index.php/Kategori:Polyglotta:Documentation:SearchHelp">Search-help</a><div class='diacritical' id='diacritical_sign'><div style="text-align: left; ">
+<table class = 'diacritica' width="200" border="1" cellpadding="1" cellspacing="1" id="diacritical">
+    <tbody>
+        <tr>
+            <td style="text-align: center; ">ā</td>
+            <td style="text-align: center; ">ī</td>
+            <td style="text-align: center; ">ū</td>
+            <td style="text-align: center; ">ṛ</td>
+            <td style="text-align: center; ">ṝ</td>
+            <td style="text-align: center; ">ḷ</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">ḹ</td>
+            <td style="text-align: center; ">&rsquo;</td>
+            <td style="text-align: center; ">ṃ</td>
+            <td style="text-align: center; ">ḥ</td>
+            <td style="text-align: center; ">ṅ</td>
+            <td style="text-align: center; ">&ntilde;</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">ṭ</td>
+            <td style="text-align: center; ">ḍ</td>
+            <td style="text-align: center; ">ṇ</td>
+            <td style="text-align: center; ">ṣ</td>
+            <td style="text-align: center; ">ś</td>
+            <td style="text-align: center; ">ź</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">&scaron;</td>
+            <td style="text-align: center; ">č</td>
+            <td style="text-align: center; ">ǰ</td>
+            <td style="text-align: center; ">&gamma;</td>
+            <td style="text-align: center; ">&nbsp;</td>
+            <td style="text-align: center; ">&nbsp;</td>
+        </tr>
+    </tbody>
+</table>
+</div></div><!-- diacritical --><div id="ex3a" class="jqmDialog"><div>
+	<span style="font-size:12px;">Note on the transliteration:</span></div>
+<div>
+	<span style="font-size:12px;">The transliteration system of the BP/TLB is based on the Unicode/UTF-8 system. However, there may be difficulties with some of the letters &ndash; particularly on PC/Windows-based systems, but not so much on the Mac. We have chosen the most accepted older and traditional systems of transliteration against, e.g, Wylie for Tibetan, since with Unicode it is possible, in Sanskrit and Tibetan, etc., to represent one sound with one letter in almost all the cases (excepting Sanskrit and Tibetan aspirated letters, and Tibetan tsa, tsha, dza). We thus do not use the Wylie system which widely employs two letters for one sound (ng, ny, sh, zh etc.).</span></div>
+<div>
+	&nbsp;</div>
+<div>
+	<span style="font-size:12px;">Important:</span></div>
+<div>
+	<span style="font-size:12px;">We ask you in particular to note the use of the &rsquo; apostrophe and not the &#39; representing the avagrāha in Sanskrit, and most important the &rsquo;a-chuṅ in Tibetan. On the Mac the &rsquo; is Alt-M.</span></div>
+<div>
+	&nbsp;</div>
+<div>
+	<span style="font-size:12px;">If you cannot find the letters on your key-board, you may click on the link &quot;Diacritica&quot; to access it for your search.</span></div>
+</div><!-- diacritical_doc --><div class='clear'></div><select name='searchmode'><option selected value='phrase'>Search for exact phrase</option>
+<option  value='phraseregex'>Search for exact phrase (regex)</option>
+<option  value='word'>Search for every word in one record</option>
+<option  value='free'>Search for every word fragment in one record</option>
+</select>
+<select name='context'>
+<option ($_GET[context]=="a" ? "selected" : "") value="a"> Search in all libraries</option><option selected value="bTLB">Search in TLB</option><option selected value="v1131">Search in Asaṅga/Maitreya: Mahāyānasūtrālaṃkāra</option></select><div class='clear'></div><a class='sbutton' href='/polyglotta/index.php?page=asearch&amp;bid=2&amp;vid=1131'>Choose specific texts..</a><div class='clear'></div></div></form></div><!-- sok --><div class='clear'></div><!-- clear --><div id='dcr' class='divControlRead'><div class='venstrefulltekstfelt'><div class='bverknavn'><a href='/polyglotta/index.php?page=volume&amp;vid=1131'>Asaṅga/Maitreya: Mahāyānasūtrālaṃkāra</a></div><table class="tlvl2">
+					<tr>
+						<td bgcolor="#ffffff"> &nbsp; &nbsp;
+						<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_7627.Verses41-58" border=0 hspace=2>
+						<a href="/polyglotta/index.php?page=fulltext&amp;view=fulltext&amp;vid=1131" class="ajax_tree0">Complete text</a>
+						</td>
+					</tr>
+				  </table><input type="hidden" name="tree_top_options" id="tree_top_options" value="135128.Title|135129.Preface|135130.ChapterI|135132.ChapterII|135133.ChapterIII|135134.ChapterIV|135135.ChapterV|135136.ChapterVI|135137.ChapterVII|135138.ChapterVIII|135139.ChapterIX|135140.ChapterX|135141.ChapterXI|135142.ChapterXII|135143.ChapterXIII|135144.ChapterXIV|135145.ChapterXV|135146.ChapterXVI|135147.ChapterXVII|135148.ChapterXVIII|135149.ChapterXIX|135150.ChapterXX-XXI|135151.Colophon|">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135128.Title" border=0 hspace=2><a id="href_135128.Title" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1945667&level=1&cid=845779" class="ajax_tree0">Title
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135129.Preface" border=0 hspace=2><a id="href_135129.Preface" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1945668&level=1&cid=845780" class="ajax_tree0">Preface
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<a href="javascript:;" onclick="Expand('135130.ChapterI','0','1')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_135130.ChapterI" border=0 hspace=2><a id="href_135130.ChapterI" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1945669&level=1&cid=845781" class="ajax_tree0">Chapter I
+</td></tr></table>
+<div style="display:none;"  id="div_135130.ChapterI">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135131.Verses21-40" border=0 hspace=2><a id="href_135131.Verses21-40" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1945708&level=2&cid=845820" class="ajax_tree1">Verses 21-40
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135132.ChapterII" border=0 hspace=2><a id="href_135132.ChapterII" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1945711&level=1&cid=845823" class="ajax_tree0">Chapter II
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135133.ChapterIII" border=0 hspace=2><a id="href_135133.ChapterIII" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1945737&level=1&cid=845849" class="ajax_tree0">Chapter III
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135134.ChapterIV" border=0 hspace=2><a id="href_135134.ChapterIV" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1945765&level=1&cid=845877" class="ajax_tree0">Chapter IV
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135135.ChapterV" border=0 hspace=2><a id="href_135135.ChapterV" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1945808&level=1&cid=845920" class="ajax_tree0">Chapter V
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135136.ChapterVI" border=0 hspace=2><a id="href_135136.ChapterVI" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1945830&level=1&cid=845942" class="ajax_tree0">Chapter VI
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135137.ChapterVII" border=0 hspace=2><a id="href_135137.ChapterVII" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1945848&level=1&cid=845960" class="ajax_tree0">Chapter VII
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135138.ChapterVIII" border=0 hspace=2><a id="href_135138.ChapterVIII" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1945870&level=1&cid=845982" class="ajax_tree0">Chapter VIII
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135139.ChapterIX" border=0 hspace=2><a id="href_135139.ChapterIX" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1945915&level=1&cid=846027" class="ajax_tree0">Chapter IX
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135140.ChapterX" border=0 hspace=2><a id="href_135140.ChapterX" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1946076&level=1&cid=846188" class="ajax_tree0">Chapter X
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135141.ChapterXI" border=0 hspace=2><a id="href_135141.ChapterXI" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1946104&level=1&cid=846216" class="ajax_tree0">Chapter XI
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135142.ChapterXII" border=0 hspace=2><a id="href_135142.ChapterXII" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1946255&level=1&cid=846367" class="ajax_tree0">Chapter XII
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135143.ChapterXIII" border=0 hspace=2><a id="href_135143.ChapterXIII" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1946299&level=1&cid=846411" class="ajax_tree0">Chapter XIII
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135144.ChapterXIV" border=0 hspace=2><a id="href_135144.ChapterXIV" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1946348&level=1&cid=846460" class="ajax_tree0">Chapter XIV
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135145.ChapterXV" border=0 hspace=2><a id="href_135145.ChapterXV" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1946424&level=1&cid=846536" class="ajax_tree0">Chapter XV
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135146.ChapterXVI" border=0 hspace=2><a id="href_135146.ChapterXVI" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1946435&level=1&cid=846547" class="ajax_tree0">Chapter XVI
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135147.ChapterXVII" border=0 hspace=2><a id="href_135147.ChapterXVII" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1946577&level=1&cid=846689" class="ajax_tree0">Chapter XVII
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135148.ChapterXVIII" border=0 hspace=2><a id="href_135148.ChapterXVIII" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1946715&level=1&cid=846827" class="ajax_tree0">Chapter XVIII
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135149.ChapterXIX" border=0 hspace=2><a id="href_135149.ChapterXIX" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1946966&level=1&cid=847078" class="ajax_tree0">Chapter XIX
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135150.ChapterXX-XXI" border=0 hspace=2><a id="href_135150.ChapterXX-XXI" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1947102&level=1&cid=847214" class="ajax_tree0">Chapter XX-XXI
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135151.Colophon" border=0 hspace=2><a id="href_135151.Colophon" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1947214&level=1&cid=847326" class="ajax_tree0">Colophon
+</td></tr></table>
+<script language=javascript>test('135142.ChapterXII|')</script><div class='bverknavn'><a href='/polyglotta/index.php?page=library&amp;bid=2'>Back to library</a></div></div><!-- venstrefulltekstfelt --><div class="clear"></div><!-- clear --><div id="nav-menu"><ul>
+  		  <li  id="nav-1"><a class="tabValgt" href="/polyglotta/index.php?page=record&amp;view=record&amp;vid=1131&amp;mid=1946255&amp;level=1">Sentence by sentence view</a></li>
+  		  <li  id="nav-2"><a  href="/polyglotta/index.php?page=fulltext&amp;view=fulltext&amp;vid=1131&amp;cid=846367&amp;mid=1946255&amp;level=1">Continuous text view</a></li>
+ 		<li  id="nav-3"><a  href="/polyglotta/admin/index.php?page=fulltext&amp;view=fulltext&amp;vid=1131&amp;cid=846367&amp;mid=1946255&amp;level=1">View in admin</a></li>
+
+  		  </ul></div><div class='clear'></div><!-- clear -->			<script language="javascript" type="text/javascript">
+			var kilderef = '';
+			var tekstid = 0;
+			var tekstid_bilder = 0;
+			var filsti = '';
+			var thumbnail = '';
+			</script>
+		<div class='infofulltekstfelt'><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><div class='kilderef' id='7870143'></div><div class='clear'></div><span id='7870143bi' class='paragraph'>
+							dvādaśo ’dhikāraḥ&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><div class='kilderef' id='7871691'></div><div class='clear'></div><span id='7871691bi' class='paragraph'>
+							(6)弘法品第十三&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><div class='kilderef' id='7873239'></div><div class='clear'></div><span id='7873239bi' class='paragraph'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><div class='kilderef' id='7874787'></div><div class='clear'></div><span id='7874787bi' class='paragraph'>
+							CHAPITRE XII<br />LA PRÉDICATION&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7870144bi' class='paragraph'>
+							dharmadeśanāyāṃ mātsaryapratiṣedhe ślokaḥ<br />prāṇān bhogāṃś ca dhīrāḥ pramuditamanasaḥ kṛcchralabdhān asārān satvebhyo duḥkhitebhyaḥ satatam avasṛjanty uccadānaprakāraiḥ |<br />prāg evodāradharmaṃ hitakaram asakṛt sarvathaiva prajānāṃ kṛcchre naivopalabdhaṃ bhṛśamavasṛjatāṃ vṛddhigaṃ cāvyayaṃ ca || 1 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871692bi' class='paragraph'>
+							(7)釋曰。已説求法。次應以法爲人演説。偈曰<br />(8)難得復不堅 愍苦恒喜施<br />(9)況以法利世 増長亦無盡&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7873240bi' class='paragraph'>
+							chos ston pa la ser sna dgag ba’i tshigs su bcad pa |<br />brtan pa rnams ni srog daṅ loṅs spyod tshigs ches rñed ciṅ sñiṅ po med pa (181a1) dag || rab dga’i yid kyis sems can sdug bsṅal rnams la sbyin rnams rgya chen rtag gtoṅ na |<br />| chos yaṅs skye dgu rnams la rnam pa kun tu phan byed tshegs ches rñed min źiṅ || śin tu btaṅ yaṅ zad med ’phel ’gyur ba lta lan cig ma yin smos ci (2) dgos ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874788bi' class='paragraph'>
+							Touchant la Prédication de l’Idéal, un vers pour exclure l’Égoïsme.<br />1. Les Sages, d’un esprit tout joyeux, donnent constamment aux créatures souffrantes en une foule de dons sublimes, leur vie et leur fortune qui s’acquièrent péniblement et qui n’ont pas de substance. Combien plus le feront-ils de l’Idéal sublime, qui fait tant de fois et de toutes façons le salut des créatures, qui ne s’obtient pas péniblement, qui ne fait que s’accroître d’autant plus qu’un le donne, et qui ne périt point.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7870145bi' class='paragraph'>
+							kṛcchralabdhān apy asārān kṣayitvā prāṇān bhogāṃś ca bodhisatvā duḥkhitebhyaḥ kāruṇyāt satatam udārair visargair utsṛjanti prāg eva dharmaṃ yo naiva kṛcchreṇa vā bhṛśam api vāvasṛjatāṃ vṛddhiṃ gachati na kṣayaṃ | dharmanairarthakyasārthakye ślokadvayaṃ |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871693bi' class='paragraph'>
+							(10)釋曰。此偈先遮法慳。難得復不堅者。謂身命(11)財。愍苦恒喜施者。菩薩尚能於一切時捨此(12)三種不堅之法施諸苦厄衆生。由慈悲故。況(13)以法利世増長亦無盡者。何況大法得之不(14)難而生慳悋。是故菩薩應以此法廣利世間。(15)何以故。法得増長亦無盡故。已遮法慳。次説(16)利益。偈曰&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7873241bi' class='paragraph'>
+							byaṅ chub sems dpa’ rnams ni sñiṅ rjes srog daṅ loṅs spyod tshegs chen pos rñed ciṅ zad par ’gyur bas sñiṅ po med pa dag kyaṅ sems can sdug bsṅal bar ’gyur ba rnams la sbyin pa rgya chen po rtag tu gtoṅ na | chos gaṅ źig tshegs chen pos rñed pa ma (3) yin źiṅ | śin tu btaṅ yaṅ zad pa med la | ’phel bar ’gyur ba lta smos kyaṅ ci dgos | chos la don med pa ñid daṅ don yod pa ñid kyi tshigs su bcad pa gñis te |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874789bi' class='paragraph'>
+							Les Bodhisattvas donnent aux créatures souffrantes leur vie et leur fortune, acquises péniblement, et pourtant sans moelle, puisqu’elles s’épuisent. Par pitié, ils les sacrifient constamment en de sublimes sacrifices. A plus forte raison l’Idéal qui n’est pas pénible à acquérir, et qui s’accroît, bien loin de décroître, à mesure qu’on le donne.<br />Deux vers sur l’inutilité et l’utilité de l’Idéal.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7870146bi' class='paragraph'>
+							dharmo naiva ca deśito bhagavatā pratyātmavedyo yata ākṛṣṭā janatā ca yuktayuktivihitair dharmaiḥ svakīṃ dharmatāṃ |<br />svaśāntyāsyapuṭe viśuddhivipule sādhāraṇe ’thākṣaye lāleneva kṛpātmabhis tvajagaraprakhyaiḥ samāpāditā || 2 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871694bi' class='paragraph'>
+							(17)自證不可説 引物説法性<br />(18)法身寂滅口 悲流如蟒吸&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7873242bi' class='paragraph'>
+							gaṅ phyir so so raṅ rig bya phyir bcom ldan ’das kyis chos ma bstan || thugs rje’i bdag ñid sbrul (4) chen lta bus rigs bśad dbugs ’dra’i chos rnams kyis |<br />| skye bo ñid kyi chos la kun nas draṅs te ñid źi źal gyi sgo || rnam par dag pa rgya chen thun moṅ zad mi śes la yaṅ dag bkod || de la sprul chen po lta bu ni saṅs rgyas rnams so ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874790bi' class='paragraph'>
+							2. L’Idéal n’a pas été, à vrai dire, prêché par Bhagavat, puisqu’on doit le savoir Quant-à-soi; et la multitude,-attirée qu’elle est à son Idéalité propre par des Idéaux disposés à propos, est amenée par les Compatissants, à l’instar des serpents, comme par fascination, dans ce creux de la gueule qu’est leur État-dePaix, si vaste en pureté, commun à tous, et inépuisable.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7870147bi' class='paragraph'>
+							tatra buddhā ajagaropamās teṣāṃ svaśāntir āsyapuṭaṃ dharmakāyaḥ | viśuddhivipulaṃ savāsanakleśajñeyāvaraṇaviśuddhitaḥ | sādhāraṇaṃ sarvabuddhaiḥ akṣayam ātyantikatvāt |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871695bi' class='paragraph'>
+							(19)釋曰。自證不可説引物説法性者。世尊不説(20)自所證法。由不可説故。爲引接衆生復以方(21)便而説法性。問云何方便。答法身寂滅口悲(22)流如蟒吸。諸佛以法性爲身。寂滅爲口。極廣(23)清淨離二障故。以大慈悲流出教網引接衆(24)生。譬如大蟒張口吐涎吸引諸物。一切諸佛(25)身口悲同引接亦爾。大悲無盡由畢竟故。偈(26)曰&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7873243bi' class='paragraph'>
+							de dag ñid kyi źi ba źal gyi sgo (5) ni chos kyi sku ste | ñon moṅs pa daṅ | śes bya’i sgrib pa bag chags daṅ bcas pa rnam par dag pas rnam par dag pa rgya che ba daṅ | saṅs rgyas thams cad daṅ thun moṅ ba daṅ | gtan du ba’i phyir zad mi śes pa yaṅ yin no ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874791bi' class='paragraph'>
+							Les Bouddhas sont comparés à des serpents; le creux de gueule de leur État-de-Paix, c’est le Corps d’Idéal. Vaste en pureté, par le nettoyage des obstructions de Souillure et de connaissable avec Imprégnation. Commun à tous, à fous les Bouddhas. Inépuisable, puisqu’il dure à jamais.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7870148bi' class='paragraph'>
+							tasmān naiva nirarthikā bhavati sā yā bhāvanā yogināṃ tasmān naiva nirarthikā bhavati sā yā deśanā saugatī |<br />dṛṣṭo ’rthaḥ śrutamātrakād yadi bhavet syād bhāvanāpārthikā aśrutvā yadi bhāvanām anuviśet syād deśanāpārthikā || 3 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871696bi' class='paragraph'>
+							(27)彼修得果故 修説非無義<br />(28)但聞及不聞 修説則無理&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7873244bi' class='paragraph'>
+							de ltas rnal ’byor can gyis sgom pa gaṅ (6) yin de ni don med min || de ltas bde bar gśegs kyi bstan pa gaṅ yin de yaṅ don med min |<br />| gal te thos pa tsam gyis don mthoṅ ’gyur na sgom pa don med ’gyur || gal te ma thos par yaṅ sgom ’jug ’gyur na bstan pa don med ’gyur ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874792bi' class='paragraph'>
+							3. Donc, elle n’est pas dépourvue de Sens, la Pratique des Appliqués: donc, elle n’est pas dépourvue de Sens, la prédication des Sugatas. Si, rien qu’à l’entendre, on voyait le Sens, la Pratique serait dénuée de Sens; si, sans avoir entendu, on s’engageait dans la Pratique, la prédication serait dépourvue de Sens.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7870149bi' class='paragraph'>
+							tasmān na nirarthikā yogināṃ bhāvanā bhavati pratyātmavedyasya dharmasya tadvaśenābhigamāt | na nirarthikā deśanā bhavati yuktivihitair dharmaiḥ svadharmatāyāṃ janatākarṣaṇāt | yathā punarbhāvanā sārthikā bhaved deśanā vā tat ślokārdhena darśayati | śeṣaṃ gatārthaṃ | deśanāvibhāge ślokaḥ |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871697bi' class='paragraph'>
+							(29)釋曰。彼修得果故修説非無義者。諸佛以方(619a1)便説自所證引接世間。由能行者修力自在(2)而得果故。是故彼修及佛所説得非無義。但(3)聞及不聞修説則無理者。若但聞法得見眞(4)義。彼修則無利益。若不聞法得入於修。彼(5)説則無利益。已説説法利益。次説説法差(6)別。偈曰&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7873245bi' class='paragraph'>
+							de lta bas na rnal ’byor (7) can rnams kyi bsgom pa don med par mi ’gyur te | de’i dbaṅ gis so so raṅ gis rig par bya ba’i chos rtogs pa’i phyir ro || bstan pa yaṅ don med par mi ’gyur te | rigs par bśad pa’i chos rnams kyis ñid kyi chos ñid la skye bo kun nas ’dren pa’i phyir ro || (181b1) bsgom pa daṅ | bśad pa ji ltar na don med par mi ’gyur ba de ni tshigs su bcad pa phyed kyis ston to || lhag ma ni don go bar zad do || ston pa rnam par dbye ba’i tshigs su bcad pa |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874793bi' class='paragraph'>
+							Donc la Pratique des Appliqués n’est pas dénuée de Sens, puisque c’est. par elle qu’on se dirige vers l’Idéal qu’on doit savoir Quant-à-soi. La prédication n’est pas dépourvue de Sens, puisqu’elle attire la multitude à son Idéalité propre au moyen d’Idéaux disposés à propos. Comment la Pratique a un Sens, et aussi la prédication, c’est ce qu’il montre dans la moitié du vers. Le Sens du reste va de soi.<br />Un vers sur le classement de la prédication.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7870150bi' class='paragraph'>
+							āgamato adhigamato vibhutvato deśanāgrasatvānāṃ |<br />mukhato rūpāt sarvākāśād uccaraṇatā ’pi............ || 4 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871698bi' class='paragraph'>
+							(7)阿含説證説 謂口謂通力<br />(8)通力謂相好 餘色及虚空&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7873246bi' class='paragraph'>
+							sems dpa’ mchog gi ston pa ni || luṅ daṅ rtogs daṅ dbaṅ ’byor las |<br />| kha (2) daṅ gzugs ni thams cad daṅ || nam mkha’ las kyaṅ ’byuṅ ba yin ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874794bi' class='paragraph'>
+							4. La prédication des êtres capitaux vient de la Tradition, de l’Acquis, de la Maîtrise, c’est aussi une émission de la Bouche, de toute Forme, de l’Espace.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7870151bi' class='paragraph'>
+							tatra vibhutvato yā mahābhūmipraviṣṭānāṃ | sarvato rūpādyā vṛkṣavāditrādibhyo ’pi niścarati | śeṣaṃ gatārthaṃ | deśanāsaṃpattau ślokadvayaṃ |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871699bi' class='paragraph'>
+							(9)釋曰。諸菩薩説法有二種差別。一者阿含説。(10)謂以口力而説。二者證説。謂以通力而説。通(11)力説復有多種。或相好説。或樹林説。或樂器(12)説。或空中説。已説説法差別。次説説法成就。(13)偈曰&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7873247bi' class='paragraph'>
+							de la dbaṅ ’byor pa las ni sa chen po la źugs pa rnams kyi gaṅ yin pa’o || gzugs thams cad las ni śiṅ daṅ sil sñan la sogs pa’i bar las kyaṅ ’byuṅ ba yin no || lhag ma ni don go (3) bar zad do || ston pa phun sum tshogs pa la tshigs su bcad pa gñis te |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874795bi' class='paragraph'>
+							De la Maîtrise, quand ils sont entrés dans les grandes Terres. De toute Forme, c’est celle qui se dégage même des arbres, des instruments de musique, etc. Le Sens du reste va de soi.<br />Deux vers sur la plénitude de la prédication.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7870152bi' class='paragraph'>
+							viṣadā saṃdehajahā ādeyā tatvadarśikā dvividhā |<br />saṃpannadeśaneyaṃ vijñeyaṃyā bodhisatvānāṃ || 5 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871700bi' class='paragraph'>
+							(14)無畏及斷疑 令信亦顯實<br />(15)如此諸菩薩 説成就應知&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7873248bi' class='paragraph'>
+							rgya che the tshom spoṅ ba daṅ || gzuṅ ’os de ñid gñis ston pa |<br />| ’di ni byaṅ chub sems dpa’ yi || ston pa phun sum tshogs yin źes bya ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874796bi' class='paragraph'>
+							5. Étendue, destructrice des doutes, agréable, montrant le Positif, de deux façons; telle est à connaître la pleine prédication des Bodhisattvas.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7870153bi' class='paragraph'>
+							ayaṃ catuṣkārthanirdeśena ślokaḥ | yad uktaṃ brahmaparipṛcchāyāṃ | caturbhir dharmaiḥ samanvāgatā bodhisatvā mahādharmadānaṃ vitaranti saddharmaparigrahaṇatayā ātmanaḥ prajñottāpanatayā satpuruṣakarmakaraṇatayā saṃkleśavyavadānasaṃdeśanatayā ca | ekena hi bāhuśrutyād viṣadā deśanā bhavati | dvitīyena mahāprājñatvāt saṃśayajahā pareṣāṃ saṃśayacchedāt | tṛtīyenānavadyakarmatvād ādeyā | caturthena tatvadarśikā dvividhā saṃkleśalakṣaṇasya ca tatvasya vyavadānalakṣaṇasya ca dvābhyāṃ dvābhyāṃ satyābhyāṃ |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871701bi' class='paragraph'>
+							(16)釋曰。諸菩薩説法成就由四種義。一者無畏。(17)二者斷疑。三者令信。四者顯實。如梵天王(18)問經説。菩薩四法具足則能開於廣大法施。(19)何等爲四。一者攝治妙法。二者自慧明淨。三(20)者作善丈夫業。四者顯示染淨。此中第一多(21)聞故得無畏。第二大慧故能斷疑。第三不依(22)名利故令他信受。第四由通達世諦第一義(23)諦故能顯二種眞實。謂染相眞實淨相眞實。(24)偈曰&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7873249bi' class='paragraph'>
+							tshigs su bcad pa ’di ni ’phags pa tshaṅs pas źus (4) pa’i mdo las | chos bźi po dam pa’i chos yoṅs su ’dzin pa daṅ | bdag ñid kyi śes rab sbyaṅs pa daṅ | skyes bu dam pa’i las byed pa daṅ | kun nas ñon moṅs pa daṅ | rnam par byaṅ ba yaṅ dag par ston pa daṅ ldan pa’i byaṅ chub sems dpa’ sems dpa’ chen po (5) rnams ni ches kyi sbyin pa chen po rnam par ’byed do źes gaṅ gsuṅs pa’i don bźi ston pa yin te | gcig gis ni maṅ du thos pa’i phyir ston pa rgya chen por ’gyur ro || gñis pas ni śes rab che ba’i phyir the tshom spoṅ ba ste | gźan dag gi the tshom gcod pa’i phyir ro || (6) gsum pas ni kha na ma tho ba med pa’i las can yin pa’i phyir gzuṅ bar ’os pa’o || bźi pas ni bden pa gñis kyis kun nas ñon moṅs pa’i mtshan ñid daṅ | rnam par byaṅ ba’i mtshan ñid kyi de kho na ñid rnam pa gñis ston par ’gyur ro ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874797bi' class='paragraph'>
+							Ce vers explique le Sens des quatre. Comme il est dit, clans la Brahma-paripṛcchâ: “Pourvus de quatre Idéaux, les Bodhisattvas donnent le grand don de l’Idéal: en prenant possession du Bon Idéal; en épurant leur Sapience personnelle; en accomplissant des actes vraiment virils; en prêchant la Pleine-Souillure et le nettoyage.” Par la première, comme ils ont beaucoup entendu, leur prédication devient étendue; par la seconde, comme ils ont une grande Sapience, elle, est destructrice des doutes, car elle tranche les doutes d’autrui; par la troisième, comme l’Acte n’en laisse rien à redire, clic est agréable; par la quatrième, elle est en état de montrer le Positif, de deux façons, le Positif qui i a pour Indice la Pleine-Souillure et le Positif qui a pour Indice le nettoyage, au moyen des Vérités deux par deux.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7870154bi' class='paragraph'>
+							madhurā madavyapetā na ca khinnā deśanāgrasatvānāṃ |<br />sphuṭacitrayuktagamikā nirāmiṣā sarvagā caiva || 6 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871702bi' class='paragraph'>
+							(25)美語及離醉 無退無不盡<br />(26)種種及相應 令解非求利<br />(27)及以遍教授 復次成就説&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7873250bi' class='paragraph'>
+							sems (7) dpa’ mchog gi ston pa ni || ’jam źiṅ rgyags bral mi skyo ba |<br />| gsal źiṅ sna tshogs rigs pa daṅ || ’go źiṅ zaṅ ziṅ med kun ’gro ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874798bi' class='paragraph'>
+							6. Harmonieuse, dégagée d’orgueil, sans fatigue est la prédication des être,~ capitaux, claire, nuancée, bien appliquée, convaincante, sans amorce, universelle.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7870155bi' class='paragraph'>
+							asmin dvitīye śloke madhurā pareṇākṣiptasyāparuṣavacanāt | madavyapetā stutau siddhau vā madānanugamanāt | akhinnā akilāsikatvāt | sphuṭā nirācāryamuṣṭitvāt kṛtsnadeśanataḥ | citrā apunaruktatvāt | yuktā pramāṇāviruddhavāt | gamikā pratītapadavyañjanatvāt nirāmiṣā prasannādhikārānadhikatvāt | sarvatragā yānatrayagatatvāt | vāksaṃpattau ślokaḥ |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871703bi' class='paragraph'>
+							(28)釋曰。美語者。他瞋罵時不惡報故。離醉者。醉(29)有二種。一他稱讃時醉。二自成就時醉。謂家(619b1)色財等成就生愛喜故。離者如此二醉於心(2)滅故。無退者。不懈怠故。無不盡者。離於法(3)慳一切説故。種種者。不重説故。相應者。不(4)違現比量故。令解者。字句可解故。非求利(5)者。不爲財利令彼信故。遍教授者。被三乘故。(6)已説説法成就。次説語成就。偈曰&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7873251bi' class='paragraph'>
+							tshigs su bcad pa gñis pa ’di la ’jam pa ni gźan gyis brgal ba la tshig rtsub mo mi ’byin pa’i phyir ro || rgyags pa daṅ (182a1) bral ba ni bstod dam grub na rgyags par mi ’gyur pa’i phyir ro || mi skyo ba ni dub pa med pa’i phyir ro || gsal ba ni zad par ston pas slob dpon gyi dpe mkhyud med pa’i phyir ro || sna tshogs ni mi zlos pa’i phyir ro || rigs pa ni tshad ma daṅ mi ’gal ba’i (2) phyir ro || ’go ba ni tshig daṅ yi ge grags pa’i phyir ro || zaṅ ziṅ med pa ni | dad pa’i lhag par bya ba don du mi gñer ba’i phyir ro || kun tu ’gro ba ni theg pa gsum car la ’gro ba’i phyir ro || tshig phun sum tshogs pa’i tshigs su bcad pa |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874799bi' class='paragraph'>
+							Dans ce vers, qui est le second,“harmonieuse” signifie que même insultés par autrui ils parlent sans rudesse. Dégagée d’orgueil, parce qu’ils ne se laissent pas aller à l’orgueil en cas d’éloge ou de succès. Sans fatigue, parce qu’ils n’ont pas d’indolence. Claire, parce qu’ils prêchent complètement, sans tenir les poings fermés comme un professeur Nuancée, parce qu’il n’ v a pas de répétition. Bien appliquée, parce qu’elle ne choque pas le raisonnement. Convaincante, parce que les mots et les lettres se comprennent bien. Sans Amorce, limpide, parce qu’il n’y a rien de plus que le sujet traité. Universelle, puisqu’elle va dans les trois Véhicules.<br />Un vers sur la plénitude de la voix.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7870156bi' class='paragraph'>
+							adīnā madhurā sūktā pratītā viṣadā tathā vāg jinātmaje |<br />yathārhā nirāmiṣā ca parimitākṣayā tathā || 7 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871704bi' class='paragraph'>
+							(7)不細及調和 善巧亦明了<br />(8)應機亦離求 分量與無盡&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7873252bi' class='paragraph'>
+							rgyal sras tshig ni mi źan (3) pa || sñan źiṅ legs bśad grags pa daṅ |<br />| ci rigs pa daṅ zaṅ ziṅ med || ran źiṅ de bźin yaṅs pa yin ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874800bi' class='paragraph'>
+							7. Sans faiblesse, harmonieuse, bien dite, intelligible est la voix chez le fils des Vainqueurs, comme il faut, sans Amorce, mesurée, étendue.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7870157bi' class='paragraph'>
+							adīnā paurī parṣanpūraṇāt | madhurā valguḥ | sūktā vispaṣṭā suniruktākṣaratvāt | pratītā vijñeyā pratītābhidhānatvāt | yathārhā śravaṇīyā vineyānurūpatvāt | anāmiṣā aniḥśritalābhasatkārā loke | pratatā apratikūlā | parimitā āyāmakhedāt | viṣadā aparyāttā | vyañjanasaṃpattau ślokadvayaṃ |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871705bi' class='paragraph'>
+							(9)釋曰。不細者。遍徒衆故。調和者。悦可意故。(10)善巧者。開示字句分明故。明了者。令易解故。(11)應機者。隨宜説故。離求者。不依名利説故。分(12)量者。樂聞無厭故。無盡者。不可窮故。已説語(13)成就。次説字成就。偈曰&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7873253bi' class='paragraph'>
+							mi źan pa ni groṅ khyer pa ste | ’khor la khyab pa’i phyir ro || sñan pa ni sñan źiṅ ’jebs pa’o || legs par bśad pa ni rnam par gsal ba ste | yi ge (4) legs par ṅes par bśad pa’i phyir ro || grags pa ni rnam par rig par byed pa ste | grags pa brjod pa’i phyir ro || ci rigs pa ni mñan par ’os pa ste | gdul bya daṅ mthun pa’i phyir ro || zaṅ ziṅ med pa ni brten pa med pa ste | rñed pa daṅ | bkur sti daṅ | tshigs (5) su bcad pa la mi brten pa’i phyir ro || ran pa ni mi mthun pa med pa ste | ran pa la mi skyo ba’i phyir ro || yaṅs pa ni gtugs pa med pa’o || yi ge phun sum tshogs pa la tshigs su bcad pa gñis te |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874801bi' class='paragraph'>
+							Sans faiblesse, urbaine, puisqu’elle remplit les assemblées. Harmonieuse, élégante. Bien dite, bien claire, parce que les syllabes sont bien articulées. Intelligible, facile à comprendre, parce que l’élocution est nette. Comme il faut., faite pour être entendue, parce qu’elle se conforme aux Disciplinables. Sans amorce, parce qu’elle ne se base pas sur le profit, l’honneur, la réputation. Mesurée, sans rien qui gène puisque la mesure exclut la fatigue. Étendue, sans épuisement.<br />Deux vers sur la plénitude de la lettre.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7870158bi' class='paragraph'>
+							uddeśān nirdeśāt tathaiva yānānulomanāt ślākṣṇyāt |<br />prātītyād yāthārhān nairyāṇyād ānukūlyatvāt || 8 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871706bi' class='paragraph'>
+							(14)擧名及釋義 隨乘亦柔軟<br />(15)易解而應機 出離隨順故&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7873254bi' class='paragraph'>
+							bstan daṅ de bźin bśad pa daṅ || theg daṅ mthun daṅ bde ba daṅ |<br />| (6) grags pa daṅ ni ci rigs daṅ || ṅes par ’byuṅ daṅ mthun pa’i phyir ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874802bi' class='paragraph'>
+							8. Énoncé, exposé, conformité aux Véhicules, douceur, netteté, comme il faut, Evasion, facilitation.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7870159bi' class='paragraph'>
+							yuktaiḥ padavyañjanair uddeśāt pramāṇāvirodhena | sahitair nirdeśād uddeśāvirodhena | yānānulomanād ānulomikair yānatrayāvirodhena | ślākṣṇyād anucchavikair akaṣṭaśabdatayā | prātītyād aupayikaiḥ pratītārthatayā cārthopagamanāt | yāthārhāt pratirūpair vineyānurūpatayā | nairyāṇyāt pradakṣiṇair nirvāṇādhikāratayā | ānukūlyān nipakasyāṅgasaṃbhāraiḥ śaikṣasyāryāṣṭāṅgamārgānukūlyāt |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871707bi' class='paragraph'>
+							(16)釋曰。擧名者。相應諸字句不違驗故。釋義者。(17)釋言諸字句不違理故。隨乘者。隨乘諸字句(18)不違三乘故。柔軟者。離難諸字句不違於聲(19)故。易解者。聚集諸字句得義易故。應機者。(20)應物諸字句逗機宜故。出離者。不在諸字句(21)向涅槃故。隨順者。正行諸字句隨順八支聖(22)道故。偈曰&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7873255bi' class='paragraph'>
+							bstan pa ni tshig daṅ yi ge rigs pa ste | rigs pa daṅ mi ’gal ba’i phyir ro || bśad pa ni ’brel pa ste | bstan pa daṅ mi ’gal ba’i phyir ro || theg pa daṅ mthun pa ni mthun pa ste | theg pa gsum (7) car daṅ mi ’gal ba’i phyir ro || bde ba ni ruṅ ba ste | sgra ñam ṅa ba med pa’i phyir ro || grags pa ni ’byor pa ste | don grags pa ñid kyis ’don pa’i phyir ro || ci rigs pa ni ’phrod pa ste | gdul bya daṅ mthun pa’i phyir ro || ṅes par ’byuṅ ba ni ’tsham pa ste | mya ṅan las (182b1) ’das pa’i ched kyi phyir ro || mthun pa ni ’grus skyoṅ gi yan lag gi tshogs te | slob ma’i ’phags pa’i lam daṅ mthun pa’i phyir ro ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874803bi' class='paragraph'>
+							Énoncé, avec des mots et des lettres bien appliqués, sans choquer le raisonnement. Exposé, avec des mots et des syllabes cohérents, sans contredire l’énoncé. Conformité aux Véhicules, avec des mots et des lettres concordants, sans contredire les trois Véhicules. Douceur, avec des mots et des lettres bien lisses, sans aucun son blessant. Netteté, avec des mots et des lettres accessibles, parce que leur Sens, étant intelligible, conduit au Sens. Connue il faut, avec des mots et des lettres correspondants, parce qui ils sont proportionnés aux Disciplinables. Évasion, avec des mots et des lettres adroits, puisque le sujet traité est le Nirvâṇa. Facilitation, avec des mots et des lettres qui approvisionnent de Membres le prudent, parce qu’ils facilitent le Chemin à Huit Membres pour celui qui a encore à apprendre.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7870160bi' class='paragraph'>
+							vyañjanasaṃpac caiṣā vijñeyā sarvathāgrasatvānāṃ |<br />ṣaṣṭyaṅgī sācintyā ghoṣo ’nantas tu sugatānāṃ || 9 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871708bi' class='paragraph'>
+							(23)菩薩字成就 如前義應知<br />(24)聲有六十種 是説如來事&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7873256bi' class='paragraph'>
+							de mdor sems dpa’ mchog rnams kyi || yi ge phun tshogs yin źes bya |<br />| bde gśegs gsuṅ ni mtha’ yas te || yan lag (2) drug cu bsam mi khyab ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874804bi' class='paragraph'>
+							9. La plénitude de la lettre chez les êtres capitaux est à connaître ainsi totalement; elle a soixante Membres, et elle est hors-réflexion. Quant au son des Sugatas, il est infini.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7870161bi' class='paragraph'>
+							ṣaṣṭyaṅgī sācintyā yā guhyakādhipatinirdeśe buddhasya ṣaṣṭyākārā vāg nirdiṣṭā | punar aparaṃ śāntamate tathāgatasya ṣaṣṭyākāropetā vāg niścarati snigdhā ca mṛdukā ca manojñā ca manoramā ca śuddhā ceti vistaraḥ | tatra snigdhā satvadhātukuśalamūlopastambhikatvāt | mṛdukā duṣṭa eva dharme sukhasaṃsparśatvāt | manojñā svarthatvāt | manoramā suvyañjanatvāt | śuddhā niruttaralokottarapṛṣṭhalabdhatvāt | vimalā sarvakleśānuśayavāsanāvisaṃyuktatvāt | prabhāsvarā  pratītapadavyañjanatvāt | valguḥ sarvatīrthyakumatidṛṣṭivighātabalaguṇayuktatvāt | śravaṇīyā pratipattinairyāṇikatvāt | anantā sarvaparapravādibhir anāchedyatvāt | kalā rañjikatvāt | vinītā rāgādipratipakṣatvāt | akarkaśā śikṣāprajñaptisukhopāyatvāt | aparuṣā tadvyatikramasaṃpanniḥsaraṇopadeśakatvāt | suvinītā yānatrayanayopadeśikatvāt | karṇasukhā vikṣepapratipakṣatvāt | kāyaprahlādanakarī samādhyāvāhakatvāt | cittāudvilyakarī vipaśyanāprāmodyāvāhaphalakatvāt | hṛdayasaṃtuṣṭikarī saṃśayacchedikatvāt | prītisukhasaṃjananī mithyāniścayāpakarṣikatvāt | niḥparidāhā pratipattāvavipratisāratvāt | ājñeyā saṃpannaśrutamayajñānāśrayatvāt | vijñeyā saṃpannacintāmayajñānāśrayatvāt | viṣpaṣṭā anācāryamuṣṭidharmavihitatvāt | premaṇīyā ’nuprāptasvaka-arthānāṃ premakaratvāt | abhinandanīyā ’nanuprāptasvakārthānāṃ spṛhaṇīyatvāt | ājñāpanīyā acintyadharmasamyagdarśikatvāt | vijñāpanīyā ’cintyadharmasamyagdeśikatvāt | yuktā pramāṇāviruddhatvāt | sahitā yathārhavineyadeśikatvāt | punaruktadoṣajahā avandhyatvāt | siṃhasvaravegā sarvatīrthyasaṃtrāsakatvāt | nāgasvaraśabdā udāratvāt | meghasvaraghoṣā gambhīratvāt | nāgendrarutā ādeyatvāt | kinnarasaṃgītighoṣā madhuratvāt | kalaviṅkasvararutaravitā ’bhīkṣṇabhaṅgaratvāt | brahmasvararutaravitā dūraṃgamatvāt | jīvaṃjīvakasvararutaravitā sarvasiddhipūrvaṃgamanaṅgalatvāt | devendramadhuranirghoṣā anatikramaṇīyatvāt | dundubhisvarā sarvamārapratyarthikavijayapūrvaṃgamatvāt | anunnatā stutyasaṃkliṣṭatvāt | anavanatā nindā’saṃkliṣṭatvāt | sarvaśabdānupraviṣṭā sarvavyākaraṇasarvākāralakṣaṇānupraviṣṭatvāt | apaśabdavigatā smṛtisaṃpramoṣe tadaniścaraṇatvāt | avikalā vineyakṛtyasarvakālapratyupasthitatvāt | alīnā lābhasatkārāniśritatvāt | adīnā sāvadyāpagatatvāt | pramuditā akheditvāt | prasṛtā sarvavidyāsthānakauśalyānugatatvāt | akhilā satvānāṃ tatsakalārthasaṃpādakatvāt | saritā prabandhānupacchinnatvāt | lalitā vicitrākārapratyupasthānatvāt | sarvasvarapūraṇī ekasvaranaikaśabdavijñaptipratyupasthāpanatvāt | sarvasatvendriyasaṃtoṣaṇī ekānekārthavijñaptipratyupasthānatvāt | aninditā yathāpratijñatvāt | acañcalā āgamitakālaprayuktatvāt | acapalā atvaramāṇavihitatvāt | sarvaparṣadanuravitā dūrāntikaparṣattulyaśravaṇatvāt | sarvākāravaropeto sarvalaukikārthadṛṣṭāntadharmapariṇāmikatvāt | deśanāmāhātmye catvāraḥ ślokāḥ |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871709bi' class='paragraph'>
+							(25)釋曰。如來有六十種不可思議音聲。如佛祕(26)密經中説。寂靜慧如來具足六十種聲語。所(27)謂潤澤柔軟可意意樂清淨。如是廣説。此中(28)潤澤聲者。衆生善根能持攝故。柔軟聲者。現(29)前聞法得樂觸故。可意聲者。由善義故。意樂(619c1)聲者。由善字故。清淨聲者。無上出世後得(2)故。無垢聲者。諸惑習氣不相應故。明亮聲者。(3)字句易解故。善力聲者。具足功徳破諸外道(4)惡邪見故。樂聞聲者。信順出離故。不絶聲(5)者。一切外道無能斷故。調伏聲者。貪等煩(6)惱能對治故。無刺聲者。制戒樂方便故。不(7)澁聲者。令犯戒人得正出故。善調聲者。教(8)化教授故。悦耳聲者。亂心對治故。身倚(9)聲者。能引三摩提故。心了聲者。能引毘(10)鉢舍那故。心喜聲者。善斷疑故。喜樂生聲(11)者。決定拔邪故。無熱惱聲者。信受不悔故。(12)能持智聲者。成就聞因智依止故。能持解聲(13)者。成就思因智依止故。不隱覆聲者。不慳(14)法而説故。可愛聲者。令得自利果故。渇仰(15)聲者。已得果人深願樂故。教勅聲者。不思議(16)法正説故。令解聲者。思議法正説故。相應聲(17)者。不違驗故。有益聲者。如其所應教示導故。(18)離重聲者。不虚説故。師子聲者。怖外道故。象(19)聲者。振大故。雷聲者。深遠故。龍聲者。令信(20)受故。緊那羅聲者。歌音美故。迦陵頻伽聲(21)者。韻清亮故。梵聲者。出遠去故。命命鳥聲(22)者。初得吉祥一切事成故。天王聲者。無敢違(23)故。天鼓聲者。破魔初故。離慢聲者。讃毀不高(24)故。入一切聲者。入毘伽羅論一切種相故。(25)離不正聲者。憶不忘故。應時聲者。教化事一(26)切時起故。無羞聲者。不依利養故。不怖聲(27)者。離慚羞故。歡喜聲者。聞無厭故。隨捨聲(28)者。一切明處善巧入故。善友聲者。一切衆生(29)利成就故。常流聲者。相續不斷故。嚴飾聲者。(620a1)種種顯現故。滿足聲者。一音無量聲説法故。(2)衆生根喜聲者。一語無量義顯現故。不毀呰(3)聲者。如所立義信順故。不増減聲者。應時量(4)説故。不躁急聲者。不疾疾説故。遍一切聲者。(5)遠近徒衆同依止故。一切種成就聲者。世間(6)法義皆譬喩令解故。已説字成就。次説説法(7)大。偈曰&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7873257bi' class='paragraph'>
+							yan lag drug cu bsam gyis mi khyab pa ni | gsaṅ ba pa’i bdag pos bstan pa las | saṅs rgyas kyi gsuṅ rnam pa drug cu bstan pa | źi ba’i blo gros gźan yaṅ de bźin gśegs pa’i gsuṅ ni rnam pa drug cu daṅ ldan par ’byuṅ ste | mñen pa daṅ | (3) ’jam pa daṅ | yid du ’oṅ ba daṅ | yid du ’thad pa daṅ | dag pa daṅ źes bya ba la sogs pa rgyas par ’byuṅ ba gaṅ yin pa’o || de la mñen pa ni sems can gyi khams kyi dge ba’i rtsa ba ston pa’i phyir ro || ’jam pa ni mthoṅ ba’i chos kho na la reg na bde ba’i phyir ro || yid du (4) ’oṅ ba ni don bzaṅ ba’i phyir ro || yid du ’thad pa ni yi ge bzaṅ ba’i phyir ro || dag pa ni ’jig rten las ’das pa goṅ na med pa’i rjes la thob pa’i phyir ro || dri ma med pa ni ñon moṅs pa’i bag la ñal daṅ | bag chags thams cad daṅ bral ba’i phyir ro || gsal ba ni (5) tshig daṅ yi ge rab tu grags pa’i phyir ro || sñan ciṅ ’jebs pa ni mu stegs can blo gros ṅan pa thams cad kyi lta ba ’joms pa’i stobs kyi yon tan daṅ ldan pa’i phyir ro || mñan par ’os pa ni sgrub pas ṅes par ’byuṅ ba’i phyir ro || mi tshugs pa ni phas kyi rgol thams cad kyis mi (6) brdzi ba’i phyir ro || sñan pa ni dga’ bar byed pa’i phyir ro || dul ba ni ’dod chags la sogs pa’i gñen po yin pa’i phyir ro || mi rtsub pa ni bslab pa bca’ ba’i thabs bde ba’i phyir ro || mi brlaṅ ba ni de las ’das nas ṅes par ’byuṅ ba’i thabs yaṅ dag par ston pa’i phyir (7) ro || rab tu dul ba ni theg pa gsum char gyis ’dul ba ston pa’i phyir ro || rnar sñan pa ni rnam par g-yeṅ ba’i gñen po yin pa’i phyir ro || lus sim par byed pa ni tiṅ ṅe ’dzin bskyed pa’i phyir ro || sems tshim par byed pa ni lhag mthoṅ gis rab tu dga’ ba bskyed pa’i (183a1) phyir ro || sñiṅ dga’ bar byed pa ni the tshom gcod par byed pa’i phyir ro || dga’ ba daṅ bde ba bskyed pa ni log par ṅes pa sel ba’i phyir ro || yoṅs su gduṅ ba med pa ni sgrub pa la ’gyod pa med pa’i phyir ro || kun tu śes par bya ba ni || thos pa las byuṅ ba’i (2) śes pa phun sum tshogs pa’i rten yin pa’i phyir ro || rnam par rig par bya ba ni bsams pa las byuṅ ba’i śes pa phun sum tshogs pa’i rten yin pa’i phyir ro || rnam par gsal ba ni slob dpon gyi dpe mkhyud med par chos ston pa’i phyir ro || dga’ bar byed pa ni raṅ gi don rjes su (3) thob pa rnams dga’ bar bya ba yin pa’i phyir ro || mṅon par dga’ bar byed pa ni raṅ gi don rjes su ma thob pa rnams kyis dga’ bar bya ba yin pa’i phyir ro || kun śes par byed pa ni | bsam gyis mi khyab pa’i chos yaṅ dag par ston pa’i phyir ro || rnam par rig par byed pa ni (4) bsam du ruṅ ba’i chos yaṅ dag par ston pa’i phyir ro || rigs pa ni tshad ma daṅ mi ’gal ba’i phyir ro || ’brel pa ni gdul ba la ji ltar rigs par ston pa’i phyir ro || zlos pa’i skyon med pa ni don med pa ma yin pa’i phyir ro || seṅ ge’i sgra’i śugs ni mu stegs can gyi tshogs (5) thams cad skrag par byed pa’i phyir ro || glaṅ po che’i sgra skad ni rgya che ba’i phyir ro || ’brug gi sgra dbyaṅs ni brjid pa’i phyir ro || klu’i dbaṅ po’i sgra ni gzuṅ bar ’os pa’i phyir ro || dri za’i glu dbyaṅs ni sñan pa’i phyir ro || ka la piṅ ka’i sgra dbyaṅs ni rno ba daṅ ’jigs pa’i phyir (6) ro || tshaṅs pa’i sgra dbyaṅs su bsgrags pa ni thag riṅ por grag pa’i phyir ro || śaṅ śaṅ te’u’i sgra dbyaṅs su grag pa ni grub pa thams cad kyi sṅon du ’gro ba’i bkra śis yin pa’i phyir ro || lha’i dbaṅ po’i sgra dbyaṅs ltar sñan pa ni mi ’da’ bar bya ba yin pa’i phyir ro || rṅa’i (7) sgra ni bdud daṅ phyir rgol ba thams cad las rnam par rgyal ba’i sṅon du ’gro ba yin pa’i phyir ro || ma kheṅs pa ni bstod kyaṅ kun nas ñon moṅs pa med pa’i phyir ro || mi dma’ ba ni smad kyaṅ kun nas ñon moṅs pa med pa’i phyir ro || sgra thams cad kyi rjes su źugs pa ni thams (183b1) cad luṅ bstan pa’i mtshan ñid la rnam pa thams cad du rjes su źugs pa’i phyir ro || tshig zur chag med pa ni bsñel te mi gsuṅ ba’i phyir ro || ma tshaṅ ba med pa ni gdul ba’i bya ba la dus thams cad du ñe bar gnas pa’i phyir ro || ma źum pa ni rñed pa daṅ bkur sti la mi brten pa’i (2) phyir ro || mi źan pa ni bsñeṅs pa daṅ bral ba’i phyir ro || rab tu dga’ ba ni mi skyo ba’i phyir ro || khyab pa ni rig pa’i gnas thams cad la mkhas pa daṅ ldan pa’i phyir ro || thab daṅ bcas pa’i ched ni | sems can rnams kyi de dag gi don thams cad sgrub par byed pa’i (3) phyir ro || rgyun chags pa ni rgyun ma chad pa’i phyir ro || ’brel pa ni rnam pa sna tshogs su ñe bar gnas pa’i phyir ro || sgra thams cad rdzogs par byed pa ni | gsuṅ gcig las sgra’i rnam par rig pa rnam pa du ma ñe bar gnas pa’i phyir ro || dbaṅ po thams cad tshim par byed (4) pa ni gcig las don du ma’i rnam par rig pa ñe bar gnas pa’i phyir ro || ma smad pa ni dam bcas pa ji lta ba bźin pa’i phyir ro || mi ’gyur ba ni dus la bab par rab tu sbyor ba’i phyir ro || ma rtabs pa ni rtab rtab por mi gsuṅ ba’i phyir ro || ’khor kun tu grag pa ni ’khor (5) ñe ba daṅ riṅ bas mtshuṅs par thos pa’i phyir ro || rnam pa thams cad kyi mchog daṅ ldan pa ni | ’jig rten pa’i don thams cad dpe’i chos su bsgyur ba’i phyir ro || ston pa’i che ba’i bdag ñid kyi tshigs su bcad pa bźi ste |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874805bi' class='paragraph'>
+							A soixante Membres, et hors-réflexion; c’est la voix du Bouddha telle qu’elle est exposée, avec ses soixante Membres’, dans le Guhyakâdhipati-nirdeça: “Et de plus, ô Çântamati, la voix du Tathâgata sort, douée de soixante Membres. Elle est onctueuse, douce, ravissante, charmante, pure, etc. Onctueuse, parce qu’elle étaie les Racines de Bien des Plans des créaturcs. Douce, parce que, même dans le monde présent, on a plaisir à en être touché. Ravissante, parce que le Sens en est bon, Charmante, parce que la lettre en est bonne. Pure, parce qu’elle est obtenue derrière le Supra-mondain que rien ne surpasse. Immaculée, parce qu’elle est détachée de toutes les Souillures. Les Résidus, les Imprégnations. Lumineuse, parce qu’elle a des mots et des lettres intelligibles. Souple, parce qu’elle a des vertus et des forces qui détruisent les Vues de tous les hérétiques et les mauvais esprits, Bonne à entendre, parce qu’elle est propre à l’Évasion par l’lnitiative. Sans tare, parce que tous les contradicteurs sont impuissants à l’accabler. Mélodieuse, car elle séduit. Disciplinée, car elle est l’auxiliaire contre la passion, etc, Sans aspérité, car elle a d’heureux moyens pour publier les Prescriptions. Sans rudesse, car elle prêche les moyens de se dégager des infractions aux Prescriptions. Bien disciplinée, car elle prêche la méthode des trois Véhicules. Plaisante à l’oreille, car elle est l’auxiliaire contre la dispersion. Rafraîchissante au corps, car elle amène les Unions. Enthousiasmant a la Pensée, car elle a pour fruit d’amener la joie intense de l’Inspection. Faisant le contentement complet du cúur, car elle tranche les doutes. Produisant le plaisir de l’affection, car elle arrache les solutions fausses. Sans brûlure. car il n’y a pas de repentir en fait d’Initiative. Reconnaissable, car elle a pour Fond la plénitude de la connaissance faite d’audition. Distinguable, car elle a pour Fond la plénitude de la connaissance faite de réflexion. Évidente, car elle traite de l’Idéal sans fermer le poing comme un professeur. Aimable, car elle se fait aimer de ceux qui ont atteint graduellement leur Sens propre. Digne de félicitations, car ceux qui n’ont pas atteint graduellement leur Sens propre doivent en avoir envie. Digne d’être obéie, car elle montre régulièrement les Idéaux hors-réflexion. Digne d’être notifiée, car elle prêche régulièrement les Idéaux hors-réflexion, Bien appliquée, car elle ne contredit pas le raisonnement. Cohérente, car elle prêche comme il faut les Disciplinables. Sans répétition fautive, car elle n’est pas stérile. Violente comme le bruit d’un lion, parce qu’elle l’ait frissonner tous les hérétiques. Sonore comme le bruit d’un éléphant, à cause de sa hauteur. Bruyante comme le bruit du nuage, à cause de sa profondeur, Retentissante comme un roi des éléphants, parce qu’elle est agréable. Sonore comme titi concert de Kinnaras, parce qu’elle est harmonieuse. Chantante connue les accents du kalaviṅka, parce qu’elle fléchit à l’aigu’. Chantante comme les accents de Brama, parce qu’elle va au loin. Chantante comme les accents du jîvaṃjîvaka, car elle porte bonheur et assure tous les succès. D’une sonorité harmonieuse comme l’Indra des dieux, parce qu’on ne saurait la surPasser. Bruvante comme un tambour, car elle annonce la victoire sur tous les Dénions et les contradicteurs. Sans morgue. car elle n’a pas de Pleine-Souillure par l’éloge. Sans dépression, car elle n’a pas de Pleine-Souillure par la critique. Avancée dans tous les sons, car elle a pénétré les Indices de tout genre de toutes les grammaires. Sans aucun mol dégradé, car elle n’a pas à en laisser échapper par défaillance de mémoire. Sans lacune, car elle est toujours prête en tout temps pour le service des Disciplinables. Sans affaissement, car elle rie se base pas sur le profit et l’honneur. Sans faiblesse, car elle est dégagée de tout ce qui laisse à redire. Toute joyeuse, car elle est sans lassitude. Prolongée, car elle possède l’adresse à toutes les sciences classiques. Sans manque, car elle procure aux créatures leur Sens total. A courant continu, car sa teneur n’est pas interceptée. Attrayante, car elle se présente sous des aspects nuancés. Emplissant tous les sons, car elle présente en un seul son la Notification de sons nombreux. Satisfaisant les organes de toutes les créatures, car elle présente en un seul Sens la Notification de plusieurs, Sans reproche, car elle tient sa promesse. Sans vacillement, car elle s’emploie au temps qu’elle a laissé venir. Sans inconstance, car elle dispose sans précipitation. Retentissant en écho dans toutes les assemblées, car les assemblées proches ou lointaines l’entendent également. Douée de gr‚ces de toute sorte, car elle per-fléchit vers l’Idéal tous les Sens et les Exemples du monde.<br />Quatre vers sur la grandeur de la prédication.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7870162bi' class='paragraph'>
+							vācā padaiḥ suyuktair anudeśavibhāgasaṃśayacchedaiḥ |<br />bahulīkārānugatā hy uddhaṭitavipañcitajñeṣu || 10 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871710bi' class='paragraph'>
+							(8)開演及施設 建立并總擧<br />(9)別説與斷疑 略廣皆令解&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7873258bi' class='paragraph'>
+							ṅag tshig śin tu rigs pa daṅ || bstan daṅ rnam (6) ’byed the tshom gcod |<br />| lan maṅ byed daṅ ldan pa ni || mgo smos rnam spros go rnams la ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874806bi' class='paragraph'>
+							10. Avec la voix, avec les mots bien appliqués, l’énoncé, la division, la solution des doutes, et accompagnée de reprises fréquentes, selon que les gens comprennent au premier mot ou veulent des détails.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7870163bi' class='paragraph'>
+							ākhyāti vācā | prajñāpayati padaiḥ suyuktaiḥ | prasthāpayati vibhājayati vivṛṇoti yathākramamuddeśavibhāgasaṃśayacchedaiḥ | uttānīkaroti uttānīkaraṇaṃ bahulīkārānugatā deśanā niścayabalādhānarthaṃ | deśayaty udghaṭitajñeṣu | saṃprakāśayati vipañcitajñeṣu |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871711bi' class='paragraph'>
+							(10)釋曰。開演者。謂言説也。施設者。謂諸句也。(11)建立者。謂善相應也。如是分別開示。如其次(12)第總擧別説。斷疑使義淺近易解。令聽受者(13)於所説法得決定故。略者一説。彼利根人速(14)得解故。廣者重説。彼鈍根人遲得解故。偈(15)曰&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7873259bi' class='paragraph'>
+							brjod pa ni ṅag gis so || ’dogs pa ni tshig śin tu rigs pa dag gis so || rab tu ’jog pa daṅ | rnam par ’byed pa daṅ | rnam par ’brel pa ni go rims bźin du stan pa daṅ | (7) rnam par ’byed pa daṅ | the tshom gcod pa rnams kyis so || gsal bar byed pa ni bśad pa la ṅes pa’i stobs bskyed pa’i phyir lan maṅ du byed pa daṅ ldan par ston pa yin no || ston pa ni mgo smos pas go ba rnams la’o || yaṅ dag par rab tu ston pa ni rnam par spros (184a1) na go ba rnams la’o ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874807bi' class='paragraph'>
+							Avec la voix elle s’énonce; avec des mots bien appliqués, elle fait comprendre. Avec l’énoncé, la division, la solution des doutes respectivement, elle pose le sujet, le distribue, l’explique. La prédication accompagnée de reprises fréquentes aplanit, en vue d’intromettre la force de conviction. Elle prêche pour ceux qui comprennent au premier mot; elle éclaircit, pour ceux qui veulent des détails.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7870164bi' class='paragraph'>
+							śuddhā trimaṇḍalena hiteyaṃ deśanā hi buddhānāṃ |<br />doṣair vivarjitā punar aṣṭabhir eṣaiva vijñeyā || 11 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871712bi' class='paragraph'>
+							(16)説者及所説 受者三輪淨<br />(17)復離八種過 説者淨應知&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7873260bi' class='paragraph'>
+							saṅs rgyas rnams kyi ston pa ’di || ’khor gsum gyis ni dag pa ste |<br />| ’di ni ñes pa brgyad dag daṅ || bral ba ñid du śes par bya ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874808bi' class='paragraph'>
+							11. Étant pure en trois tours, la prédication des Bouddhas est salutaire; en outre elle est exempte des huit défauts.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7870165bi' class='paragraph'>
+							śuddhā trimaṇḍaleneti | yena ca deśayati vācā padaiś ca | yathā coddeśādiprakāraiḥ | yeṣu codghaṭitavipañcitajñeṣu | eṣaiva ca deśanā punar aṣṭadoṣavivarjitā veditavyā yathākramaṃ |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871713bi' class='paragraph'>
+							(18)釋曰。説者及所説受者三輪淨者。何等三(19)輪一是説者。謂諸佛菩薩。二是所説。謂總説(20)名字等諸種。三是受者。謂前略説得解人廣(21)説得解人。復離八種過説者淨應知者。説者(22)清淨。應知復離八種過失。問何者八耶。偈曰&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7873261bi' class='paragraph'>
+							’khor gsum gyis dag pa źes bya ba ni gaṅ gi ston pa ste | ṅag daṅ tshig (2) dag daṅ | ji ltar ston pa ste | bstan pa la sogs pa’i rnam pa daṅ | gaṅ dag la ston pa ste | mgo smos pa daṅ rnam par spros na go ba rnams kyis so || yaṅ ston pa ’di ñid go rims bźin du ñes pa brgyad daṅ bral bar rig par bya ste |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874809bi' class='paragraph'>
+							Pure en trois tours: avec quoi il prêche; la voix, les mots; — comment il prêche; l’énoncé, etc.; - à qui il prêche, ceux qui comprennent du premier mot ou qui veulent des détails. Et cette prédication est exempte des huit défauts, savoir:&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7870166bi' class='paragraph'>
+							kauśīdyam anavabodho hy avakāśasyākṛtir hy anītatvam |<br />saṃdehasyācchedas tadvigamasyādṛḍhīkaraṇam || 12 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871714bi' class='paragraph'>
+							(23)懈怠及不解 拒請不開義<br />(24)及以不斷疑 斷疑不堅固&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7873262bi' class='paragraph'>
+							le lo daṅ ni mi (3) ’go ba || skabs mi ’byed daṅ ma ṅes daṅ |<br />| the tshom dag ni mi gcod daṅ || de daṅ bral ba brtan mi byed ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874810bi' class='paragraph'>
+							12. Paresse, manque de compréhension, manque d’occasion, manque de méthode; ne pas trancher les doutes; ne pas les expulser définitivement; —&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7870167bi' class='paragraph'>
+							te punar aṣṭau doṣāḥ kauśīdyam anavasaṃbodhaḥ avakāśasyākaraṇaṃ anītārthatvaṃ saṃdehasyācchedanā tadvigamasyādṛḍhīkaraṇaṃ niścayasyety arthaḥ |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871715bi' class='paragraph'>
+							(27)釋曰。八種過者。一懈怠。二不解義。三拒請。(28)四不開義。五不斷疑。六斷疑不決定。&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7873263bi' class='paragraph'>
+							ñes pa brgyad po de dag kyaṅ le lo daṅ | mi ’go ba daṅ | go skabs mi ’byed pa daṅ | don ṅes pa ma yin pa ñid daṅ | the tshom mi gcod pa ñid (4) daṅ || de daṅ bral ba brtan por mi byed pa ste | ṅes par źes bya ba’i tha tshig go ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874811bi' class='paragraph'>
+							[Analyse des mots des vers.]&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7870168bi' class='paragraph'>
+							khedo ’tha matsaritvaṃ doṣā hy ete matā kathāyāṃ hi |<br />tadabhāvād buddhānāṃ niruttarā deśanā bhavati || 13 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871716bi' class='paragraph'>
+							(25)厭退及有悋 如是八種過<br />(26)諸佛無彼體 故成無上説&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7873264bi' class='paragraph'>
+							skyo ba daṅ ni ser sna ñid || ’di dag gtam gyi ñes par ’dod |<br />| de dag med phyir saṅs rgyas kyi || bśad pa bla na med par ’gyur ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874812bi' class='paragraph'>
+							13. - lassitude, égoïsme. Voilà les huit défauts en fait de parole; par suite de leur absence, la prédication des Bouddhas est insurpassable.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7870169bi' class='paragraph'>
+							khedo yenābhīkṣṇaṃ na deśayet | matsaritvaṃ cākṛtsnaprakāśantā | arthasaṃpattau ślokadvayaṃ |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871717bi' class='paragraph'>
+							七心有(29)厭退　不一切時説故。八有悋。不盡開示故。(620b1)一切諸佛如是八過悉皆遠離。是故得成無(2)上説法。已説説法大。次説義成就。偈曰&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7873265bi' class='paragraph'>
+							skyo ba daṅ ni gaṅ gis yaṅ daṅ yaṅ du ston par (5) mi byed pa’o || ser sna ñid ni zad par yaṅ dag par rab tu ston par mi byed pa’i phyir ro || don phun sum tshogs pa’i tshigs su bcad pa gñis te |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874813bi' class='paragraph'>
+							La lassitude, parce qu’elle empêche de répéter souvent la prédication. L’égoÔsme, parce qu’il n’éclaircit pas tout.<br />Deux vers sur la plénitude du Sens.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7870170bi' class='paragraph'>
+							kalyāṇo dharmo ’yaṃ hetutvād bhaktituṣṭibuddhīnāṃ |<br />dvividhārthaḥ sugrāhyaś caturguṇabrahmacaryavadaḥ || 14 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871718bi' class='paragraph'>
+							(3)此法隨時善 生信喜覺因<br />(4)義正及語巧 能開四梵行&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7873266bi' class='paragraph'>
+							dad daṅ dga’ daṅ blo rnams kyi || rgyu phyir chos ’di dge ba yin |<br />| don rnam gñis ldan gzuṅ sla daṅ || yon tan bźi ldan (6) tshaṅs spyod ston ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874814bi' class='paragraph'>
+							14. Cet Idéal de Bien, qui cause la dévotion, le contentement, la compréhension, a deux sens, est facile à saisir, énonce la Conduite-brahmique aux quatre vertus.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7870171bi' class='paragraph'>
+							parair asādhāraṇayogakevalaṃ tridhātukakleśavihānipūrakam |<br />svabhāvaśuddhaṃ malaśuddhitaś ca tac caturguṇabrahmavicaryam iṣyate || 15 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871719bi' class='paragraph'>
+							(12)不共他相應 具斷三界惑<br />(13)自性及無垢 是行爲四種&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7873267bi' class='paragraph'>
+							gźan daṅ thun moṅ ma yin ldan pa daṅ || khams gsum ñon moṅs rnam spoṅ rdzogs byed daṅ |<br />| ṅo bo ñid dag dri ma dag pa ste || tshaṅs spyod yon tan bźi ldan yin par ’dod ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874815bi' class='paragraph'>
+							15. Unique en son application qui n’a rien de commun avec les autres, parachevant l’abandon des Souillures des trois Plan pure par sa nature propre, et aussi par le nettoyage des tache telle est la Conduite-bralmnique aux quatre vertus.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7870172bi' class='paragraph'>
+							caturguṇabrahmacaryasaṃprakāśako dharmaḥ | ādimadhyaparyavasānakalyāṇo yathākramaṃ śrutacintābhāvanābhir bhaktituṣṭibuddhihetutvāt | tatra bhaktir adhimuktiḥ saṃpratyayaḥ tuṣṭiḥ prāmodyaṃ yuktinidhyānāc chakyaprāptitāṃ viditvā | buddhiḥ samāhitacittasya yathābhūtajñānaṃ | dvividhārtha ityataḥ svarthaḥ saṃvṛttiparamārthasatyayogāt | sugrāhya ityataḥ suvyañjanaḥ pratītapadavyañjanatvāt | caturguṇaṃ brahmacaryaṃ | kevalaṃ parair asādhāraṇatvāt paripūrṇaṃ tridhātukleśaprahāṇaparipūraṇāt | pariśuddhaṃ svabhāvaviśuddhito ’nāsravatvāt | paryavadātaṃ malaviśuddhitaḥ saṃtānaviśuddhyā kṣīṇāsravāṇāṃ | abhisaṃdhivibhāge ślokadvayaṃ |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871720bi' class='paragraph'>
+							(5)釋曰。此法隨時善生信喜覺因者。隨時善謂(6)初中後善。如其次第。聞思修時。爲信因故。爲(7)喜因故。爲覺因故。爲覺因者。定心觀察此法(8)道理得如實智故。義正及語巧能開四梵行(9)者。義正謂善義及妙義。與世諦第一義諦相(10)應故。語巧謂易受及易解由文顯義現故。由(11)此故能開示四種梵行。問何者四耶。偈曰<br />(Verse above)<br />(14)釋曰。四梵行者。一者獨。二者滿。三者清。四(15)者白。不共他相應者是獨義。由此行不共外(16)道同行故。具斷三界惑者是滿義。由此行具(17)斷三界煩惱故。自性者是清義。由此行是無(18)漏自性淨故。無垢者是白義。由此行在漏盡(19)身種類得無垢淨故。已説説法義成就。次説(20)説法節。偈曰&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7873268bi' class='paragraph'>
+							yon tan bźi ldan gyi tshaṅs par spyod pa yaṅ dag par rab tu ston pa’i (7) chos ni go rims bźin du thos pa daṅ | bsams pa daṅ | bsgoms pa dag gis dad pa daṅ dga’ ba daṅ | blo’i rgyu yin pa’i phyir thog ma daṅ | bar daṅ tha mar dge ba yin no || de la dad pa ni mos pa daṅ yid ches pa’o || dga’ ba ni rigs pas ṅes par brtags pa’i (184b1) sgo nas thob pa ñid du nus par rig nas rab tu dga’ ba’o || blo ni sems mñam par gźag pa’i yaṅ dag pa ji lta ba bźin du śes pa’o || don rnam pa gñis daṅ ldan pas de’i phyir don bzaṅ po yin te | kun rdzob daṅ don dam pa’i bden pa daṅ ldan pa’i phyir ro || gzuṅ (2) sla bas de’i phyir tshig ’bru bzaṅ po yin te | tshig daṅ yi ge grags pa’i phyir ro || yon tan bźi ldan gyi tshaṅs par spyod pa la ma ’dres pa ni gźan dag daṅ thun moṅ ma yin pa’i phyir ro || yoṅs su rdzogs pa ni khams gsum pa’i ñon moṅs pa spoṅ ba yoṅs su (3) rdzogs pa’i phyir ro || yoṅs su dag pa ni ṅo bo ñid kyis rnam par dag pa’i sgo nas zag pa med pa’i phyir ro || yoṅs su byaṅ ba ni dri ma rnam par dag pa’i sgo nas zag pa zad pa rnams kyi rgyud rnam par dag pa’i phyir ro || ldem por dgoṅs pa rnam par dbye ba’i tshigs (4) su bcad pa gñis te |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874816bi' class='paragraph'>
+							L’Idéal met en lumière la Conduite-brahmique qui a quati vertus; cet Idéal est bon au commencement, au milieu, à la fi parce qu’il cause respectivement la dévotion, le contentemen la compréhension par l’audition, la réflexion, la pratique. I dévotion, c’est la Croyance, la confiance. Le contentement c’est la pleine joie, à la suite de la considération d’appropriation, quand on a reconnu que le succès est possible. L compréhension, c’est la connaissance adéquate de la Pensée e état d’Union. A sens double, donc le Sens en est bon, par application à la Vérité Contingente et à la Vérité Transcendante Facile à saisir; donc la lettre en est bonne, parce que les mot et les lettres en sont intelligibles. La Conduite-brahmique quatre vertus; elle est unique, parce qu’elle n’a rien de commun avec les autres; toute pleine, parce qu’elle parachève l’abandon des Souillures des trois Principes: toute pure, pare qu’elle est nettoyée naturellement, en tant qu’elle est sans Écoulement; toute nette, parce qu’elle est nettoyée des taches car la Série-Personnelle est nettoyée chez ceux dont l’Écoulement est épuisé.<br />Deux vers sur la division de l’Arrière-pensée.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7870173bi' class='paragraph'>
+							avatāraṇasaṃdhiś ca saṃdhir lakṣaṇato ’paraḥ |<br />pratipakṣābhisaṃdhiś ca saṃdhiḥ pariṇatāv api || 16 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871721bi' class='paragraph'>
+							(21)所謂令入節 相節對治節<br />(22)及以祕密節 是名爲四節&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7873269bi' class='paragraph'>
+							gźug pa ldem por dgoṅs pa daṅ || mtshan ñid ldem por dgoṅs pa gźan |<br />| gñen po ldem por dgoṅs pa daṅ || bsgyur la ldem por dgoṅs pa ste ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874817bi' class='paragraph'>
+							16. Arrière-pensée d’introduction, arrière-pensée d’Indice arrière-pensée d’Auxiliaire, arrière-pensée de Per-flexion.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7870174bi' class='paragraph'>
+							śrāvakeṣu svabhāveṣu doṣāṇāṃ vinaye tathā |<br />abhidhānasya gāmbhīrye saṃdhir eṣa caturvidhaḥ || 17 ||<br />asāre sāramatayo viparyāse ca susthitāḥ |<br />kleśena ca susaṃkliṣṭā labhante bodhimuktamāṃ || 17* || || iti ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871722bi' class='paragraph'>
+							(26)聲聞及自性 斷過亦語深<br />(27)次第依四義 説節有四種&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7873270bi' class='paragraph'>
+							ñan thos daṅ ni ṅo bo ñid || de bźin ñes pa gdul ba daṅ |<br />| brjod pa zab pa ñid la (5) ni || ldem por dgoṅs pa rnam pa bźi ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874818bi' class='paragraph'>
+							17. A propos des Auditeurs, des Natures-propres, de la Discipline des fautes, de la profondeur de l’expression; ce sont les quatre Arrière-pensées.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7870175bi' class='paragraph'>
+							caturvidho ’bhisaṃdhirdeśanāyāṃ buddhasya veditavyaḥ | avatāraṇābhisaṃdhir lakṣaṇābhisaṃdhiḥ pratipakṣābhisaṃdhiḥ pariṇāmana-abhisaṃdhiśca | tatrāvatāraṇābhisaṃdhiḥ śrāvakeṣu draṣṭavyaḥ | śāsanāvatāraṇārtham anuttrāsāya rūpādyastitvadeśanāt | lakṣaṇābhisaṃdhis triṣu parikalpitādisv abhāveṣu draṣṭavyo niḥsvabhāvānutpannādisarvadharmadeśanāt | pratipakṣābhisaṃdhir doṣāṇāṃ vinaye draṣṭavyo yathāṣṭāvaraṇapratipakṣāgrayānasaṃbhāṣānuśaṃse gāthādvayaṃ vakṣyati | pariṇāmanābhisaṃdhir abhidhānagāmbhīrye draṣṭavyo yathāha |<br />asāre sāratayo viparyāseca sukhitāḥ |<br />kleśena ca susaṃkliṣṭā labhante bodhim uttamāṃ || iti<br />ayam atrābhisaṃdhiḥ | asāre sāramataya ity avikṣepe yeṣāṃ sārabuddhiḥ pradhānabuddhirvikṣepo hi visāraś cetasaḥ | viparyāse ca susthitā iti nityasukhaśucyātmagrāhaviparyayeṇānityādike viparyāse susthitā aparihāṇitaḥ | kleśena ca sa saṃkliṣṭā iti dīrghaduṣkaravyāyām aśrameṇātyarthaṃ parikliṣṭāḥ | abhiprāyavibhāge ślokaḥ |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871723bi' class='paragraph'>
+							(23)釋曰。諸佛説法不離四節。一者令入節。二者(24)相節。三者對治節。四者祕密節。間此四節依(25)何義。偈曰<br />(Verse above)<br />(28)釋曰。令入節者。應知教諸聲聞入於法義令(29)得不怖。説色等是有故。相節者。應知於分別(620c1)等三種自性。無體無起自性清淨。説一切法(2)故。對治節者。應知依斷諸過對治八種障故。(3)如大乘中説。受持二偈得爾所功徳。皆爲對(4)治故説。此對治後當解。祕密節者。應知依諸(5)深語由迴語方得義故。如大乘經偈説。不堅(6)堅固解善住於顛倒。爲煩惱所惱。速得大菩(7)提。此節中不堅堅固解者。不堅謂諸衆生其(8)心不亂。於此不亂作堅固解。此解最勝能得(9)菩提。亂者心馳堅著。不能至得菩提故。此(10)是第一句義。善住於顛倒者。顛倒謂常樂我(11)淨執。若人能於顛倒中解無常無樂無我無(12)淨善住不退。即能速得菩提。不爾不得故。此(13)是第二句義。爲煩惱所惱者。長時勤修難行(14)苦行由極疲倦能得菩提。不爾不得故。此是(15)第三句義。已説説法節。次説説法意。偈曰&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7873271bi' class='paragraph'>
+							saṅs rgyas kyi bśad pa la ldem por dgoṅs pa rnam pa bźir rig par bya ste | gźug pa la ldem por dgoṅs pa daṅ | mtshan ñid la ldem por dgoṅs pa daṅ | gñen po la ldem bor dgoṅs pa daṅ || bsgyur ba la (6) ldem por dgoṅs pa’o || de la gźug pa la ldem por dgoṅs pa ni ñan thos rnams la blta bar bya ste | bstan pa la ’jug par bya ba’i don du mi skrag par bya ba’i phyir gzugs la sogs pa yod pa ñid du bstan pa’i phyir ro || mtshan ñid la ldim por dgoṅs pa (7) ni kun brtags pa la sogs pa’i ṅo bo ñid gsum la blta bar bya ste || chos thams cad ṅo bo ñid med pa daṅ | ma skyes pa la sogs par bstan pa’i phyir ro || gñen po la ldem por dgoṅs pa ni ñes pa rnams gdul bar bya ba la blta bar bya ste | ji skad (185a1) du | sgrib pa brgyad kyi gñen por theg pa mchog phan yon daṅ bcas pa bśad pa’i źar la tshigs su bcad pa gñis ’chad par ’gyur ba lta bu’o || bsgyur ba la ldem por dgoṅs pa ni brjod pa zab mo la blta bar bya ste | ji skad du |<br />(2) sñiṅ po med la sñiṅ por śes || phyin ci log la legs par gnas |<br />| ñon moṅs pas ni rab ñon moṅs || byaṅ chub dam pa ’thob par ’gyur || źes gsuṅs pa lta bu’o || de la dgoṅs pa ni ’di yin te | sñiṅ po med la sñiṅ por śes || źes (3) bya ba ni gaṅ dag gis blo rnam par g-yeṅ ba med pa la sñiṅ por ’dzin pa ste | gtso bor sems pa źes bya ba’i tha tshig go | sñiṅ po ni sems kyi rnam par g-yeṅ ba’o || phyin ci log la leg par gnas || źes bya ba ni | rtag pa daṅ | bde ba daṅ | gtsaṅ ba (4) daṅ | bdag tu ’dzin pa las bzlog ste | phyin ci log mi rtag pa la sogs pa la yoṅs su mi ñams pa’i sgo nas legs par gnas pa yin no || ñon moṅs pas ni rab ñon moṅs || źes bya ba ni | yun riṅ por dka’ ba spyod pa’i ṅal bas śin (5) tu ñon moṅs pa yin no || dgoṅs pa rnam par dbye ba’i tshigs su bcad pa |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874819bi' class='paragraph'>
+							Il y a quatre sortes d’arrière-pensée dans la prédication du Bouddha: arrière-pensée d’introduction, arrière-pensée d’indice, arrière-pensée d’Auxiliaire, arrière-pensée de Per-flexion. L’arrière-pensée d’Introduction se voit clans le cas des Auditeurs, car il est enseigné que la Forme etc. existe réellement, pour éviter de faire peur, en vue d’introduire à la doctrine. L’arrière-pensée d’Indice se constate dans le cas de la Nature Imaginaire etc., car il est enseigné que tous les Idéaux sont sans nature-propre, sans production, etc. L’arrière-pensée d’Auxiliaire est à constater dans le cas de la Discipline des fautes, comme il va le dire;hors les deux stances [v. 19 et 20] sur l’Avantages de parler du Grand Véhicule comme Auxiliaire contre les Obstructions. L’arrière-pensée de Per-flexion est à constater dans le cas de la profondeur de l’expression. P. ex.<br />“Si on pense que la Moëlle (sâra) est, sans Moëlle (asâra), si on est bien fixé à l’envers, si on est bien Souillé pleinement par la Souillure, on arrive à l’Illumination suprême.”<br />Voici l’arrière-pensée dans ce vers. Le composé sâra-mati est à interpréter par sâra-buddhi “l’entendement dans sa moëlle, dans son essentiel”. A-sâra signifie ici “n’avoir pas de dispersion” car la dispersion, c’est la diffusion (vi-sâra) de l’esprit. “A l’envers” veut dire. à l’envers des gens qui croient au moi comme permanent, heureux, pur: l’envers, c’est l’impermanence etc. “Bien fixé” parce qu’il n’y a plus de perte. “Bien souillé pleinement par la souillure” veut dire: excessivement fatigué par la peine et l’effort des épreuves de longue durée. Le vers est donc à traduire ainsi:<br />[“Si out a pour idée essentielle de n’avoir pas de dispersion, si on est bien fixé à l’envers des opinions erronées, si on est bien fatigué de la bonne fatigue, on arrive à l’Illumination suprême.”]<br />Un vers sur la section de l’lntention.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7870176bi' class='paragraph'>
+							samatā ’rthāntare jñeyas tathā kālāntare punaḥ |<br />pudgalasyāśaye caiva abhiprāyaś caturvidhaḥ || 18 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871724bi' class='paragraph'>
+							(16)平等及別義 別時及別欲<br />(17)依此四種意 諸佛説應知&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7873272bi' class='paragraph'>
+							mñam pa ñid daṅ don gźan daṅ || de bźin du ni dus gźan daṅ |<br />| gaṅ zag gi ni bsam pa la || dgoṅs pa rnam pa bźir śes bya ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874820bi' class='paragraph'>
+							18. L’Intention est de quatre sortes: égalité, autre Sens, autre temps, Tendance de l’Individu.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7870177bi' class='paragraph'>
+							caturvidho ’bhiprāyaḥ | satatābhiprāyo yad āha | aham eva sa tasmin samaye vipaśvī samyaksaṃbuddho ’bhūvam ity aviśiṣṭadharmakāyatvāt | arthāntarābhiprāyo yad āha | niḥsvabhāvāḥ sarvadharmā anutpannā ity evam ādi ayathārutārthatvāt kālāntarābhiprāyo yadāha | ye sukhāvatyāṃ prāṇidhānaṃ kariṣyanti te tatropapatsyanta iti kālāntareṇety abhiprāyaḥ | pudgalāśayābhiprāyo yat tad eva kuśalamūlaṃ kasyacit praśaṃsate kasyacid vigarhate ’lpamātrasaṃtuṣṭasya vaipulyasaṃgrahāt mahāyānasūtrāntasānuśaṃsaṃ gāthādvayam upādāyāha |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871725bi' class='paragraph'>
+							(18)釋曰。諸佛説法不離四意。一平等意。二別義(19)意。三別時意。四別欲意。平等意者。如佛説。(20)往昔毘婆尸佛即我身是。由法身無差別故。(21)如是等説。是名平等意。別義意者。如佛説。一(22)切諸法無自性故無生故。如是等説。是名別(23)義意。別時意者。如佛説。若人願見阿彌陀(24)佛。一切皆得往生。此由別時得生故如是説。(25)如是等説。是名別時意。別欲意者。彼人有如(26)是善根。如來或時讃歎或時毀呰。由得少善(27)根便爲足故。如是等説是。名別欲意。已説説(28)法意。次説受持大乘功徳。偈曰&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7873273bi' class='paragraph'>
+							dgoṅs pa rnam pa bźi la mñam (6) pa ñid la dgoṅs pa ni | ’di ltar ṅa ñid de’i tshe yaṅ dag par rdzogs pa’i saṅs rgyas rnam par gzigs su gyur to źes gsuṅs pa lta bu ste | chos kyi sku la khyad par med pa’i phyir ro || don gźan la dgoṅs pa ni ’di ltar chos thams cad ni ṅo bo ñid (7) med pa ma skyes pa’o źes bya ba la sogs pa gsuṅs pa lta bu ste | don la sgra ji bźin ma yin pa’i phyir ro || dus gźan la dgoṅs pa ni | ’di ltar gaṅ dag bde ba can du smon lam ’debs pa de dag der skye bar ’gyur ro źes gsuṅs pa lta bus te | dus (185b1) gźan na sñam du dgoṅs pa yin no || gaṅ zag gi bsam pa la dgoṅs pa ni | ’di ltar dge ba’i rtsa ba de ñid kha cig la ni bsṅags la chuṅ dus chog śes pa kha cig la ni smad pa lta bu’o || theg pa chen po’i mdo śin tu rgyas pa bsdus pa las tshigs su bcad pa gñis po (2) phan yon daṅ bcas pa blaṅs te | smras pa |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874821bi' class='paragraph'>
+							Il y a quatre sortes d’Intention. D’égalité, par exemple quand il est dit: C’est moi qui, dans ce temps-là, étais Vipaçyin, le Parfait Illuminé e, puisque le Corps d’Idéal n’a pas de distinctions. D’autre Sens; par exemple quand il est dit: “Tous les Idéaux sont dénués de nature-propre, sans production, etc.”; car il ne faut pas l’entendre au Sens littéral. D’autre temps; par exemple quand il est dit: “Ceux qui feront un vúu en vue de Sukhâvatî, ceux-là iront y renaître”. De Tendance d’Individu, quand par exemple il loue la Racine de Bien d’un tel, et qu’il critique tel autre qui se contente de trop peu.<br />En posant que deux stances ont tout l’Avantage des Sûtras du Grand Véhicule parce qu’elles résument de longs développements, il dit:&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7870178bi' class='paragraph'>
+							buddhe dharme ’vajñā kauśīdyaṃ tuṣṭir alpamātreṇa |<br />rāge māne caritaṃ kaukṛtaṃ cāniyatabhedaḥ || 19 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871726bi' class='paragraph'>
+							(29)輕佛及輕法 懈怠少知足<br />(621a1)貪行及慢行 悔行不定等&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7873274bi' class='paragraph'>
+							saṅs rgyas chos la brñas pa daṅ || le lo cuṅ zad chog ’dzin daṅ |<br />| ṅa rgyal ’dod chags spyod pa daṅ || ’gyod daṅ ma ṅes ldog pa ni ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874822bi' class='paragraph'>
+							19. Mépris à l’égard du Bouddha, de l’Idéal, paresse, contentement de trop peu, conduite par passion et par Sentiment-personnel, repentance, section du non-définitif,&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7870179bi' class='paragraph'>
+							satvānām āvaraṇaṃ tatpratipakṣo ’grayān asaṃbhāṣā |<br />sarvāntarāyadoṣaprahāṇam eṣāṃ tato bhavati || 20 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871727bi' class='paragraph'>
+							(2)如是八種障 大乘説對治<br />(3)如是諸障斷 是人入正法&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7873275bi' class='paragraph'>
+							sems can rnams kyi sgrib pa ste || de yi gñen por theg mchog (3) gsuṅs |<br />| des de’i bar du gcod pa yi || ñes pa thams cad spoṅs bar ’gyur |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874823bi' class='paragraph'>
+							20. sont l’Obstruction des créatures; contre eux, l’Auxiliaire, c’est les propos sur le Véhicule capital; de là vient le sujet. de toutes les fautes qui font obstacle.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7870180bi' class='paragraph'>
+							yo granthato ’rthato vā gāthādvayadhāraṇe prayujyeta |<br />sa hi daśavidhamanuśaṃsaṃ labhate satvottamo dhīmān || 21 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871728bi' class='paragraph'>
+							(21)若文及若義 二偈勤受持<br />(22)功徳數有十 是名勝慧者&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7873276bi' class='paragraph'>
+							gaṅ źig tshig gam don sgo nas || tshigs bcad gñis ’dzin rab sbyor ba |<br />| sems can blo ldan mchgo de yis || yon tan rnam bcu thob ’gyur te ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874824bi' class='paragraph'>
+							21. Celui qui s’emploie à retenir deux stances, dans leur texte ou dans leur Sens, gagne dix Avantages, ce Sage qui est le prince des créatures:&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7870181bi' class='paragraph'>
+							kṛtsnāṃ ca dhātupuṣṭiṃ prāmodyaṃ cottamaṃ maraṇakāle |<br />janma ca yathābhikāmaṃ jātismaratāṃ ca sarvatra || 22 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871729bi' class='paragraph'>
+							(23)善種得圓滿 死時歡喜勝<br />(24)受生隨所欲 念生智亦成&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7873277bi' class='paragraph'>
+							khams ni zad par (4) brtas pa daṅ || ’chi ba’i tshe na rab dga’ mchog |<br />| ji ltar ’dod par skye ba daṅ || kun tu tshe rabs dran pa daṅ ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874825bi' class='paragraph'>
+							22. Alimentation intégrale des Plans, joie intense et suprême à l’heure de la mort, naissance à volonté, souvenir des existences passées en tout lieu,&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7870182bi' class='paragraph'>
+							buddhaiś ca samavadhānaṃ tebhyaḥ śravaṇaṃ tathāgrayān asya |<br />adhimuktiṃ saha buddhyā dvayamukhatām āśubodhiṃ ca || 23 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871730bi' class='paragraph'>
+							(25)生生恒値佛 聞法得信慧<br />(26)遠離於二障 速成無上道&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7873278bi' class='paragraph'>
+							saṅs rgyas rnams daṅ phrad pa daṅ || de las theg mchog thos pa daṅ |<br />| mos pa blo daṅ bcas pa daṅ || sgo gñis byaṅ chub myur ’thob (5) pa’o ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874826bi' class='paragraph'>
+							23. Conjonction avec les Bouddhas, audition directe du Grand Véhicule, Croyance avec Compréhension, les deux Embouchures, et bientôt l’Illumination.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7870183bi' class='paragraph'>
+							buddhe dharme ’vajñeti pañca gāthāḥ | tatrāniyatabhedo bodhisatvānām aniyatānāṃ mahāyānadbhedaḥ | agrayān asaṃbhāṣā yā mahāyānadeśanā | buddhe ’vajñāvaraṇasya pratipakṣasaṃbhāṣā | aham eva sa tena kālena vipaśvī samyaksaṃbuddho ’bhūvam iti | dharme ’vajñāvaraṇasya pratipakṣasaṃbhāṣā | iyato gaṃgānadīvālikāsamānabuddhān paryupāsya mahāyāne ’vabodha utpadyata iti | kauśīdyāvaraṇasya pratipakṣasaṃbhāṣā | ye sukhāvatyāṃ praṇidhānaṃ kariṣyanti te tatropapatsyanta iti | vimalacandraprabhasya ca tathāgatasya nāmadheyagrahaṇamātreṇa niyato bhavaty unattarāyāṃ samyaksaṃbodhāv iti | alpamātrasaṃtuṣṭyāvarasya pratipakṣasaṃbhāṣā | yatra bhagavān kvacid dānādi vivarṇayati anyatra varṇitavān | rāgacaritasya cāvaraṇasya pratipakṣasaṃbhāṣā | yatra bhagavān buddhakṣetravibhūtiṃ varṇayati | mānacaritasyāvaraṇasya pratipakṣasaṃbhāṣā | yatra bhagavān kasyacid buddhasyādhikāṃ saṃpattiṃ varṇayati | kaukṛtyāvaraṇasya pratipakṣasaṃbhāṣā | ye buddhabodhisatveṣv akāraṃ kariṣyanti te sarve svargopagā bhaviṣyantīti | aniyatabhedasyāvaraṇasya pratipakṣasaṃbhāṣā | mahāśrāvakāṇāṃ buddhatve vyākaraṇadeśanā ekayānadeśanā ca | kṛtsnadhātupuṣṭiḥ sarvamahāyānādhiṣṭhānāya dhātupuṣṭis tadāvaraṇavigamāt sarvatra mahāyāne ’dhimuktilābhataḥ | dvayamukhatā samādhimukhatā dhāraṇīmukhatā ca | dṛṣṭe dharme dvividho ’nuśaṃsaḥ sāṃparāyike ’ṣṭavidhaḥ krameṇottarāuttaraviśeṣalābhād veditavyaḥ | deśanānuśaṃse ślokaḥ |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871731bi' class='paragraph'>
+							(4)釋曰。此二偈顯示大乘斷障功徳。障有八種。(5)一者輕佛障。二者輕法障。三者懈怠障。四者(6)少知足障。五者貪行障。六者慢行障。七者悔(7)行障。八者不定障。爲對治輕佛障故。大乘經(8)説。往昔毘婆尸佛即我身是。爲對治輕法障(9)故。大乘經説。於無量恒河沙佛所。修行大乘(10)乃得生解。爲對治懈怠障故。大乘經説若有(11)衆生願生安樂國土。一切當得往生。稱念(12)無垢月光佛名。決定當得作佛。爲對治少知(13)足障故。大乘經説有處讃歎檀等行。有處毀(14)呰檀等行。爲對治貪行障故。大乘經説。諸佛(15)國土極妙樂事。爲對治慢行障故大乘經説(16)或有佛土最勝成就。爲對治悔行障故。大乘(17)經説。或有衆生於佛菩薩起不饒益事得生(18)善道。爲對治不定障故。大乘經説。諸佛授記(19)聲聞當得作佛及説一乘。是名受持大乘得(20)離八障。偈曰<br />(Commentary for the three last verses above)<br />(27)釋曰。此三偈顯示受持大乘集得功徳。此功(28)徳有十種。一者成就一切善根種子圓滿依(29)止。二者臨命終時得無上喜悦。三者於一切(621b1)處得隨願受生。四者於一切生處得自性念(2)生智。五者所生之處恒得値佛。六者恒在佛(3)邊聞大乘法。七者成就増上信根。八者成就(4)増上慧根。九者得遠離惑智二障。十者速得(5)成就無上菩提。若人於一切大乘經典。若文(6)若義乃至一句。正勤受持。則得如是十種功(7)徳。此中應知。於現在世得初二種功徳。於未(8)來世得餘八種功徳。漸漸増勝。已説持法功(9)徳。次説説法功徳。偈曰&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7873279bi' class='paragraph'>
+							saṅs rgyas chos la brñas pa daṅ || źes bya ba la sogs pa’i tshigs su bcad pa lṅa ste | de la ma ṅes pa ldog pa ni | byaṅ chub dpa’ ma ṅes pa rnams theg pa chen po las ldog pa’o || theg pa mchog gsuṅs pa ni theg pa chen po bstan pa (6) yin no || saṅs rgyas la brñas pa’i sgrib pa’i gñen por gsuṅs pa ni ’di ltar ṅa ñid de’i dus na yaṅ dag pa rdzogs pa’i saṅs rgyas rnam par gzigs su gyur to źes gsuṅs pa lta bu’o || chos la brñas pa’i sgrib pa’i gñen por gsuṅs pa ni | gaṅ+g’a’i (7) kluṅ gi bya ma ’di sñed daṅ mñam pa’i saṅs rgyas rnams la bsñen bkur byas na gzod theg pa chen po’i rtogs pa skye’o źes bya ba lta bu’o || le lo’i sgrib pa’i gñen por gsuṅs pa ni | gaṅ dag bde ba can du smon lam ’debs pa de dag der skye bar ’gyur ro źes (186a1) bya ba daṅ | de bźin gśegs pa zla ’od dri med kyi mtshan smos pa tsam gyis bla na med pa yaṅ dag par rdzogs pa’i byaṅ chub tu ṅes pa yin no źes bya ba lta bu’o || cuṅ zad tsam gyis chog par ’dzin pa’i sgrib pa’i gñen por gsuṅs pa ni | (2) gaṅ du bcom ldan ’das kyis la lar sbyin pa la sogs pa smad la | gźan du ni bsṅags pa lta bu’o || ’dod chags spyod pa’i sgrib pa’i gñen por gsuṅs pa ni | gaṅ du saṅs rgyas bcom ldan ’das kyis saṅs rgyas kyi źiṅ gi ’byor pa bsṅags pa lta bu’o || (3) ṅa rgyal spyod pa’i sgrib pa’i gñen por gsuṅs pa ni | gaṅ du bcom ldan ’das kyis saṅs rgyas la la’i phun sum tshogs pa lhag par bsṅags pa lta bu’o || ’gyod pa’i sgrib pa’i gñen por gsuṅs pa ni | gaṅ dag saṅs rgyas daṅ byaṅ chub sems dpa’ (4) rnams la gnod pa byed pa de dag thams cad ni mtho ris su ’gro bar ’gyur ro źes bya ba lta bu’o || ma ṅes pa ldog pa’i sgrib pa’i gñen por gsuṅs pa ni | ñan thos chen po rnams saṅs rgyas ñid du luṅ bstan pa bśad pa daṅ | theg pa gcig tu bśad pa lta (5) bu’o || khams zad par brtas pa ni | theg pa chen po’i rten can gyi khams thams cad brtas pa gaṅ yin pa ste | de’i sgrib pa daṅ bral ba’i sgo nas theg pa chen po thams cad la mos pa ’thob pa’i phyir ro || sgo gñis ni tiṅ ṅe ’dzin gyi sgo daṅ | gzuṅs (6) kyi sgo’o || mthoṅ ba’i chos la ni phan yon rnam pa gñis so || tshe phyi ma la ni rnam pa brgyad de | rim gyis goṅ nas goṅ du khyad par ’thob pa’i sgo nas rig par bya’o || ston pa’i phan yon gyi tshigs su bcad pa |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874827bi' class='paragraph'>
+							Ces cinq vers vont ensemble. Section de ce qui n’est pas définitif, car les Bodhisattvas qui ne le sont pas définitivement sont séparés du Grand Véhicule. La prédication du Grand Véhicule est désignée, dans le texte du vers, par “les propos sur le Véhicule capital”. Propos auxiliaires contre l’Obstruction qui est le mépris du Bouddha; par exemple: “C’est moi qui, dans ce temps-là, étais Vipaçyin, le Parfait Illuminé”. Propos Auxiliaires contre l’Obstruction qui est le mépris de l’Idéal; par exemple: “C’est quand on a servi respectueusement tant et tant de Bouddhas, égaux en nombre aux grains de sable du Gange, qu’on devien apte à comprendre le Grand Véhicule”. Propos Auxiliaires contre l’Obstruction qui est la paresse; par exemple: “Ceux qui feront un vúu en vue de Sukhâvatî, ceux-là iront y renaître”, — ou encore: “Rien qu’en mentionnant le nom du Tathâgata Vimalacandraprabha, on est certain d’aller vers la Toute parfaite Illumination qui est insurpassable”. Propos Auxiliaires contre l’Obstruction qui est le contenteraient de trop peu; par exemple quand Bhagavat, dans une circonstance, rabaisse le don, etc. qu’il avait vanté ailleurs. Propos Auxiliaires contre l’Obstruction qui est la conduite par passion; par exemple quand Bhagavat célèbre la splendeur des Champs des Bouddhas. Propos Auxiliaires contre l’Obstruction qui est la conduite par Sentiment-personnel; par exemple quand Bhagavat célèbre le comble de plénitude d’un Bouddha quelconque, Propos Auxiliaires contre l’Obstruction qui est la repentance; par exemple: “Tous ceux qui commettront un méfait contre les Bouddhas et les Bodhisattvas, tous prendront le chemin du ciel”. Propos Auxiliaires contre l’Obstruction qui est la section de ce qui n’est pas définitif; quand la prédication prophétise aux grands Auditeurs qu’ils deviendront des Bouddhas, ou quand elle traite du Véhicule unique. L’Alimentation des Plans intégrale, c’est l’Alimentation des Plans pour dominer intégralement le Grand Véhicule, car, ces Obstructions une fois quittées, on arrive à la Croyance dans l’intégralité du Grand Véhicule. Les deux Embouchures, c’est l’Embouchure d’Union et l’Embouchure de Formule, Deux sortes d’Avantages s’appliquent au monde présent, huit sortes au monde à venir, parce qu’on gagne graduellement une distinction toujours ascendante.<br />Un vers sur l’Avantage de la prédication.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7870184bi' class='paragraph'>
+							iti sugatirakhedavān kṛpāluḥ prathitayaśāḥ suvidhijñatām upetaḥ |<br />bhavati sukathiko hi bodhisatvas tapati jane kathitair yathaiva sūryaḥ || 24 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871732bi' class='paragraph'>
+							(10)慧善及不退 大悲名稱遠<br />(11)巧便説諸法 如日朗世間&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7873280bi' class='paragraph'>
+							de ltar blo bzaṅ skyo ba med ldan brtse ba can || (7) sñan par rab grags cho ga bzaṅ śes ldan pa yi |<br />| byaṅ chub sems dpa’ legs par smra ba yin pa ste || bśad pas skye bo’i naṅ na ñi ma bźin du lham ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874828bi' class='paragraph'>
+							24. C’est ainsi que l’esprit bon, sans lassitude, compatissant, glorieux au loin, arrivé à connaître les bons arrangements, le Bodhisattva devient bon parleur, et qu’il resplendit par ses propos dans le monde comme un soleil.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7870185bi' class='paragraph'>
+							pañcabhiḥ kāraṇaiḥ sukathikatvaṃ | sūryavat pratapanaṃ cānuśaṃsaḥ | lokāvarjanato bahumatatvāt | pañca kāraṇāni sukathikatvasya yenāviparītaṃ darśayati abhīkṣṇaṃ nirāmiṣacitta ādeyavākyavineyānurūpaṃ ca |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871733bi' class='paragraph'>
+							(12)釋曰。若諸菩薩具足五因名善説法。一者不(13)倒説。由慧善故。二者恒時説。由不退故。三者(14)離求説。由大悲故。四者令信説。由名稱遠故。(15)五者隨機説。由巧便故。由此五因能善説法。(16)導引衆生多生恭敬。譬如日出照朗世間。&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7873281bi' class='paragraph'>
+							rgyu lṅas legs par smra ba ñid daṅ | ñi ma bźin du lham pa’i phan yon yin te | ’jig rten ’dun (186b1) par byed pa’i sgo nas ya mtshan du gyur pa’i phyir ro || rgyu lṅa ni | gaṅ gis phyin ci ma log pa daṅ | yaṅ daṅ yaṅ du daṅ | zaṅ ziṅ med pa’i sems daṅ | tshig gzuṅ bar ’os ba daṅ | gdul ba daṅ ’tsham par ’chad pa yin no ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874829bi' class='paragraph'>
+							Cinq raisons font qu’il est bon parleur. Quant à l’Avantage de briller comme un soleil, c’est qu’il est très estimé parce qu’il gagne à lui le monde. Les cinq raisons qui font qu’il parle bien, c’est qu’il prêche sans rien à rebours, et souvent, et la Pensée libre d’amorces, et avec un langage agréable, et en s’adaptant aux Disciplinables’’.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7870186bi' class='paragraph'>
+							mahāyānasūtrālaṃkāre deśanādhikāro dvādaśaḥ&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "7870143";
+							kilderef = "Msa San: Lévi (1907)  12.0 - San: Lévi (1907) 25";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871734bi' class='paragraph'>
+							弘(17)法品究竟&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "7871691";
+							kilderef = "Msa Chi: T. 1604  618c6 - Chi: T. 1604 621b17";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7873282bi' class='paragraph'>
+							bśad pa’i skabs (2) rdzogs so | || |&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "7873239";
+							kilderef = "Msa Tib: Tg sems tsam phi  180b7 - Tib: Tg sems tsam phi 186b2";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874830bi' class='paragraph'>
+							25. &nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "7874787";
+							kilderef = "Msa Fre: Lévi (1911)  - Fre: Lévi (1911) ";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'></div><div class='textvar' style='width:24%;'></div><div class='textvar' style='width:24%;'></div><div class='textvar' style='width:24%;'></div></div><div class='clear'></div><div class="fontboks"><a onClick=onOffdiv('permlink') name="permlink" href="#permlink">Permanent link</a></div><div class='clear'></div><div class='perm_felt' id='permlink'>http://www2.hf.uio.no/common/apps/permlink/permlink.php?app=polyglotta&amp;context=ctext&amp;uid=90a1c5e4-6e5a-11e0-be58-001cc4df1abe</div></div></div><!-- infofelt --></div><!-- divControl --><div class="clear"></div>
+<div style="clear:both"></div><div class="signatur"><div class="signatur_left">
+		<a href="https://wiki.uio.no/hf/dmlf/index.php/Kategori:Polyglotta:Documentation">Go to Wiki Documentation</a></br>Enhet: <a HREF=http://www.hf.uio.no>Det humanistiske fakultet</a> &nbsp; Utviklet av: <a href="http://www.hf.uio.no/tjenester/it">IT-seksjonen ved HF</a></div><!--signatur_left -->
+		<div class="signatur_right"><a href="/polyglotta/admin/index.php">Login</a></div>
+		<div style="clear:both"></div></div>
+</body></html><SCRIPT LANGUAGE="JAVASCRIPT">
+	
+	$("#tr_IA").click(function(){
+	    if ($("#toggle_container_IA").is(':hidden'))
+	    	$("#toggle_container_IA").show();
+	    else{
+	        $("#toggle_container_IA").hide();
+	    }
+	    return false;
+		});
+
+	$("#tr_lang").click(function(){
+	    if ($("#toggle_container_lan").is(':hidden'))
+	    	$("#toggle_container_lan").show();
+	    else{
+	        $("#toggle_container_lan").hide();
+	    }
+	    return false;
+	});
+
+	$("#tr_img").click(function(){
+	    if ($("#toggle_container_img").is(':hidden'))
+	    	$("#toggle_container_img").show();
+	    else{
+	        $("#toggle_container_img").hide();
+	    }
+	    return false;
+	});
+
+	$("#diac2button").click(function(){
+	   if ($("#ex3a").is(':hidden')){
+		   $("#ex3a").show();
+	       $("#diac2button").html("Hide&#32Diacritica-help");
+	   }else{
+	       $("#ex3a").hide();
+	       $("#diac2button").html("Diacritica-help");
+	   }
+	   return false;
+	});
+
+	$("#diacbutton").click(function(){
+	   if ($("#diacritical_sign").is(':hidden')){
+		   	$("#diacritical_sign").show();
+	      	$("#diacbutton").html("Hide&#32diacritica");
+	   }else{
+	        $("#diacritical_sign").hide();
+	        $("#diacbutton").html("Diacritica");
+	   }
+	   return false;
+    });
+
+	$('#toggle_container_IA').click(function(e) {
+	   e.stopPropagation();
+	});
+
+	$('#toggle_container_lan').click(function(e) {
+        e.stopPropagation();
+    });
+
+	$('#toggle_container_img').click(function(e) {
+        e.stopPropagation();
+    });
+
+	$('#ex3a').click(function(e) {
+	    e.stopPropagation();
+	});
+
+	$('#diacritical_sign').click(function(e) {
+        e.stopPropagation();
+    });
+
+	//Kode for å sette inn diakritiske tegn
+	$('#diacritical > tbody > tr > td').click(function() {
+	  	//alert('red');
+		$("#sokeboks").val($("#sokeboks").val() + $(this).text());
+	});
+
+	$('.diac2button').text(($('.diacbutton').text() == 'Diacritica-help') ? 'Hide Diacritica-help' : 'Diacritica-help');
+	
+	//Lukker alle åpnede pop'uper ved klikk på siden
+	$(document).click(function() {
+		$('#toggle_container_IA').hide();
+	    
+        $('#toggle_container_lan').hide();
+    
+        $('#toggle_container_img').hide();
+   
+   		$('#diacritical_sign').hide();
+   		$("#diacbutton").html("Diacritica");
+   
+       	$('#ex3a').hide();
+       	$("#diac2button").html("Diacritica-help");
+   });
+	</SCRIPT>

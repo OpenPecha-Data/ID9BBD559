@@ -1,0 +1,465 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Bibliotheca Polyglotta</title>
+<link rel='stylesheet' type='text/css' href='css/bp.css'>
+<link rel='stylesheet' type='text/css' href='css/diac_doc.css'>
+
+<link rel='stylesheet' type='text/css' href='css/imageGallery.css'>
+<link rel='stylesheet' type='text/css' href='css/ss.css'>
+	      <link rel='stylesheet' type='text/css' href='css/tree_menu.css'>
+<script type="text/javascript" src="js/jquery-1.3.2.js"></script>
+<!--  <script type="text/javascript" src="js/jqModal.js"></script>-->
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/tree_menu.js"></script>
+<!-- <script src="js/analytics_tracking.js" type="text/javascript"></script> -->
+
+
+<!-- <script type="text/javascript" src="js/popupDivhandling.js"></script> -->
+<!--  <script type="text/javascript" src="jquery-latest.js"></script>
+<script type="text/javascript" src="js/jquery-imagegallery.js"></script>-->
+</head>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//vrtx.uio.no/js/analytics/v2/analytics.js','ga');
+
+ga('create', 'UA-86407471-1', 'auto');
+ga(function(tracker) {
+
+	// Modifies sendHitTask to hit ipproxy instead of http://www.google-analytics.com directly
+	tracker.set('sendHitTask', function(model) {
+		payload = model.get('hitPayload');
+		var xhr = new XMLHttpRequest();
+		xhr.open('GET', '//w3prod-ipproxy.uio.no/collect' +'?' + payload, true);
+		xhr.send();
+	});
+		ga('send', 'pageview');
+});
+</script>
+<body><div class='banner'></div><!-- banner --><div class='uiologo'>
+<a href='http://www.hf.uio.no/'><img src='https://www2.hf.uio.no/polyglotta/hfe.png' border='0'></a></div><!-- uiologo --><div class='clear'></div>
+<div class='smule_tittel'>
+<div class='brodsmuleboks'>You are here: <a href='/polyglotta/index.php' accesskey='1'> BP HOME</a> >  <a href='/polyglotta/index.php?page=library&amp;bid=2' accesskey='1'>TLB</a> > <a href='/polyglotta/index.php
+	?page=volume&amp;vid=1131' accesskey='1'>Asaṅga/Maitreya: Mahāyānasūtrālaṃkāra</a> > fulltext</div><div class='clear'></div>
+<div class='headline'>Asaṅga/Maitreya: Mahāyānasūtrālaṃkāra<div class='clear'></div></div><!-- headline -->
+</div><!-- smule_tittel -->
+<!--<div>-->
+
+<h2 class="trigger" id="tr_lang"><a  href="#">Choose languages</a></h2>
+<h2 class="trigger" id="tr_img"><a  href="#">Choose images, etc.</a></h2>
+
+
+<div id="toggle_container_lan">
+
+<form  id="tr"  name="Sprakvalg2" action="inc/set_cookie_lan.php" method="POST">
+
+<div style="float:left; width:auto; text-align:left; margin-left:20px;">
+<h5>Choose languages</h5>
+<ul>
+<input value="Choose all" type="button" onClick="markAll('tr')"><input value="Uncheck all" type="button" onClick="markNone('tr')">
+
+	<li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1131[5695]" value="5695" id="lancheckbox" checked >Sanskrit: San: Lévi (1907)</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1131[5696]" value="5696" id="lancheckbox" checked >Chinese: Chi: T. 1604</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1131[5697]" value="5697" id="lancheckbox" checked >Tibetan: Tib: Tg sems tsam phi</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1131[5698]" value="5698" id="lancheckbox" checked >French: Fre: Lévi (1911)</label></li><div style="clear:both"></div>
+<input type='submit' name='set_cookie' value='Save view'>
+<div style="clear:both"></div>
+
+</ul>
+<input type="hidden" name="vid" value="1131">
+<input type="hidden" name="page" value="fulltext">
+</form>
+</div>
+</div>
+
+<div id="toggle_container_img">
+<form  id="tr"  name="Sprakvalg2" action="inc/set_cookie_img.php" method="POST">
+
+<div style="float:left; width:auto; text-align: left;">
+<h5>Choose display</h5>
+<ul>
+		
+	<li> 
+		<input type='checkbox' name='bilder' checked="checked" > Enable images
+	</li>
+	<li> 
+	<input type='checkbox' onclick="onOffCheckbox();" name='fotnoter' checked="checked"> Enable footnotes
+	<div id="pff" style="display:block" >
+	<ul>
+	<li><input type='radio' name='fotnote_valg'  value='show_a' checked> Show all footnotes</li>
+	<li><input type='radio' name='fotnote_valg'  value='show_h'  > Minimize footnotes</li>
+	</ul>
+	</li>
+	
+	</div>
+	<div style="float:left; width:20em; text-align: left; margin-left:120px ">
+	<div style="clear:both"></div>
+	<input type='submit' name='set_cookie' value='Save view'>
+	<div style="clear:both"></div>
+	</div>
+	
+</ul>
+<input type="hidden" name="vid" value="1131">
+<input type="hidden" name="page" value="fulltext">
+</form>
+</div>
+	
+
+
+
+</div>
+</div>
+
+<div class='sok'><form name='Sok' id='FormBlock' action='/polyglotta/index.php' method='get'>
+<input type='hidden' name='page' value='search'>
+<input type='hidden' name='bid' value='2'>
+<input type='hidden' name='vid' value='1131'>
+<div class='sokeboks'>
+<input name='sokefelt' id='sokeboks' type='text' size='30' value=''>
+<input type='submit' name='Sok' value='Search' id='nsubmit'>
+<div class='clear'></div><a class="diacbutton" id="diacbutton" href="#">Diacritica</a><a id="diac2button" class="diac2button"  href="#">Diacritica-help</a><a class="s2button" href="https://wiki.uio.no/hf/dmlf/index.php/Kategori:Polyglotta:Documentation:SearchHelp">Search-help</a><div class='diacritical' id='diacritical_sign'><div style="text-align: left; ">
+<table class = 'diacritica' width="200" border="1" cellpadding="1" cellspacing="1" id="diacritical">
+    <tbody>
+        <tr>
+            <td style="text-align: center; ">ā</td>
+            <td style="text-align: center; ">ī</td>
+            <td style="text-align: center; ">ū</td>
+            <td style="text-align: center; ">ṛ</td>
+            <td style="text-align: center; ">ṝ</td>
+            <td style="text-align: center; ">ḷ</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">ḹ</td>
+            <td style="text-align: center; ">&rsquo;</td>
+            <td style="text-align: center; ">ṃ</td>
+            <td style="text-align: center; ">ḥ</td>
+            <td style="text-align: center; ">ṅ</td>
+            <td style="text-align: center; ">&ntilde;</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">ṭ</td>
+            <td style="text-align: center; ">ḍ</td>
+            <td style="text-align: center; ">ṇ</td>
+            <td style="text-align: center; ">ṣ</td>
+            <td style="text-align: center; ">ś</td>
+            <td style="text-align: center; ">ź</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">&scaron;</td>
+            <td style="text-align: center; ">č</td>
+            <td style="text-align: center; ">ǰ</td>
+            <td style="text-align: center; ">&gamma;</td>
+            <td style="text-align: center; ">&nbsp;</td>
+            <td style="text-align: center; ">&nbsp;</td>
+        </tr>
+    </tbody>
+</table>
+</div></div><!-- diacritical --><div id="ex3a" class="jqmDialog"><div>
+	<span style="font-size:12px;">Note on the transliteration:</span></div>
+<div>
+	<span style="font-size:12px;">The transliteration system of the BP/TLB is based on the Unicode/UTF-8 system. However, there may be difficulties with some of the letters &ndash; particularly on PC/Windows-based systems, but not so much on the Mac. We have chosen the most accepted older and traditional systems of transliteration against, e.g, Wylie for Tibetan, since with Unicode it is possible, in Sanskrit and Tibetan, etc., to represent one sound with one letter in almost all the cases (excepting Sanskrit and Tibetan aspirated letters, and Tibetan tsa, tsha, dza). We thus do not use the Wylie system which widely employs two letters for one sound (ng, ny, sh, zh etc.).</span></div>
+<div>
+	&nbsp;</div>
+<div>
+	<span style="font-size:12px;">Important:</span></div>
+<div>
+	<span style="font-size:12px;">We ask you in particular to note the use of the &rsquo; apostrophe and not the &#39; representing the avagrāha in Sanskrit, and most important the &rsquo;a-chuṅ in Tibetan. On the Mac the &rsquo; is Alt-M.</span></div>
+<div>
+	&nbsp;</div>
+<div>
+	<span style="font-size:12px;">If you cannot find the letters on your key-board, you may click on the link &quot;Diacritica&quot; to access it for your search.</span></div>
+</div><!-- diacritical_doc --><div class='clear'></div><select name='searchmode'><option selected value='phrase'>Search for exact phrase</option>
+<option  value='phraseregex'>Search for exact phrase (regex)</option>
+<option  value='word'>Search for every word in one record</option>
+<option  value='free'>Search for every word fragment in one record</option>
+</select>
+<select name='context'>
+<option ($_GET[context]=="a" ? "selected" : "") value="a"> Search in all libraries</option><option selected value="bTLB">Search in TLB</option><option selected value="v1131">Search in Asaṅga/Maitreya: Mahāyānasūtrālaṃkāra</option></select><div class='clear'></div><a class='sbutton' href='/polyglotta/index.php?page=asearch&amp;bid=2&amp;vid=1131'>Choose specific texts..</a><div class='clear'></div></div></form></div><!-- sok --><div class='clear'></div><!-- clear --><div id='dcr' class='divControlRead'><div class='venstrefulltekstfelt'><div class='bverknavn'><a href='/polyglotta/index.php?page=volume&amp;vid=1131'>Asaṅga/Maitreya: Mahāyānasūtrālaṃkāra</a></div><table class="tlvl2">
+					<tr>
+						<td bgcolor="#ffffff"> &nbsp; &nbsp;
+						<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_7627.Verses41-58" border=0 hspace=2>
+						<a href="/polyglotta/index.php?page=fulltext&amp;view=fulltext&amp;vid=1131" class="ajax_tree0">Complete text</a>
+						</td>
+					</tr>
+				  </table><input type="hidden" name="tree_top_options" id="tree_top_options" value="135128.Title|135129.Preface|135130.ChapterI|135132.ChapterII|135133.ChapterIII|135134.ChapterIV|135135.ChapterV|135136.ChapterVI|135137.ChapterVII|135138.ChapterVIII|135139.ChapterIX|135140.ChapterX|135141.ChapterXI|135142.ChapterXII|135143.ChapterXIII|135144.ChapterXIV|135145.ChapterXV|135146.ChapterXVI|135147.ChapterXVII|135148.ChapterXVIII|135149.ChapterXIX|135150.ChapterXX-XXI|135151.Colophon|">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135128.Title" border=0 hspace=2><a id="href_135128.Title" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1945667&level=1&cid=845779" class="ajax_tree0">Title
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135129.Preface" border=0 hspace=2><a id="href_135129.Preface" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1945668&level=1&cid=845780" class="ajax_tree0">Preface
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<a href="javascript:;" onclick="Expand('135130.ChapterI','0','1')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_135130.ChapterI" border=0 hspace=2><a id="href_135130.ChapterI" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1945669&level=1&cid=845781" class="ajax_tree0">Chapter I
+</td></tr></table>
+<div style="display:none;"  id="div_135130.ChapterI">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135131.Verses21-40" border=0 hspace=2><a id="href_135131.Verses21-40" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1945708&level=2&cid=845820" class="ajax_tree1">Verses 21-40
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135132.ChapterII" border=0 hspace=2><a id="href_135132.ChapterII" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1945711&level=1&cid=845823" class="ajax_tree0">Chapter II
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135133.ChapterIII" border=0 hspace=2><a id="href_135133.ChapterIII" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1945737&level=1&cid=845849" class="ajax_tree0">Chapter III
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135134.ChapterIV" border=0 hspace=2><a id="href_135134.ChapterIV" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1945765&level=1&cid=845877" class="ajax_tree0">Chapter IV
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135135.ChapterV" border=0 hspace=2><a id="href_135135.ChapterV" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1945808&level=1&cid=845920" class="ajax_tree0">Chapter V
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135136.ChapterVI" border=0 hspace=2><a id="href_135136.ChapterVI" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1945830&level=1&cid=845942" class="ajax_tree0">Chapter VI
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135137.ChapterVII" border=0 hspace=2><a id="href_135137.ChapterVII" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1945848&level=1&cid=845960" class="ajax_tree0">Chapter VII
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135138.ChapterVIII" border=0 hspace=2><a id="href_135138.ChapterVIII" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1945870&level=1&cid=845982" class="ajax_tree0">Chapter VIII
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135139.ChapterIX" border=0 hspace=2><a id="href_135139.ChapterIX" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1945915&level=1&cid=846027" class="ajax_tree0">Chapter IX
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135140.ChapterX" border=0 hspace=2><a id="href_135140.ChapterX" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1946076&level=1&cid=846188" class="ajax_tree0">Chapter X
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135141.ChapterXI" border=0 hspace=2><a id="href_135141.ChapterXI" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1946104&level=1&cid=846216" class="ajax_tree0">Chapter XI
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135142.ChapterXII" border=0 hspace=2><a id="href_135142.ChapterXII" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1946255&level=1&cid=846367" class="ajax_tree0">Chapter XII
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135143.ChapterXIII" border=0 hspace=2><a id="href_135143.ChapterXIII" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1946299&level=1&cid=846411" class="ajax_tree0">Chapter XIII
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135144.ChapterXIV" border=0 hspace=2><a id="href_135144.ChapterXIV" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1946348&level=1&cid=846460" class="ajax_tree0">Chapter XIV
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135145.ChapterXV" border=0 hspace=2><a id="href_135145.ChapterXV" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1946424&level=1&cid=846536" class="ajax_tree0">Chapter XV
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135146.ChapterXVI" border=0 hspace=2><a id="href_135146.ChapterXVI" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1946435&level=1&cid=846547" class="ajax_tree0">Chapter XVI
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135147.ChapterXVII" border=0 hspace=2><a id="href_135147.ChapterXVII" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1946577&level=1&cid=846689" class="ajax_tree0">Chapter XVII
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135148.ChapterXVIII" border=0 hspace=2><a id="href_135148.ChapterXVIII" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1946715&level=1&cid=846827" class="ajax_tree0">Chapter XVIII
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135149.ChapterXIX" border=0 hspace=2><a id="href_135149.ChapterXIX" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1946966&level=1&cid=847078" class="ajax_tree0">Chapter XIX
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135150.ChapterXX-XXI" border=0 hspace=2><a id="href_135150.ChapterXX-XXI" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1947102&level=1&cid=847214" class="ajax_tree0">Chapter XX-XXI
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135151.Colophon" border=0 hspace=2><a id="href_135151.Colophon" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1947214&level=1&cid=847326" class="ajax_tree0">Colophon
+</td></tr></table>
+<script language=javascript>test('135136.ChapterVI|')</script><div class='bverknavn'><a href='/polyglotta/index.php?page=library&amp;bid=2'>Back to library</a></div></div><!-- venstrefulltekstfelt --><div class="clear"></div><!-- clear --><div id="nav-menu"><ul>
+  		  <li  id="nav-1"><a class="tabValgt" href="/polyglotta/index.php?page=record&amp;view=record&amp;vid=1131&amp;mid=1945830&amp;level=1">Sentence by sentence view</a></li>
+  		  <li  id="nav-2"><a  href="/polyglotta/index.php?page=fulltext&amp;view=fulltext&amp;vid=1131&amp;cid=845942&amp;mid=1945830&amp;level=1">Continuous text view</a></li>
+ 		<li  id="nav-3"><a  href="/polyglotta/admin/index.php?page=fulltext&amp;view=fulltext&amp;vid=1131&amp;cid=845942&amp;mid=1945830&amp;level=1">View in admin</a></li>
+
+  		  </ul></div><div class='clear'></div><!-- clear -->			<script language="javascript" type="text/javascript">
+			var kilderef = '';
+			var tekstid = 0;
+			var tekstid_bilder = 0;
+			var filsti = '';
+			var thumbnail = '';
+			</script>
+		<div class='infofulltekstfelt'><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><div class='kilderef' id='7869718'></div><div class='clear'></div><span id='7869718bi' class='paragraph'>
+							ṣaṣṭho ’dhikāraḥ&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><div class='kilderef' id='7871266'></div><div class='clear'></div><span id='7871266bi' class='paragraph'>
+							(18)＊大乘莊嚴經論眞實品第七&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><div class='kilderef' id='7872814'></div><div class='clear'></div><span id='7872814bi' class='paragraph'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><div class='kilderef' id='7874362'></div><div class='clear'></div><span id='7874362bi' class='paragraph'>
+							CHAPITRE VI<br />LE POSITIF.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869719bi' class='paragraph'>
+							paramārthalakṣaṇavibhāge ślokaḥ |<br />na san na cāsan na tathā na cānyathā na jāyate vyeti na cāvahīyate |<br />na vardhate nāpi viśudhyate punar viśudhyate tatparamārthalakṣaṇaṃ || 1 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871267bi' class='paragraph'>
+							(19)釋曰。已説隨順修行。次説第一義相。偈曰<br />(20)非有亦非無 非如亦非異<br />(21)非生亦非滅 非増亦非減<br />(22)非淨非不淨 此五無二相<br />(23)是名第一義 行者應當知&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872815bi' class='paragraph'>
+							don dam pa’i mtshan ñid du tshigs su bcad pa |<br />yod min med min de bźin min gźan min || skye daṅ ’jig med ’bri bar mi ’gyur te |<br />| ’phel ba med ciṅ rnam par dag pa’aṅ med || rnam par dag (3) ’gyur de ni don dam mtshan ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874363bi' class='paragraph'>
+							Classement des Indices du Transcendant; un vers.<br />1. Ni être, ni non-être; ni identique, ni autrement –, il ne naît pas, il ne finit pas; il ne décroît pas, il n’augmente pas; il ne se nettoie pas, et il se nettoie. Tel est l’Indice du Transcendant.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869720bi' class='paragraph'>
+							advayārtho hi paramārthaḥ | tam advayārthaṃ pañcabhir ākāraiḥ saṃdarśayati | <b>na sat</b>parikalpitaparatantralakṣaṇābhyāṃ <b>na cāsat</b>pariniṣpannalakṣaṇena | <b>na tathā</b> parikalpitaparatantrābhyāṃ pariniṣpannasyaikatvābhāvāt | <b>na cānyathā</b> tābhyām evānyatvābhāvāt | <b>na jāyate na ca vyety</b> anabhisaṃskṛtatvād dharmadhātoḥ | <b>na hīyate na ca vardhate</b> saṃkleśavyavadānapakṣayor nirodhotpāde tadavasthatvāt | <b>na viśudhyat</b>i prakṛtyasaṃkliṣṭatvāt na ca na viśudhyati āgantukopakleśavigamāt | ity etat pañcavidham advayalakṣaṇaṃ <b>paramārthalakṣaṇaṃ</b> veditavyaṃ | ātmadṛṣṭiviparyāsapratiṣedhe ślokaḥ |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871268bi' class='paragraph'>
+							(24)釋曰。無二義是第一義。五種示現。非有者。分(25)別依他二相無故。非無者。眞實相有故。非如(26)者。分別依他二相無一實體故。非異者。彼二(27)種如無異體故。非生非滅者。無爲故。非増(28)非減者。淨染二分起時滅時法界正如是住(29)故。非淨者。自性無染不須淨故。非不淨者。客(598c1)塵去故。如是五種無二相。是第一義相應知。(2)已説第一義。次遮於彼起顛倒。偈曰&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872816bi' class='paragraph'>
+							gñis med pa’i don ni don dam pa ste | gñis med pa’i don de yaṅ rnam pa ldas yaṅ dag par ston to || kun brtags pa daṅ gźan gyi dbaṅ gi mtshan ñid kyis ni yod pa ma yin no || yoṅs su grub pa’i mtshan ñid kyis ni med pa ma yin no || kun (4) brtags pa daṅ gźan gyi dbaṅ dag daṅ yoṅs su grub par gcig pa ñid med pas de bźin ma yin no || de dag kho na daṅ gźan pa ñid med pas gźan ma yin no || chos kyi dbyiṅs ’dus ma byas pa’i phyir skye ba yaṅ med | ’jig pa yaṅ med do || kun nas ñon moṅs pa daṅ (5) rnam par byaṅ ba dag ’gag pa daṅ skye ba daṅ de bźin gnas pa’i phyir ’bri bar yaṅ mi ’gyur | ’phel bar yaṅ mi ’gyur ro || raṅ bźin gyis kun nas ñon moṅs pa can ma yin pa’i phyir | rnam par dag par ’gyur ba med do || glo bur gyi ñon moṅs pa daṅ bral bas rnam par ma dag (6) pa yaṅ ma yin te | de ltar na gñis med pa’i mtshan ñid rnam pa lṅa po de ni don dam pa’i mtshan ñid kyi par rig par bya’o || bdag tu lta ba’i phyin ci log dgag par tshigs su bcad pa |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874364bi' class='paragraph'>
+							Le Transcendant a pour Sens la non-dualité. Ce Sens de Nondualité, il le montre sous cinq aspects. Ni être, en raison des Indices Imaginaire et Relatif; ni non-être, en raison de l’Indice Absolu. Ni identique, puisque l’Absolu ne fait pas un avec l’Imaginaire et le Relatif; ni autrement, puisqu’il n’est pas différent de tous les deux. Il ne naît pas et ne finit pas, puisque le Plan des Idéaux n’est pas sur-opéré. Il ne décroît pas, et n’augmente pas, puisqu’il reste tel quel, quel que soit des deux, Souillure ou Nettoyage, le parti qui vienne à cesser ou à se produire. Il ne se nettoie pas, puisqu’il n’est absolument pas souillé de nature; et on ne peut pas dire qu’il ne se nettoie pas, puisque les Soussouillures Incidentes s’en vont. Ces cinq Indices de Non-dualité sont l’Indice Transcendant.<br />Un vers pour exclure I’Idée-à-rebours qui est la Vue du Moi,&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869721bi' class='paragraph'>
+							na cātmadṛṣṭiḥ svayam ātmalakṣaṇā na cāpi duḥsaṃsthitatā vilakṣaṇā |<br />dvayān na cānyad bhrama eṣa tatūditas tataś ca mokṣo bhramamātrasaṃkṣayaḥ || 2 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871269bi' class='paragraph'>
+							(3)我見非見我 無相非無縁<br />(4)異二無我故 解脱唯迷盡&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872817bi' class='paragraph'>
+							bdag tu lta ba bdag ñid bdag mtshan min || ṅan par gnas min mtshan ñid mi ’dra phyir |<br />| (7) gñis las gźan med de ni nor pa skyes || de phyir thar pa nor tsam zad pa yin ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874365bi' class='paragraph'>
+							2. La Vue du Moi n’a pas par elle-même pour Indice le Moi; la Malformation ne l’a pas non plus; elle diffère en Indice. Et il n’y a rien en dehors des deux; ce n’est donc qu’un préjugé, et la délivrance est la destruction de Rien-qu’un-préjugé.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869722bi' class='paragraph'>
+							na tāvad <b>ātmadṛṣṭir</b> eva_<b>ātmalakṣaṇā</b> | <b>nāpi duḥsaṃsthitatā</b> | tathā hi sā <b>vilakṣaṇā</b> ātmalakṣaṇāt parikalpitāt | sā punaḥ pañcopādānaskandhāḥ kleśadauṣṭhulyaprabhāvitatvāt | nāpy ato <b>dvayād anyad</b> ātmalakṣaṇam upapadyate | tasmān nāsty ātmā | <b>bhrama</b> eṣa tūtpanno yeyam ātmadṛṣṭis tasmād eva cātmābhāvān <b>mokṣo ’pi bhramamātrasaṃkṣayo</b> veditavyo na tu kaścin muktaḥ | viparyāsaparibhāṣāyāṃ dvau ślokau |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871270bi' class='paragraph'>
+							(5)釋曰。我見非見我者。無我相故。何以故。由我(6)相但是分別故。非無縁者。煩惱習氣所起縁(7)五受陰故。異二無我故者。二謂我見及五受(8)陰。亦非異此二種而有我相。如是我見但是(9)迷謬。實無我相可得故。解脱唯迷盡者。若縁(10)自身起解脱亦唯迷盡。無別有我名解脱者(11)故。已遮妄見。次訶顛倒。偈曰&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872818bi' class='paragraph'>
+							re źig bdag tu lta ba ñid ni bdag gi mtshan ñid ma yin no || ṅan par gnas pa ñid kyaṅ ma yin te | ’di ltar de ni bdag gi mtshan ñid du kun brtags pa’i bdag daṅ mtshan ñid ni ’dra ba’i phyir ro || de (145b1) yaṅ ñe bar len pa’i phuṅ po lṅa ste | ñon moṅs pa’i gnas ṅan len gyis rab tu bskyed pa’i phyir ro || ’di gñis las gźan pa’i bdag gi mtshan ñid kyaṅ mi dmigs te | de lta bas na bdag ni med kyi bdag tu lta ba gaṅ yin pa de ni nor pa skyes pa yin no || bdag med pa ñid kyi phyir | thar (2) pa yaṅ nor pa tsam du zad pa yin par rig par bya’i grol ba ni ’ga’ yaṅ med do || phyin ci log smad par tshigs su bcad pa gñis te |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874366bi' class='paragraph'>
+							Ce n’est pas la Vue du Moi qui a pour Indice le Moi; ce n’est pas non plus la Malformation. Et, en effet, l’une diffère en Indice de l’Indice du Moi, qui est Imaginaire. L’autre, c’est les Cinq Masses d’Auto-Subsumption, puisque les Souillures et la Turbulence en sont, l’origine. Et il ne peut y avoir d’autre Indice du Moi que ces deux. Donc le Moi n’existe pas. C’est donc tout simplement un préjugé que la Vue du Moi; et puisqu’il n’y a pas de Moi, la Délivrance aussi est la destruction d’un simple préjugé, et il n’y a personne de délivré.<br />Deux vers pour condamner l’erreur.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869723bi' class='paragraph'>
+							kathaṃ jano vibhramamātram āśritaḥ paraiti duḥkhaprakṛtiṃ na saṃtatām |<br />avedako vedaka eva duḥkhito na duḥkhito dharmamayo na tanmayaḥ || 3 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871271bi' class='paragraph'>
+							(12)云何依我見 不見苦自性<br />(13)迷苦及苦者 法性與無性&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872819bi' class='paragraph'>
+							ji ltar ’khrul pa tsam brten skye bo yis || sdug bsṅal raṅ bźin rgyun chags rtogs mi ’gyur |<br />| rigs min rig ñid sdug bsṅal sdug bsṅal (3) med || chos kyi raṅ bźin de yi raṅ bźin min ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874367bi' class='paragraph'>
+							3. Comment se fait-il que le monde, fondé sur un simple fantôme, ne comprenne pas que la nature de la douleur est continue, soit qu’il la sente ou qu’il ne la sente pas, qu’il soit malheureux ou non, qu’il soit fait d’idéaux ou non?&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869724bi' class='paragraph'>
+							pratītyabhāvaprabhave kathaṃ janaḥ samakṣavṛttiḥ śrayate ’nyakāritam |<br />tamaḥ prakāraḥ katamo ’yam īdṛśo yato ’vipaśyan sadasan nirīkṣate || 4 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871272bi' class='paragraph'>
+							(21)云何縁起體 現見生異見<br />(22)闇故不見有 亦復不有見&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872820bi' class='paragraph'>
+							brten nas dṅos rab skye rab skye bar mṅon ’jug pa’i || skye bo ji ltar gźan gyis byas la brten |<br />| gaṅ phyir yod pa mi mthoṅ med mthoṅ ba || ’di ’dra’i mun nag rnam pa de gaṅ źig |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874368bi' class='paragraph'>
+							4. Comment se fait-il que le monde, qui voit sous ses yeux naître les existences par Rencontre, s’imagine l’intervention d’un autre agent’? Quelle est donc cette obscurité particulière qui peut faire que l’on ne voit pas ce qui est, et qu’on voit ce qui n’est pas?&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869725bi' class='paragraph'>
+							<b>kathaṃ</b> nāmāyaṃ loko <b>bhrāntimātram</b> ātmadarśanaṃ niśritya satatānubaddhaṃ duḥkhasvabhāvaṃ saṃskārāṇāṃ na paśyati | <b>avedako </b>jñānena tasyā duḥkhaprakṛteḥ | vedako ’nubhavena duḥkhasyāduḥkhito duḥkhasyāprahīṇatvāt | <b>na duḥkhito</b> duḥkhayuktasyātmano ’satvāt | <b>dharmamayo</b> dharmamātratvāt pudgalanairātmyena | na ca <b>dharmamayo</b> dharmanairātmyena | yadā ca loko bhāvānāṃ pratītyasamutpādaṃ pratyakṣaṃ paśyati taṃ taṃ pratyayaṃ pratītya te te bhāvā bhavantīti | tat katham etāṃ dṛṣṭiṃ <b>śrayate ’nyakāritaṃ</b> darśanādikaṃ na pratītyasamutpannam iti | <b>katamo ’yam īdṛśas</b> tamaḥprakāro lokasya yad vidyamānaṃ pratītyasamutpādam avipaśyan na vidyamānam ātmānaṃ <b>nirīkṣate</b> | śakyaṃ hi nāma tamasā vidyamānam adraṣṭuṃ syān na tvavidyamānaṃ draṣṭum iti | asaty ātmani śamajanmayoge ślokaḥ |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871273bi' class='paragraph'>
+							(14)釋曰。云何依我見不見苦自性者。咄哉世間(15)云何依止。我見起種種迷不能了達諸行。是(16)苦自性而常隨逐邪。迷苦及苦者法性與無(17)性者。苦謂受彼苦觸。苦者謂苦不斷非我與(18)苦相應。名爲苦者。迷苦謂不解苦自性。迷苦(19)者謂不解無我。法性者唯法。由人無我故。無(20)性者非法。由法無我故。偈曰(<br />(Verse above)<br /><br />(23)釋曰。云何縁起體現見生異見者。咄哉世間(24)云何現見。諸行各從縁起。而依此體横生異(25)見。謂眼等諸根體非縁起。邪闇故不見有。亦(26)復不有見者。由無明故縁起之法是有而不(27)見有。我體不有而復有見問若爾云何得涅(28)槃。偈曰&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872821bi' class='paragraph'>
+							ji ltar na ’jig rten ’di dag tu lta ba nor pa tsam la brten (4) nas ’du byed rnams kyi sdug bsṅal gyis ṅo bo ñid rtag tu rjes su ’prel pa mi mthoṅ ste | sdug bsṅal gyi raṅ bźin de ni ye śes kyis rig par bya mi dgos te | sdug bsṅal ñams su myoṅ bas rig pa yin no || sdug bsṅal ma spaṅs pas sdug bsṅal bar gyur pa yin la (5) sdug bsṅal daṅ ldan pa’i bdag med pa’i phyir sdug bsṅal bar gyur pa med do || gaṅ zag la bdag med pas chos tsam du zad pa’i phyir chos kyi raṅ bźin yin no || chos la bdag med pas chos kyi raṅ bźin ma yin no || yaṅ gaṅ gi tsho ’jig rten gyis de daṅ de la brten nas dṅos (6) po de daṅ de dag ’byuṅ ṅo źes bya bar dṅos po rnams kyi rten ciṅ ’brel par ’byuṅ ba mṅon sum du mthoṅ ba na de ji ltar mthoṅ ba la sogs pa ni gźan gyis byas kyi | rten ciṅ ’brel par ’byuṅ ba ni ma yin no źes bya ba’i lta ba ’di la brten | ’jig rten gyi mun nag gaṅ rten ciṅ (7) ’brel par ’byuṅ ba yod pa ni mi mthoṅ gi | med pa bdag du rtogs pa ’di ’dra ba de gaṅ źig yin te | yod pa ni mun pas mi mthoṅ bar nus kyi | med pa ma thoṅ bar ni ma yin no || bdag med par źi ba ruṅ bar tshigs su bcad pa |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874369bi' class='paragraph'>
+							Comment se fait-il que le monde, se fondant sur la Vue du Moi qui est une simple illusion, ne voit pas que la nature de douleur est constamment attachée aux Opérants? Quand il ne la ressent pas, alors parla connaissance de cette nature de douleur. Quand il la ressent, alors par l’expérience de la douleur. Quand il est malheureux, alors parce que la douleur n’est pas rejetée. Quand il n’est pas malheureux, alors parce que le Moi appliqué à la douleur est en non-être. Qu’il soit fait d’Idéaux, alors parce que l’Individu n’a pas de Personnalité, tout n’étant qu’Idéaux. Qu’il ne soit pas fait d’Idéaux, alors parce que les Idéaux n’ont pas de Personnalité. Et quand le monde voit sous ses yeux la Production par Rencontre des existences, quand il voit d’une Rencontre donnée naître une existence donnée, comment s’en va-t-il croire qu’un autre agent intervient pour produire la vue, etc., et qu’elle ne se produit pas par Rencontre? Quelle est donc cette singulière obscurité qui fait que le inonde ne voit pas le jeu de la Production par Rencontre, qui est, et qu’il regarde le Moi qui n’est pas? Il se peut en effet que l’obscurité empêche de voir ce qui est, mais non pas qu’elle fasse voir ce qui n’est pas.<br />La Pacification et la Naissance sont possibles sans qu’il y ait de Moi: un vers.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869726bi' class='paragraph'>
+							ta cāntaraṃ kiṃcana vidyate ’nayoḥ sadarthavṛttyā śamajanmanor iha |<br />tathāpi janmakṣayato vidhīyate śamasya lābhaḥ śubhakarmakāriṇām || 5 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871274bi' class='paragraph'>
+							(29)生死與涅槃 無二無少異<br />(599a1)善住無我故 生盡得涅槃&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872822bi' class='paragraph'>
+							’di la don dam tshul gyis źi ba daṅ || (146a1) skye ba de gñis khyad par ci yaṅ med |<br />| ’on kyaṅ dge ba’i las rnams byed pa dag || skye ba zad pas źi ba ’thob par bśad ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874370bi' class='paragraph'>
+							5. Il n’y a absolument aucune différence ici entre la Pacification et la Naissance en fonction de Sens réel; et cependant il est enseigné que les Bienfaisants arriveront à la Pacification par épuisement des naissances.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869727bi' class='paragraph'>
+							na cāsti saṃsāranirvāṇayoḥ kiṃcin nānākaraṇaṃ paramārthavṛttyā nairātmyasya samatayā | <b>tathāpi janmakṣayān</b> mokṣaprāptir bhavaty eva <b>śubhakarmakāriṇāṃ</b> ye mokṣamārgaṃ bhāvayanti | viparyāsaparibhāṣāṃ kṛtvā tatpratipakṣapāramārthikajñānapraveśe catvāraḥ ślokāḥ |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871275bi' class='paragraph'>
+							(2)釋曰。生死涅槃無有二。乃至無有少異。何以(3)故。無我平等故。若人善住無我而修善業。則(4)生死便盡而得涅槃。如是已遮顛倒。次應説(5)彼對治。偈曰&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872823bi' class='paragraph'>
+							don dam pa’i tshul bdag med par mñam pa ñid kyis ’khor ba daṅ mya ṅan las ’das pa dag la tha dad du bya ba ci yaṅ med do || (2) ’on kyaṅ gaṅ dag thar pa’i lam sgom pa dge ba’i las byed pa dag gi skye ba zad pas thar pa ’thob par ’gyur ba ñid do || phyin ci log smad pa byas nas de’i gñen po don dam pa’i ye śes la ’jug par tshigs su bcad pa bźi ste |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874371bi' class='paragraph'>
+							Il n’y a aucune distinction absolument entre Transmigration et Nirvâṇa au Sens transcendant; et cependant la Délivrance par épuisement des naissances est obtenue par ceux-là seuls qui font des actes de Bien, qui pratiquent le Chemin de la Délivrance.<br />Maintenant qu’il a condamné l’erreur, il introduit à la connaissance transcendante qui sert d’Auxiliaire contre elle; quatre vers.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869728bi' class='paragraph'>
+							saṃbhṛtya saṃbhāram anantapāraṃ jñānasya puṇyasya ca bodhisatvaḥ |<br />dharmeṣu cintāsuviniśriś citatvāj jalpānvayām arthagatiṃ paraiti || 6 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871276bi' class='paragraph'>
+							(6)福智無邊際 生長悉圓滿<br />(7)思法決定已 通達義類性&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872824bi' class='paragraph'>
+							byaṅ chub sems dpa’ bsod nams ye (3) śes kyi || mtha’ yas pha rol tshogs rnams legs bsags nas |<br />| chos la sems pa śin tu rnam ṅes phyir || don gyi rnam pa brjod pa’i rgyu can rtogs ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874372bi' class='paragraph'>
+							6. Quand il a fait une Provision de Savoir et de Mérite emplie à l’infini, le Bodhisattva, arrivé par la réflexion à une bonne certitude sur les Idéaux, comprend la Méthode de Sens consécutive au verbe.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869729bi' class='paragraph'>
+							arthān sa vijñāya ca jalpamātrān saṃtiṣṭhate tannibhacittamātre |<br />pratyakṣatām eti ca dharmadhātus tasmād viyukto dvayalakṣaṇena || 7 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871277bi' class='paragraph'>
+							(13)已知義類性 善住唯心光<br />(14)現見法界故 解脱於二相&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872825bi' class='paragraph'>
+							de yis brjod pa tsam du don rig nas || der snaṅ sems tsam la ni yaṅ dag gnas |<br />| de nas chos dbyiṅs (4) gñis kyi mtshan ñid daṅ || bral ba mṅon sum ñid du rtogs par ’gyur ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874373bi' class='paragraph'>
+							7. Quand il a reconnu que les Sens ne sont rien que Verbe, il fait halte alors dans cet aspect du Rien-que-Pensée; et le Plan des Idéaux s’offre immédiatement à ses regards; et dès lors il est dissocié de l’Indice de dualité.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869730bi' class='paragraph'>
+							nāstīti cittāt param etya buddhyā cittasya nāstitvam upaiti tasmāt |<br />dvayasya nāstitvam upetya dhīmān saṃtiṣṭhate ’tadgatidharmaghātau || 8 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871278bi' class='paragraph'>
+							(19)心外無有物 物無心亦無<br />(20)以解二無故 善住眞法界&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872826bi' class='paragraph'>
+							sems las gźan med par ni blos rig nas || de nas sems kyaṅ med pa ñid du rtogs |<br />| blo daṅ ldan pas gñis po med rig nas || de mi ldan pa’i chos kyi dbyiṅs lag nas ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874374bi' class='paragraph'>
+							8. Puis connaissant, par la compréhension, que ce qui est autre que la Pensée n’est pas, alors il arrive à comprendre de cette Pensée qu’elle n’est pas. Quand il a compris que la dualité n’est pas, il fait halte dans le Plan des Idéaux qui n’a pas cette manière d’être.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869731bi' class='paragraph'>
+							akalpanājñānabalena dhīmataḥ samānuyātena samantataḥ sadā |<br />tadāśrayo gahvaradoṣasaṃcayo mahāgadeneva viṣaṃ nirasyate || 9 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871279bi' class='paragraph'>
+							(25)無分別智力 恒平等遍行<br />(26)爲壞過聚體 如藥能除毒&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872827bi' class='paragraph'>
+							blo daṅ ldan (5) pa’i mi rtog ye śes stobs || rtag tu kun nas mñam par soṅ ba yis |<br />| de la brten pa’i ñes tshogs tshaṅ tshiṅ dag || dug sman chen pos dug bźin sel bar byed ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874375bi' class='paragraph'>
+							9. Par la force de la connaissance sans différenciation, toujours et partout escortée par l’égalité, la masse touffue des fautes, qui a ce Fond, est expulsée, compte un poison l’est par un puissant antidote.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869732bi' class='paragraph'>
+							ekena saṃbhṛta<b>saṃbhāra</b>tvaṃ dharmacintāsuviniśritatvaṃ samādhiniśrityabhāvanāt manojalpāc ca teṣāṃ dharmāṇām arthaprakhyānāvagamāt tatpraveśaṃ darśayati | asaṃkhyeyaprabhedakālaṃ pāramasya paripūraṇam ity <b>anantapāraṃ</b> | dvitīyena mano<b>jalpamātra</b>_anarthān viditvā tadābhāse cittamātre ’vasthānamiyaṃ bodhisatvasya nirvedhabhāgīyāvasthā | tataḥ pareṇa <b>dharmadhātoḥ pratyakṣato</b> gamane dvayalakṣaṇena viyukto grāhyagrāhakalakṣaṇena iyaṃ darśanamārgāvasthā | tṛtīyena yathāsau dhamadhātuḥ pratyakṣatām eti tad darśayati | kathaṃ cāsau dharmadhātuḥ pratyakṣatām eti | <b>cittād</b> anyadālambanaṃ grāhyaṃ nāstīty avagamya buddhyā tasyāpi cittamātrasya nāstitvāvagamanaṃ grāhyaṃbhāve grāhakābhāvāt | dvaye cāsya nāstitvaṃ viditvā dharmadhātau avasthānam atadgatir grāhyagrāhakalakṣaṇābhyāṃ rahita evaṃ dharmadhātuḥ pratyakṣatām eti | caturthena bhāvanāmārgāvasthāyām aśrayaparivartanāt pāramārthikajñānapraveśaṃ darśayati | sadā sarvatra samatānugatena_<b>avikalpajñānabalena</b> yatra tatsamatānugataṃ paratantre svabhāve <b>tadāśrayasya</b> dūra-anupraviṣṭasya doṣasaṃcayasya dauṣṭhulyalakṣaṇasya mahāgadeneva <b>viṣasya nirasanāt</b> | paramārthajñānamāhātmye ślokaḥ |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871280bi' class='paragraph'>
+							(8)釋曰。此偈顯第一集大聚位。福智無邊際者。(9)由差別無數及時節無邊故。生長悉圓滿者。(10)菩薩集此大聚到彼岸故。思法決定已者。依(11)止定心而思惟故。通達義類性者。解所思諸(12)法義類。悉以意言爲自性故。偈曰<br />(Verse above)<br /><br />(15)釋曰。此偈顯第二通達分位。由解一切諸義(16)唯是意言爲性。則了一切諸義悉是心光。菩(17)薩爾時名善住唯識。從彼後現見法界。了達(18)所有二相。即解脱能執所執。偈曰<br />(Verse above)<br /><br />(21)釋曰。此偈顯第三見道位。如彼現見法界故。(22)解心外無有所取物。所取物無故。亦無能取(23)心。由離所取能取二相故。應知善住法界自(24)性。偈曰<br />(Verse above)<br /><br />(27)釋曰。此偈顯第四修道位。菩薩入第一義智(28)轉依已。以無分別智恒平等行及遍處行。何(29)以故。爲壞依止依他性熏習稠林過聚相故。(599b1)問此智力云何。答譬如阿伽陀大藥。能除一(2)切衆毒。彼力如此。偈曰&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872828bi' class='paragraph'>
+							gcig gis ni tshogs chen po bas gas pa daṅ | tiṅ ṅe ’dzin la brten nas ṅas ma pa’i phyir chos (6) bsam pa ñid du rnam par ṅes pa ñid daṅ | yid kyi brjod pa yin pa’i phyir chos de dag don du snaṅ bar rtogs lṅa’i phyir de la ’jug pa rab tu ston te | dus rab tu dbye ba graṅs med pas ’di’i pha rol yoṅs su rdzogs pas nas mtha’ yas pha rol yin no || gñis pas ni don rnams (7) yid kyis brjod pa tsam du rig nas der snaṅ ba’i sems tsam la gnas pa ston te | ’di ni byaṅ chub sems dpa’i ṅes par ’byed pa’i cha daṅ mthun pa’i gnas skabs yin no || de phan chad ni chos kyi dbyiṅs gñis kyi mtshan ñid gzuṅ ba daṅ | ’dzin pa’i mtshan ñid daṅ bral ba mṅon (146b1) sum ñid du rtogs te | ’di ni mthoṅ ba’i lam gyi skabs yin no || gsum pas ni ji ltar ’dis chos kyi dbyiṅs mṅon sum ñid du rtogs pa ston to || ji ltar ’dis mṅon sum du rtogs śe na | sems las gźan pa’i dmigs pa gzuṅ ba med do źes bya bar blos rtogs nas gzuṅ (2) ba med na ’dzin pa yaṅ med pa’i phyir sems tsam po de yaṅ med pa ñid du khoṅ du chud do || de gñis med pa ñid du rig nas de daṅ mi ldan pa’i chos kyi dbyiṅs gzuṅ ba daṅ | ’dzin pa’i mtshan ñid dag daṅ bral ba la gnas te | de ltar na chos kyi dbyiṅs mṅon sum ñid du rtogs pa (3) yin no || bźi pas ni bsgom pa’i lam gyi gnas skabs na gnas yoṅs su gyur pas don dam pa’i ye śes la ’jug pa ston te | rnam par mi rtog pa’i ye śes kyi stobs kyis dus kun du mñam pa ñid du soṅ bas de la brten pa’i ñes pa’i tshogs riṅ du rjes su źugs pa | gnas ṅan (4) len gyi mtshan ñid dag dug sman chen pos dug bźin du sel ba’i phyir ro || de gaṅ la mñam ñid du soṅ źe na | gźan gyi dbaṅ gi ṅo bo ñid la’o || don dam pa’i ye śes kyi che ba ñid kyi tshigs su bcad pa |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874376bi' class='paragraph'>
+							Dans le premier vers, l’approvisionnement en Provisions et la bonne certitude après réflexion sur les Idéaux montrent l’entrée dans la connaissance transcendante, puisqu’il comprend alors que l’apparition du Sens des Idéaux tient à la Pratique fondée sur l’Union, et aussi au Verbe Mental. Dans le composé anantapâram, pâram signifie le parachèveraient, et ananta désigne un temps dont les fractions sont incalculables. Dans le second vers, le Bodhisattva, ayant connu que les Sens sont tout simplement Verbe Mental, reste alors dans cette apparence qui n’est Rienque-Pensée; c’est là l’état de l’ordre de Fixité. Ensuite, le Plan des Idéaux s’offre immédiatement à sa vue, et il est dissocié de l’Indice de dualité, Indice de Prenant et Indice de Prenable; c’est là l’état du Chemin de Vue. Par le troisième vers il montre comment le Plan des Idéaux s’offre immédiatement aux yeux. Et comment ce Plan des Idéaux s’offre-t-il immédiatement aux yeux? Dès qu’il a saisi par la compréhension qu’il n’y a pas d’autre Phénomène prenable que la Pensée, il arrive à comprendre aussi que ce Rien-que-Pensée lui-même n’existe pas, puisque là où il n’y a pas de Prenable il n’y a pas de Prenant. Ayant ainsi connu la non-existence de celle-ci dans la dualité, il reste alors dans le Plan des Idéaux. L’expression: “Qui n’a pas cette manière d’être” a signifie qu’il est dépourvu de l’Indice de Prenant et de Prenable. C’est ainsi que le Plan des Idéaux s’offre immédiatement à sa vue. Par le quatrième vers il montre l’entrée dans la connaissance transcendante par suite de la Révolution du Fond dans l’état du Chemin de Pratique: Grâce à la force du savoir sans différenciation toujours et partout escorté d’égalité, il rejette la niasse des fautes, qui a pour Indice la Turbulence, qui a sou Fond [sur la Nature relative, où ce savoir est accompagné d’égalité’, et qui a pénétré bien à fond, comme on rejette un poison par la force d’un antidote.<br />Un vers pour magnifier la connaissance transcendante.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869733bi' class='paragraph'>
+							munivihitasudharmasuvyavastho matim upadhāya samūladharmadhātau |<br />smṛtim agatim avagamya kalpamātrāṃ vrajati guṇārṇavapāramāśudhīraḥ || 10 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871281bi' class='paragraph'>
+							(3)縁佛善成法 心根安法界<br />(4)解念＊唯分別 速窮功徳海&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872829bi' class='paragraph'>
+							thub las gsuṅs pa’i dam chos legs bźag pa || rtsa ba’i chos (5) kyi dbyiṅs la blo grol bźag |<br />| dran rgyu rtog pa rtsam rig brtan pa dag || myur du yon tan rgya mtsho’i pha rol ’gro ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874377bi' class='paragraph'>
+							10. Bien disposé dans le Bon Idéal prescrit par le Muni, asseyant bien sa pensée dans le Plan des Idéaux avec sa racine, comprenant que le mouvement de la Mémoire, n’est qu’Imagination, le Noble arrive vite it l’autre bord de l’Océan des vertus.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869734bi' class='paragraph'>
+							buddha<b>vihite sudharme suvyavasthāpite</b> sa paramārthajñānapraviṣṭo bodhisatvaḥ saṃpiṇḍitadharmālambanasya <b>mūlacittasya dharmadhātau matim upanividhāya</b> yā smṛtir upalabhyate tāṃ sarvāṃ smṛtipravṛttiṃ kalpanāmātrām avagacchaty evaṃ <b>guṇārṇavasya pāraṃ</b> buddhatvam <b>āśu vrajati</b>_ity etat paramārthajñānasya māhātmyaṃ |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871282bi' class='paragraph'>
+							(5)釋曰。此偈顯第五究竟位。縁佛善成法者。諸(6)菩薩於佛善成立一切妙法中作總聚縁故。(7)問云何總聚縁。答心根安法界。此明入第一(8)義智故。由此慧安住法界。是故此心名根。問(9)此後復云何。答解念唯分別。謂此後起觀如(10)前觀事。處處念轉。解知諸念唯是分別非實(11)有故。問如此知已得進何位。答速窮功徳海。(12)謂如是知已佛果功徳海。能速窮彼岸故&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872830bi' class='paragraph'>
+							byaṅ chub sems dpa’ don dam pa’i ye śes la źugs pa des saṅs rgyas kyis gsuṅs pa’i dam pa’i chos legs par bźag pa’i rtsa ba’i sems bsdus pa’i chos (6) la dmigs pa’i chos kyi dbyiṅs la blo gros bźag nas dran pa gaṅ daṅ gaṅ skye ba’i dran ba ’jug pa de dag thams cad rtog pa rtsam du khoṅ du chud de | de ltar na myur du yon tan rgya mtsho’i pha rol saṅs rgyas ñid du ’gro bar ’gyur bas ’di ni don dam pa’i ye śes kyi che ba ñid yin no ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874378bi' class='paragraph'>
+							Quand le Bodhisattva est entré jusqu’au savoir transcendant dans le bon Idéal, prescrit par le Bouddha et bien distribué, ayant bien assis sa pensée dans le Plan des Idéaux de la Pensée Radicale, qui a pour Phénomène les Idéaux pris en bloc, il comprend que toute l’activité de la Mémoire, quel que soit le souvenir suscepté, n’est Rien-qu’Imagination, et ainsi il arrive vite à l’autre rive de l’océan des vertus, qui est la Bouddhaté. Telle est la grandeur de la connaissance transcendante.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869735bi' class='paragraph'>
+							mahāyānasūtrālaṃkāre tatvādhikāraḥ ṣaṣṭhaḥ&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "7869718";
+							kilderef = "Msa San: Lévi (1907)  6.0 - San: Lévi (1907) 11";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871283bi' class='paragraph'>
+							眞(13)實品究竟&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "7871266";
+							kilderef = "Msa Chi: T. 1604  598b18 - Chi: T. 1604 599b13";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872831bi' class='paragraph'>
+							de (7) kho na ñid kyi skabs rdzogs so || ||&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "7872814";
+							kilderef = "Msa Tib: Tg sems tsam phi  145a2 - Tib: Tg sems tsam phi 146b7";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874379bi' class='paragraph'>
+							11. &nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "7874362";
+							kilderef = "Msa Fre: Lévi (1911)  - Fre: Lévi (1911) ";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'></div><div class='textvar' style='width:24%;'></div><div class='textvar' style='width:24%;'></div><div class='textvar' style='width:24%;'></div></div><div class='clear'></div><div class="fontboks"><a onClick=onOffdiv('permlink') name="permlink" href="#permlink">Permanent link</a></div><div class='clear'></div><div class='perm_felt' id='permlink'>http://www2.hf.uio.no/common/apps/permlink/permlink.php?app=polyglotta&amp;context=ctext&amp;uid=8f61f08c-6e5a-11e0-be58-001cc4df1abe</div></div></div><!-- infofelt --></div><!-- divControl --><div class="clear"></div>
+<div style="clear:both"></div><div class="signatur"><div class="signatur_left">
+		<a href="https://wiki.uio.no/hf/dmlf/index.php/Kategori:Polyglotta:Documentation">Go to Wiki Documentation</a></br>Enhet: <a HREF=http://www.hf.uio.no>Det humanistiske fakultet</a> &nbsp; Utviklet av: <a href="http://www.hf.uio.no/tjenester/it">IT-seksjonen ved HF</a></div><!--signatur_left -->
+		<div class="signatur_right"><a href="/polyglotta/admin/index.php">Login</a></div>
+		<div style="clear:both"></div></div>
+</body></html><SCRIPT LANGUAGE="JAVASCRIPT">
+	
+	$("#tr_IA").click(function(){
+	    if ($("#toggle_container_IA").is(':hidden'))
+	    	$("#toggle_container_IA").show();
+	    else{
+	        $("#toggle_container_IA").hide();
+	    }
+	    return false;
+		});
+
+	$("#tr_lang").click(function(){
+	    if ($("#toggle_container_lan").is(':hidden'))
+	    	$("#toggle_container_lan").show();
+	    else{
+	        $("#toggle_container_lan").hide();
+	    }
+	    return false;
+	});
+
+	$("#tr_img").click(function(){
+	    if ($("#toggle_container_img").is(':hidden'))
+	    	$("#toggle_container_img").show();
+	    else{
+	        $("#toggle_container_img").hide();
+	    }
+	    return false;
+	});
+
+	$("#diac2button").click(function(){
+	   if ($("#ex3a").is(':hidden')){
+		   $("#ex3a").show();
+	       $("#diac2button").html("Hide&#32Diacritica-help");
+	   }else{
+	       $("#ex3a").hide();
+	       $("#diac2button").html("Diacritica-help");
+	   }
+	   return false;
+	});
+
+	$("#diacbutton").click(function(){
+	   if ($("#diacritical_sign").is(':hidden')){
+		   	$("#diacritical_sign").show();
+	      	$("#diacbutton").html("Hide&#32diacritica");
+	   }else{
+	        $("#diacritical_sign").hide();
+	        $("#diacbutton").html("Diacritica");
+	   }
+	   return false;
+    });
+
+	$('#toggle_container_IA').click(function(e) {
+	   e.stopPropagation();
+	});
+
+	$('#toggle_container_lan').click(function(e) {
+        e.stopPropagation();
+    });
+
+	$('#toggle_container_img').click(function(e) {
+        e.stopPropagation();
+    });
+
+	$('#ex3a').click(function(e) {
+	    e.stopPropagation();
+	});
+
+	$('#diacritical_sign').click(function(e) {
+        e.stopPropagation();
+    });
+
+	//Kode for å sette inn diakritiske tegn
+	$('#diacritical > tbody > tr > td').click(function() {
+	  	//alert('red');
+		$("#sokeboks").val($("#sokeboks").val() + $(this).text());
+	});
+
+	$('.diac2button').text(($('.diacbutton').text() == 'Diacritica-help') ? 'Hide Diacritica-help' : 'Diacritica-help');
+	
+	//Lukker alle åpnede pop'uper ved klikk på siden
+	$(document).click(function() {
+		$('#toggle_container_IA').hide();
+	    
+        $('#toggle_container_lan').hide();
+    
+        $('#toggle_container_img').hide();
+   
+   		$('#diacritical_sign').hide();
+   		$("#diacbutton").html("Diacritica");
+   
+       	$('#ex3a').hide();
+       	$("#diac2button").html("Diacritica-help");
+   });
+	</SCRIPT>

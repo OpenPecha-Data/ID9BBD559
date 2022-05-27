@@ -1,0 +1,119 @@
+id: 47660a647d7d4570be2a8ff899348c18
+annotation_type: index
+revision: '00001'
+annotations:
+  470868f86a464c8a8e909acbec20ce6a:
+    base: f15D5.txt
+    span:
+      start: 0
+      end: 5213
+  b2df151a9019488998b77ce335daf1f9:
+    base: f2666.txt
+    span:
+      start: 0
+      end: 13173
+  049590c953cd471eaaf73f8cc2b34f3b:
+    base: f2CCE.txt
+    span:
+      start: 0
+      end: 2143
+  3184ca59b41f47f5b18cc8785800ea91:
+    base: f2FB8.txt
+    span:
+      start: 0
+      end: 11155
+  e33bfdff8b8f4acbae271f592a1cd6cc:
+    base: f45D5.txt
+    span:
+      start: 0
+      end: 1433
+  ea91c645f3ca4d2682f1db0925d0f348:
+    base: f4DAE.txt
+    span:
+      start: 0
+      end: 2894
+  f005ff89d9194e81bba707227590e38f:
+    base: f5D77.txt
+    span:
+      start: 0
+      end: 10186
+  68dae2fdc2e247d08ecf1365fe7b1efa:
+    base: f8391.txt
+    span:
+      start: 0
+      end: 3543
+  fa267aec734a477d9867c72a38af9099:
+    base: f97DB.txt
+    span:
+      start: 0
+      end: 2270
+  0e2872ba3ff64fbc9beb0fda6f25ebf2:
+    base: f9EEE.txt
+    span:
+      start: 0
+      end: 12171
+  ffe8e5a3d0ab4c369914c0b4db22b7ae:
+    base: fA009.txt
+    span:
+      start: 0
+      end: 4068
+  94180b31471a444e95c466a8088ee13f:
+    base: fA36E.txt
+    span:
+      start: 0
+      end: 16546
+  b04de4e2c2024b2aa08ec2eaaca1181d:
+    base: fA3B7.txt
+    span:
+      start: 0
+      end: 813
+  37ed0cea20b34020a34b578c084b63cb:
+    base: fA72B.txt
+    span:
+      start: 0
+      end: 18821
+  924c3b768baa4fdb8d87fd0a39ff016b:
+    base: fAE66.txt
+    span:
+      start: 0
+      end: 2240
+  20d9041d0a01452db7f2a2353e644fb3:
+    base: fBC04.txt
+    span:
+      start: 0
+      end: 1436
+  3497af50b8394cdf9def4f81590ef49f:
+    base: fC883.txt
+    span:
+      start: 0
+      end: 125485
+  b5e69497c48c40a1933d7e4a02b940aa:
+    base: fCA83.txt
+    span:
+      start: 0
+      end: 32
+  f2fe8b5eff614c18a5fc7ff68adfce4e:
+    base: fD77B.txt
+    span:
+      start: 0
+      end: 1786
+  066d4f36dc94426e88ef656117716887:
+    base: fD94D.txt
+    span:
+      start: 0
+      end: 1734
+  01aed95b306740348374951208f0df40:
+    base: fED5E.txt
+    span:
+      start: 0
+      end: 44
+  f7171cf48c3d4ec7bff0d7f6face2933:
+    base: fEDA8.txt
+    span:
+      start: 0
+      end: 5767
+  ea79afb1c0374d789dd8c703099e3e57:
+    base: fFEED.txt
+    span:
+      start: 0
+      end: 9385

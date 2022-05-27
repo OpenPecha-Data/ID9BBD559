@@ -1,0 +1,573 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Bibliotheca Polyglotta</title>
+<link rel='stylesheet' type='text/css' href='css/bp.css'>
+<link rel='stylesheet' type='text/css' href='css/diac_doc.css'>
+
+<link rel='stylesheet' type='text/css' href='css/imageGallery.css'>
+<link rel='stylesheet' type='text/css' href='css/ss.css'>
+	      <link rel='stylesheet' type='text/css' href='css/tree_menu.css'>
+<script type="text/javascript" src="js/jquery-1.3.2.js"></script>
+<!--  <script type="text/javascript" src="js/jqModal.js"></script>-->
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/tree_menu.js"></script>
+<!-- <script src="js/analytics_tracking.js" type="text/javascript"></script> -->
+
+
+<!-- <script type="text/javascript" src="js/popupDivhandling.js"></script> -->
+<!--  <script type="text/javascript" src="jquery-latest.js"></script>
+<script type="text/javascript" src="js/jquery-imagegallery.js"></script>-->
+</head>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//vrtx.uio.no/js/analytics/v2/analytics.js','ga');
+
+ga('create', 'UA-86407471-1', 'auto');
+ga(function(tracker) {
+
+	// Modifies sendHitTask to hit ipproxy instead of http://www.google-analytics.com directly
+	tracker.set('sendHitTask', function(model) {
+		payload = model.get('hitPayload');
+		var xhr = new XMLHttpRequest();
+		xhr.open('GET', '//w3prod-ipproxy.uio.no/collect' +'?' + payload, true);
+		xhr.send();
+	});
+		ga('send', 'pageview');
+});
+</script>
+<body><div class='banner'></div><!-- banner --><div class='uiologo'>
+<a href='http://www.hf.uio.no/'><img src='https://www2.hf.uio.no/polyglotta/hfe.png' border='0'></a></div><!-- uiologo --><div class='clear'></div>
+<div class='smule_tittel'>
+<div class='brodsmuleboks'>You are here: <a href='/polyglotta/index.php' accesskey='1'> BP HOME</a> >  <a href='/polyglotta/index.php?page=library&amp;bid=2' accesskey='1'>TLB</a> > <a href='/polyglotta/index.php
+	?page=volume&amp;vid=1131' accesskey='1'>Asaṅga/Maitreya: Mahāyānasūtrālaṃkāra</a> > fulltext</div><div class='clear'></div>
+<div class='headline'>Asaṅga/Maitreya: Mahāyānasūtrālaṃkāra<div class='clear'></div></div><!-- headline -->
+</div><!-- smule_tittel -->
+<!--<div>-->
+
+<h2 class="trigger" id="tr_lang"><a  href="#">Choose languages</a></h2>
+<h2 class="trigger" id="tr_img"><a  href="#">Choose images, etc.</a></h2>
+
+
+<div id="toggle_container_lan">
+
+<form  id="tr"  name="Sprakvalg2" action="inc/set_cookie_lan.php" method="POST">
+
+<div style="float:left; width:auto; text-align:left; margin-left:20px;">
+<h5>Choose languages</h5>
+<ul>
+<input value="Choose all" type="button" onClick="markAll('tr')"><input value="Uncheck all" type="button" onClick="markNone('tr')">
+
+	<li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1131[5695]" value="5695" id="lancheckbox" checked >Sanskrit: San: Lévi (1907)</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1131[5696]" value="5696" id="lancheckbox" checked >Chinese: Chi: T. 1604</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1131[5697]" value="5697" id="lancheckbox" checked >Tibetan: Tib: Tg sems tsam phi</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1131[5698]" value="5698" id="lancheckbox" checked >French: Fre: Lévi (1911)</label></li><div style="clear:both"></div>
+<input type='submit' name='set_cookie' value='Save view'>
+<div style="clear:both"></div>
+
+</ul>
+<input type="hidden" name="vid" value="1131">
+<input type="hidden" name="page" value="fulltext">
+</form>
+</div>
+</div>
+
+<div id="toggle_container_img">
+<form  id="tr"  name="Sprakvalg2" action="inc/set_cookie_img.php" method="POST">
+
+<div style="float:left; width:auto; text-align: left;">
+<h5>Choose display</h5>
+<ul>
+		
+	<li> 
+		<input type='checkbox' name='bilder' checked="checked" > Enable images
+	</li>
+	<li> 
+	<input type='checkbox' onclick="onOffCheckbox();" name='fotnoter' checked="checked"> Enable footnotes
+	<div id="pff" style="display:block" >
+	<ul>
+	<li><input type='radio' name='fotnote_valg'  value='show_a' checked> Show all footnotes</li>
+	<li><input type='radio' name='fotnote_valg'  value='show_h'  > Minimize footnotes</li>
+	</ul>
+	</li>
+	
+	</div>
+	<div style="float:left; width:20em; text-align: left; margin-left:120px ">
+	<div style="clear:both"></div>
+	<input type='submit' name='set_cookie' value='Save view'>
+	<div style="clear:both"></div>
+	</div>
+	
+</ul>
+<input type="hidden" name="vid" value="1131">
+<input type="hidden" name="page" value="fulltext">
+</form>
+</div>
+	
+
+
+
+</div>
+</div>
+
+<div class='sok'><form name='Sok' id='FormBlock' action='/polyglotta/index.php' method='get'>
+<input type='hidden' name='page' value='search'>
+<input type='hidden' name='bid' value='2'>
+<input type='hidden' name='vid' value='1131'>
+<div class='sokeboks'>
+<input name='sokefelt' id='sokeboks' type='text' size='30' value=''>
+<input type='submit' name='Sok' value='Search' id='nsubmit'>
+<div class='clear'></div><a class="diacbutton" id="diacbutton" href="#">Diacritica</a><a id="diac2button" class="diac2button"  href="#">Diacritica-help</a><a class="s2button" href="https://wiki.uio.no/hf/dmlf/index.php/Kategori:Polyglotta:Documentation:SearchHelp">Search-help</a><div class='diacritical' id='diacritical_sign'><div style="text-align: left; ">
+<table class = 'diacritica' width="200" border="1" cellpadding="1" cellspacing="1" id="diacritical">
+    <tbody>
+        <tr>
+            <td style="text-align: center; ">ā</td>
+            <td style="text-align: center; ">ī</td>
+            <td style="text-align: center; ">ū</td>
+            <td style="text-align: center; ">ṛ</td>
+            <td style="text-align: center; ">ṝ</td>
+            <td style="text-align: center; ">ḷ</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">ḹ</td>
+            <td style="text-align: center; ">&rsquo;</td>
+            <td style="text-align: center; ">ṃ</td>
+            <td style="text-align: center; ">ḥ</td>
+            <td style="text-align: center; ">ṅ</td>
+            <td style="text-align: center; ">&ntilde;</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">ṭ</td>
+            <td style="text-align: center; ">ḍ</td>
+            <td style="text-align: center; ">ṇ</td>
+            <td style="text-align: center; ">ṣ</td>
+            <td style="text-align: center; ">ś</td>
+            <td style="text-align: center; ">ź</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">&scaron;</td>
+            <td style="text-align: center; ">č</td>
+            <td style="text-align: center; ">ǰ</td>
+            <td style="text-align: center; ">&gamma;</td>
+            <td style="text-align: center; ">&nbsp;</td>
+            <td style="text-align: center; ">&nbsp;</td>
+        </tr>
+    </tbody>
+</table>
+</div></div><!-- diacritical --><div id="ex3a" class="jqmDialog"><div>
+	<span style="font-size:12px;">Note on the transliteration:</span></div>
+<div>
+	<span style="font-size:12px;">The transliteration system of the BP/TLB is based on the Unicode/UTF-8 system. However, there may be difficulties with some of the letters &ndash; particularly on PC/Windows-based systems, but not so much on the Mac. We have chosen the most accepted older and traditional systems of transliteration against, e.g, Wylie for Tibetan, since with Unicode it is possible, in Sanskrit and Tibetan, etc., to represent one sound with one letter in almost all the cases (excepting Sanskrit and Tibetan aspirated letters, and Tibetan tsa, tsha, dza). We thus do not use the Wylie system which widely employs two letters for one sound (ng, ny, sh, zh etc.).</span></div>
+<div>
+	&nbsp;</div>
+<div>
+	<span style="font-size:12px;">Important:</span></div>
+<div>
+	<span style="font-size:12px;">We ask you in particular to note the use of the &rsquo; apostrophe and not the &#39; representing the avagrāha in Sanskrit, and most important the &rsquo;a-chuṅ in Tibetan. On the Mac the &rsquo; is Alt-M.</span></div>
+<div>
+	&nbsp;</div>
+<div>
+	<span style="font-size:12px;">If you cannot find the letters on your key-board, you may click on the link &quot;Diacritica&quot; to access it for your search.</span></div>
+</div><!-- diacritical_doc --><div class='clear'></div><select name='searchmode'><option selected value='phrase'>Search for exact phrase</option>
+<option  value='phraseregex'>Search for exact phrase (regex)</option>
+<option  value='word'>Search for every word in one record</option>
+<option  value='free'>Search for every word fragment in one record</option>
+</select>
+<select name='context'>
+<option ($_GET[context]=="a" ? "selected" : "") value="a"> Search in all libraries</option><option selected value="bTLB">Search in TLB</option><option selected value="v1131">Search in Asaṅga/Maitreya: Mahāyānasūtrālaṃkāra</option></select><div class='clear'></div><a class='sbutton' href='/polyglotta/index.php?page=asearch&amp;bid=2&amp;vid=1131'>Choose specific texts..</a><div class='clear'></div></div></form></div><!-- sok --><div class='clear'></div><!-- clear --><div id='dcr' class='divControlRead'><div class='venstrefulltekstfelt'><div class='bverknavn'><a href='/polyglotta/index.php?page=volume&amp;vid=1131'>Asaṅga/Maitreya: Mahāyānasūtrālaṃkāra</a></div><table class="tlvl2">
+					<tr>
+						<td bgcolor="#ffffff"> &nbsp; &nbsp;
+						<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_7627.Verses41-58" border=0 hspace=2>
+						<a href="/polyglotta/index.php?page=fulltext&amp;view=fulltext&amp;vid=1131" class="ajax_tree0">Complete text</a>
+						</td>
+					</tr>
+				  </table><input type="hidden" name="tree_top_options" id="tree_top_options" value="135128.Title|135129.Preface|135130.ChapterI|135132.ChapterII|135133.ChapterIII|135134.ChapterIV|135135.ChapterV|135136.ChapterVI|135137.ChapterVII|135138.ChapterVIII|135139.ChapterIX|135140.ChapterX|135141.ChapterXI|135142.ChapterXII|135143.ChapterXIII|135144.ChapterXIV|135145.ChapterXV|135146.ChapterXVI|135147.ChapterXVII|135148.ChapterXVIII|135149.ChapterXIX|135150.ChapterXX-XXI|135151.Colophon|">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135128.Title" border=0 hspace=2><a id="href_135128.Title" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1945667&level=1&cid=845779" class="ajax_tree0">Title
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135129.Preface" border=0 hspace=2><a id="href_135129.Preface" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1945668&level=1&cid=845780" class="ajax_tree0">Preface
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<a href="javascript:;" onclick="Expand('135130.ChapterI','0','1')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_135130.ChapterI" border=0 hspace=2><a id="href_135130.ChapterI" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1945669&level=1&cid=845781" class="ajax_tree0">Chapter I
+</td></tr></table>
+<div style="display:none;"  id="div_135130.ChapterI">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135131.Verses21-40" border=0 hspace=2><a id="href_135131.Verses21-40" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1945708&level=2&cid=845820" class="ajax_tree1">Verses 21-40
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135132.ChapterII" border=0 hspace=2><a id="href_135132.ChapterII" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1945711&level=1&cid=845823" class="ajax_tree0">Chapter II
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135133.ChapterIII" border=0 hspace=2><a id="href_135133.ChapterIII" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1945737&level=1&cid=845849" class="ajax_tree0">Chapter III
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135134.ChapterIV" border=0 hspace=2><a id="href_135134.ChapterIV" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1945765&level=1&cid=845877" class="ajax_tree0">Chapter IV
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135135.ChapterV" border=0 hspace=2><a id="href_135135.ChapterV" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1945808&level=1&cid=845920" class="ajax_tree0">Chapter V
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135136.ChapterVI" border=0 hspace=2><a id="href_135136.ChapterVI" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1945830&level=1&cid=845942" class="ajax_tree0">Chapter VI
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135137.ChapterVII" border=0 hspace=2><a id="href_135137.ChapterVII" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1945848&level=1&cid=845960" class="ajax_tree0">Chapter VII
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135138.ChapterVIII" border=0 hspace=2><a id="href_135138.ChapterVIII" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1945870&level=1&cid=845982" class="ajax_tree0">Chapter VIII
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135139.ChapterIX" border=0 hspace=2><a id="href_135139.ChapterIX" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1945915&level=1&cid=846027" class="ajax_tree0">Chapter IX
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135140.ChapterX" border=0 hspace=2><a id="href_135140.ChapterX" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1946076&level=1&cid=846188" class="ajax_tree0">Chapter X
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135141.ChapterXI" border=0 hspace=2><a id="href_135141.ChapterXI" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1946104&level=1&cid=846216" class="ajax_tree0">Chapter XI
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135142.ChapterXII" border=0 hspace=2><a id="href_135142.ChapterXII" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1946255&level=1&cid=846367" class="ajax_tree0">Chapter XII
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135143.ChapterXIII" border=0 hspace=2><a id="href_135143.ChapterXIII" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1946299&level=1&cid=846411" class="ajax_tree0">Chapter XIII
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135144.ChapterXIV" border=0 hspace=2><a id="href_135144.ChapterXIV" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1946348&level=1&cid=846460" class="ajax_tree0">Chapter XIV
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135145.ChapterXV" border=0 hspace=2><a id="href_135145.ChapterXV" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1946424&level=1&cid=846536" class="ajax_tree0">Chapter XV
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135146.ChapterXVI" border=0 hspace=2><a id="href_135146.ChapterXVI" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1946435&level=1&cid=846547" class="ajax_tree0">Chapter XVI
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135147.ChapterXVII" border=0 hspace=2><a id="href_135147.ChapterXVII" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1946577&level=1&cid=846689" class="ajax_tree0">Chapter XVII
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135148.ChapterXVIII" border=0 hspace=2><a id="href_135148.ChapterXVIII" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1946715&level=1&cid=846827" class="ajax_tree0">Chapter XVIII
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135149.ChapterXIX" border=0 hspace=2><a id="href_135149.ChapterXIX" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1946966&level=1&cid=847078" class="ajax_tree0">Chapter XIX
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135150.ChapterXX-XXI" border=0 hspace=2><a id="href_135150.ChapterXX-XXI" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1947102&level=1&cid=847214" class="ajax_tree0">Chapter XX-XXI
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_135151.Colophon" border=0 hspace=2><a id="href_135151.Colophon" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1131&mid=1947214&level=1&cid=847326" class="ajax_tree0">Colophon
+</td></tr></table>
+<script language=javascript>test('135138.ChapterVIII|')</script><div class='bverknavn'><a href='/polyglotta/index.php?page=library&amp;bid=2'>Back to library</a></div></div><!-- venstrefulltekstfelt --><div class="clear"></div><!-- clear --><div id="nav-menu"><ul>
+  		  <li  id="nav-1"><a class="tabValgt" href="/polyglotta/index.php?page=record&amp;view=record&amp;vid=1131&amp;mid=1945870&amp;level=1">Sentence by sentence view</a></li>
+  		  <li  id="nav-2"><a  href="/polyglotta/index.php?page=fulltext&amp;view=fulltext&amp;vid=1131&amp;cid=845982&amp;mid=1945870&amp;level=1">Continuous text view</a></li>
+ 		<li  id="nav-3"><a  href="/polyglotta/admin/index.php?page=fulltext&amp;view=fulltext&amp;vid=1131&amp;cid=845982&amp;mid=1945870&amp;level=1">View in admin</a></li>
+
+  		  </ul></div><div class='clear'></div><!-- clear -->			<script language="javascript" type="text/javascript">
+			var kilderef = '';
+			var tekstid = 0;
+			var tekstid_bilder = 0;
+			var filsti = '';
+			var thumbnail = '';
+			</script>
+		<div class='infofulltekstfelt'><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><div class='kilderef' id='7869758'></div><div class='clear'></div><span id='7869758bi' class='paragraph'>
+							aṣṭamo ’dhikāraḥ&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><div class='kilderef' id='7871306'></div><div class='clear'></div><span id='7871306bi' class='paragraph'>
+							(27)＊大乘莊嚴經論成熟品第九&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><div class='kilderef' id='7872854'></div><div class='clear'></div><span id='7872854bi' class='paragraph'>
+							&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><div class='kilderef' id='7874402'></div><div class='clear'></div><span id='7874402bi' class='paragraph'>
+							CHAPITRE VIII<br />LA PER-MATURATION.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869759bi' class='paragraph'>
+							bodhisatvaparipāke saṃgrahaḥ ślokaḥ |<br />rūciḥ prasādaḥ praśamo ’nukampanā kṣamātha medhā prabalatvam eva ca |<br />ahāryatāṅgaiḥ samupetatā bhṛśaṃ jinātmaje tatparipākalakṣaṇam || 1 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871307bi' class='paragraph'>
+							(28)釋曰。已説諸菩薩神通。諸菩薩云何自成熟。(29)偈曰(600b1)欲信捨悲忍 念力堅支具<br />(2)應知自成熟 此九皆上品&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872855bi' class='paragraph'>
+							byaṅ chub sems dpa’ yoṅs su smin par bsdu bar (2) tshigs su bcad pa |<br />dga’ daṅ dad daṅ rab źi sñiṅ brtse daṅ || bzod daṅ yid gźuṅs mthu can ñid daṅ ni |<br />| mi ’phrogs pa daṅ | yan lag ldan pa rab || de ni rgyal sras yoṅs su smin pa’i mtshan ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874403bi' class='paragraph'>
+							Un vers pour résumer la Per-maturation du Bodhisattva.<br />1. Délectation, Limpidité, Pacification, compassion, patience, Aptitude, vigueur, inébranlabilité, intégralité, à un haut degré, c’est l’Indice de la Per-maturation chez le fils des Vainqueurs.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869760bi' class='paragraph'>
+							<b>rucir</b> mahāyānadeśanādharme <b>prasādas</b> taddeśike <b>praśamaḥ</b> kleśānām <b>anukampā</b> satveṣu <b>kṣamā</b> duṣkaracaryāyāṃ <b>medhā</b> grahaṇadhāraṇaprativedheṣu <b>prabalatvam</b> adhigame <b>ahāryatā</b> māraparapravādibhiḥ prāhāṇika_<b>aṅgaiḥ</b> samanvāgatatvaṃ | <b>bhṛśam</b>iti rucyādīnām adhimātratvaṃ darśayati | eṣa samāsena bodhisatvānāṃ navaprakāra ātmaparipāko veditavyaḥ | ruciparipākam ārabhya ślokaḥ |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871308bi' class='paragraph'>
+							(3)釋曰。菩薩有九種自成熟。一者欲成熟。由悕(4)求大法故。二者信成熟。由淨心説者故。三者(5)捨成熟。由滅離煩惱故。四者悲成熟。由憐愍(6)衆生故。五者忍成熟。由能行難行故。六者念(7)成熟。由一切受持故。七者力成熟。由皆能通(8)達故。八者堅成熟。由惡魔外道不能奪故。九(9)者支成熟。由善分圓滿故。如此九種窮最上(10)位。是名成熟相此九成熟。一一有因有體有(11)業。今當説。偈曰&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872856bi' class='paragraph'>
+							dga’ ba ni theg pa chen po bśad pa’i chos la’o || dad pa ni de ston par byed pa la’o || (3) rab tu źi ba ni ñon moṅs pa rnams so || sñiṅ brtse ba ni sems can rnams la’o || bzod pa ni dga’ ba spyod pa la’o || yid gźuṅs pa ni len pa daṅ | ’dzin pa daṅ | kho du chud pa dag la’o || mthu can ñid ni rtogs par bya ba la’o || mi ’phrogs pa ni bdud daṅ phas kyi rgol ba (4) dag gis so || yan lag ldan pa ni | spoṅ ba’i yan lag rnam daṅ ldan pa ñid do || rab ces bya ba ni | dga’ ba la sogs pa chen po ñiṅ ston par byed do || rnam pa dgu po de ni mdor na byaṅ chub sems dpa’ rnams kyis bdag yoṅs su smin pa yin par rig par bya’o || dga’ ba (5) yoṅs su smin pa las brtsams te tshigs su bcad pa |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874404bi' class='paragraph'>
+							Délectation à l’Idéal de la prédication du Grand Véhicule; Limpidité envers qui le prêche; Pacification des Souillures; compassion pour les êtres; patience à subir les épreuves; Aptitude à saisir, à retenir, à pénétrer; vigueur en fait d’Acquis; inébranlabilité aux démons et aux controversistes; intégralité des parties essentielles, “A un haut degré” indique que le plaisir etc. y sont outre mesure. Il faut connaître que c’est là, résumée en neuf termes, la Per-maturation du Moi chez les Bodhisattvas.<br />Un vers sur la Per-maturation de Délectation.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869761bi' class='paragraph'>
+							sumitratāditrayam ugravīryatā parārdhaniṣṭhottamadharmasaṃgrahaḥ |<br />kṛpālusaddharmamahāparigrahe mataṃ hi samyakparipākalakṣaṇam || 2 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871309bi' class='paragraph'>
+							(12)近友聞亦思 勝勇勝究竟<br />(13)攝法及受法 説欲成熟相&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872857bi' class='paragraph'>
+							grogs mchog la sogs gsum daṅ brtson rab daṅ || mthar phyin pa daṅ ni chos mchog sdud |<br />| dam chos cher gzuṅ phyir ni sñiṅ rje can || yaṅ dag yoṅs su smin pa’i mtshan ñid ’dod ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874405bi' class='paragraph'>
+							2. Avoir les trois, bons amis etc., avoir une énergie farouche, être au But de l’Au-delà, embrasser l’Idéal suprême, voilà I’Indice de la Per-maturation régulière dans la possession du Bon Idéal chez le Compatissant.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869762bi' class='paragraph'>
+							<b>sumitratāditrayaṃ</b> satpuruṣasaṃsevā saddharmaśravaṇaṃ yoniśomanasikāraś ca | <b>ugravīryatā</b> adhimātro vīryārambhaḥ | <b>parārdhaniṣṭhā</b> sarvācintyasthānanirvicikitsatā | <b>uttamadharmasaṃgraho</b> mahāyānadharmarakṣā tatpratipannānām upadravebhyo rakṣaṇāt | bodhisatvasya mahāyānadharmaparigraham_adhikṛtyedaṃ ruciparipākalakṣaṇaṃ veditavyaṃ | yena kāraṇena paripacyate sumitratāditrayeṇa | yaś ca tasyāḥ paripāka ugravīryaparārdhaniṣṭhāyuktaḥ svabhāvaḥ | yatkarma cottamadharmasaṃgrahakaraṇāt tad etena paridīpitaṃ | prasādaparipākam ārabhya ślokaḥ |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871310bi' class='paragraph'>
+							(14)釋曰。親近善友。聽聞正法如法思惟。此三(15)能起大欲。是名欲因。上大精進一切不思議(16)處究竟無疑。是名欲體。於大乘法有災横處(17)則能守護。菩薩所説信心領受。是名欲業。偈(18)曰&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872858bi' class='paragraph'>
+							grogs po mchog la (6) sogs pa gsum ni skyes bu dam pa la brten pa daṅ | dam pa’i chos ñan pa daṅ | tshul bźin yid la byed pa’o || brtson pa’i rab ni brtson ’grus chen po rtsom pa’o || mthar phyin pa’i dam pa ni | bsam gyis mi khyab pa’i gnas thams cad la the tshom med pa’o || chos (7) kyi mchog sdud pa ni theg pa chen po’i chos sruṅ ba ste | de la źugs pa rnams la ’tshe ba dag las sruṅ ba’i phyir ro || de ni byaṅ chub sems dpa’i theg pa chen po’i chos yoṅs su gzuṅ ba’i dbaṅ du byas nas | dga’ ba yoṅs su smin pa’i mtshan ñid yin par rig par (149a1) bya ste | rgyu gaṅ gis yoṅs su smin par ’gyur źe na | grogs po mchog la sogs pa gsum gyis so || de’i yoṅs su smin pa gaṅ yin źe na | brtson pa’i rab daṅ mthar phyin pa’i dam pa daṅ ldan pa’o || las gaṅ yin źe na | chos kyi mchog (2) sdud pa ste | ’dis ni de dag yoṅs su bstan to || dad pa yoṅs su smin pa las brtsams te tshigs su bcad pa |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874406bi' class='paragraph'>
+							Avoir les trois, bons amis etc.., c’est fréquenter les gens de bien, entendre le Bon Idéal, faire l’Acte mental à fond. L’énergie farouche, c’est se prendre à l’énergie outre mesure. Le But de l’Au-delà, c’est être affranchi de toute incertitude sur tous les points hors-réflexion. Embrasser l’Idéal suprême, c’est défendre l’Idéal du Grand Véhicule, en défendant coutre les calamités ceux qui y ont pris l’Initiative. C’est la l’Indice de la Per-maturation de satisfaction chez le Bodhisattva au point de vue de la possession de l’Idéal du Grand Véhicule: Les trois, bons amis etc., c’est la raison qui fait per-mûrir la Délectation. Sa permaturation elle-même, appliquée à l’énergie farouche et au But de l’Au-delà, c’est sa nature propre; quant it son acte, il consiste dans le Rapprochement avec l’idéal suprême.<br />Un vers sur la Per-maturation de Limpidité.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869763bi' class='paragraph'>
+							guṇajñatāthāśusamādhilābhitā phalānubhūtir manaso ’dhyabhedatā |<br />jinātmaje śāstari saṃprapattaye mataṃ hi samyakparipākalakṣaṇam || 3 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871311bi' class='paragraph'>
+							(19)如來福智聚 淨心不可壞<br />(20)速受定智果 説信成熟相&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872859bi' class='paragraph'>
+							yon tan śes daṅ sems kyaṅ mi phyed daṅ || tiṅ ’dzin myur du thob daṅ ’bras bu myoṅ |<br />| ston la yid ches bya phyir rgyal sras kyi || yaṅ dag (3) yoṅs su smin pa’i mtshan ñid ’dod ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874407bi' class='paragraph'>
+							3. Connaître les vertus, arriver rapidement à l’Union, jouir dit fruit., avoir l’esprit archi-indivisible, c’est là chez le fils des Vainqueurs, l’indice de la Per-maturation régulière pour s’en remettre au Maître.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869764bi' class='paragraph'>
+							tatparipāko ’pi kāraṇataḥ svabhāvataḥ karmataś ca paridīpitaḥ | <b>guṇajñatā</b> ity api sa bhagavāṃs tathāgata iti vistareṇa kāraṇaṃ | avetya prabhāvalābhād abhedyacittatā svabhāvaḥ | <b>āśusamādhilābhas</b> tat<b>phala</b>sya cābhijñādikasya pratyanubhavanaṃ karma | praśamaparipākam ārabhya ślokaḥ |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871312bi' class='paragraph'>
+							(21)釋曰。婆伽婆如是廣説。是名信因。得不壞(22)淨。是名信體。得定智果。是名信業。偈曰&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872860bi' class='paragraph'>
+							de yoṅs su smin pa yaṅ rgyud daṅ raṅ bźin daṅ las kyis bstan to || yon tan śes pa ni di ltar bcom ldan ’das de ni de bźin gśegs pa źes bya ba la sogs pa rgyas par ’byuṅ lta bu ste rgyu’o || śes nas dad pa thob pa’i (4) phyir sems mi phyed pa ni raṅ bźin no || tiṅ ṅe ’dzin myur du thob pa daṅ | de’i ’bras bu mṅon par śes pa la sogs pa ñams su myoṅ ba ni las so || rab tu źi ba yoṅs su smin pa la brtsams te tshigs su bcad pa |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874408bi' class='paragraph'>
+							Cette Per-maturation, elle aussi, est illustrée au point de vue de la raison, de la nature propre, et de l’acte. Sa raison, c’est qu’on connaît les vertus, quand on se dit: C’est lui Bhagavat, le Tathâgata, etc. tout au long. Sa nature propre, c’est l’état archi-indivisible de l’esprit, quand on est arrivé par intelligence à la Limpidité t, Son acte, c’est d’arriver rapidement à l’Union et de jouir respectivement des Super-savoirs etc.<br />Un vers sur la Per-maturation de Paix.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869765bi' class='paragraph'>
+							susaṃvṛttiḥ kliṣṭavitarkavarjanā nirantarāyo ’tha śubhābhirāmatā |<br />jīnātmaje kleśavinodanāya tan mataṃ hi samyakparipākalakṣaṇam || 4 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871313bi' class='paragraph'>
+							(23)善護於六根 離惡起對治<br />(24)樂修諸善法 説捨成熟相&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872861bi' class='paragraph'>
+							śin tu sdom źiṅ ñon moṅs rtog pa spoṅ || bar (5) chad med ciṅ dge la mṅon par dga’ |<br />| rgyal ba’i sras kyis ñon moṅs bsal ba’i phyir || yaṅ dag yoṅs su smin pa’i mtshan ñid ’dod ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874409bi' class='paragraph'>
+							4. Se bien garder, éviter les Discussions souillées, n’avoir pas d’obstacle, se délecter au bien, c’est là chez le fils des Vainqueurs l’indice de la Per-maturation exacte pour dissiper les Souillures.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869766bi' class='paragraph'>
+							kleśavinodanā bodhisatvasya praśamaḥ | tatparipāko ’pi kāraṇataḥ svabhāvataḥ karmataś ca paridīpitaḥ | indriyāṇāṃ smṛtisaṃprajanyābhyāṃ <b>susaṃvṛtiḥ</b> kāraṇaṃ | <b>kliṣṭavitarkavarjanā</b> svabhāvaḥ | pratipakṣabhāvanāyāṃ <b>nirantarāyatvaṃ</b> kuśalābhirāmatā ca karma | kṛpāparipākalakṣaṇam adhikṛtya ślokaḥ |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871314bi' class='paragraph'>
+							(25)釋曰。以念倚等善護六根。是名捨因。離不(26)善覺起無間道。是名捨體。一切善法恒樂修(27)習。是名捨業。偈曰&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872862bi' class='paragraph'>
+							ñon moṅs sel ba ni byaṅ chub sems dpa’i rab tu źi ba ste | de yoṅs su smin pa yaṅ rgyu daṅ raṅ bźin daṅ las kyis bstan to || (6) dran pa daṅ śes bźin dag gis dbaṅ po rnams śin tu sṅom pa ni rgyu’o || ñon moṅs pa can gyi rnam par rtogs pa spoṅ ba ni raṅ bźin no, | gñen po sgom pa la bar chad med pa daṅ dge pa la mṅon par dga’ ba ni las so || sñiṅ brtse ba yoṅs su smin pa’i mtshan ñid kyi dbaṅ du (7) byas te tshigs su bcad pa |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874410bi' class='paragraph'>
+							Dissiper les Souillures, c’est la Pacification pour le Bodhisattva. Cette Per-maturation, elle aussi, est illustrée au point de vue de la raison, de la nature propre, et de l’acte. Sa raison, c’est qu’on garde bien les organes par la Mémoire et la Pleine Conscience. Sa nature propre, c’est d’éviter, les Conjectures souillées. Son acte, c’est qu’on est sans obstacles dans la Pratique des Auxiliaires, et qu’on se plaît au Bien.<br />Un vers sur la Per-maturation de Compassion.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869767bi' class='paragraph'>
+							kṛpā prakṛtyā paraduḥkhadarśanaṃ nihīnacittasya ca saṃpravarjanam |<br />viśeṣagatvaṃ jagadagrajanmatā parānukampāparipākalakṣaṇam || 5 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871315bi' class='paragraph'>
+							(28)見諸衆生苦 哀憐離小心<br />(29)受身世間勝 説悲成熟相&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872863bi' class='paragraph'>
+							raṅ bźin sñiṅ brtse gźan gyi sdug bsṅal mthoṅ || dman pa’i sems kyaṅ yaṅ dag rab tu spoṅ |<br />| khyad par ’gro daṅ ’gro ba’i mchog gyur lus || gźan la sñiṅ brtse yoṅs su smin pa’i mtshan ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874411bi' class='paragraph'>
+							5. Compatir naturellement, regarder la douleur d’autrui, écarter toute pensée basse, marcher de façon toute-particulière; avoir une naissance capitale dans le monde, c’est l’Indice de la Per-maturation de compassion pour autrui.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869768bi' class='paragraph'>
+							sva<b>prakṛtyā</b> ca gotreṇa <b>paraduḥkhadarśanena</b> nihīnayānaparivarjanatayā ca paripacyata iti kāraṇaṃ | <b>viśeṣagāmitvaṃ</b> paripākavṛddhigamanāt svabhāvaḥ | sarvalokaśreṣṭhātmabhāvatā karmāvinivartanīyabhūmau | kṣāntiparipākalakṣaṇam ārabhya ślokaḥ |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871316bi' class='paragraph'>
+							(600c1)釋曰。菩薩見衆生苦。是名悲因。起極憐愍(2)遠離小乘心。是名悲體。得一切世間勝諸地(3)不退。是名悲業。偈曰&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872864bi' class='paragraph'>
+							de daṅ bźin te rigs daṅ | gźan sdug (149b1) bsṅal bar mthoṅ ba daṅ | theg pa dman pa yoṅs su spoṅ pas yoṅs su smin par ’gyur ba ni rgyu’o || yoṅs su smin pa ’phel bar ’gyur ba’i phyir khyad par du ’gro ba ni raṅ bźin no || phyir mi ldog pa’i sa la ’jig rten thams cad pas lus mchog tu gyur pa ni las so || bzod (2) pa yoṅs su smin pa’i mtshan ñid las brtsams te tshigs su bcad pa |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874412bi' class='paragraph'>
+							Sa raison, c’est sa nature, autrement dit la Famille, et le spectacle de la douleur d’autrui, et l’éloignement de toute pensée basse, qui en font la Per-maturation. Sa nature propre, c’est un mouvement tout-particulier, puisque la Per-maturation va en croissant. Son acte, c’est la meilleure des existences personnelles dans tous les mondes, quand on est dans la Terre SansRégression.<br />Un vers sur la Per-maturation de Patience.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869769bi' class='paragraph'>
+							dhṛtiḥ prakṛtyā pratisaṃkhyabhāvanā suduḥkhaśītādyadhivāsanā sadā |<br />viśeṣagāmitvaśubhābhirāmatā mataṃ kṣamāyāḥ paripākalakṣaṇam || 6 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871317bi' class='paragraph'>
+							(4)持性數修習 極苦能安忍<br />(5)善根恒樂進 説忍成熟相&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872865bi' class='paragraph'>
+							raṅ bźin brtan pa so sor brtags sgom pa || graṅ sogs śin tu sdug bsṅal rtag mi mjed |<br />| khyad par ’gro daṅ dge la mṅon par dga’ || bzod pa yoṅs su smin pa’i mtshan ’dod ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874413bi' class='paragraph'>
+							6. Être naturellement ferme, pratiquer en-Comptant, accepter toujours la bonne douleur, le froid, etc., donner une allure touteparticulière, se délecter au bien, c’est l’Indice de la Per-maturation de Patience.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869770bi' class='paragraph'>
+							<b>dhṛtiḥ</b> sahanaṃ kṣāntir iti paryāyās tatparipāke gotraṃ pratisaṃkhyānaṃ bhāvanā ca kāraṇaṃ | tīvrāṇāṃ <b>śītādiduḥkhānām adhivāsanā</b> svabhāvaḥ | kṣamasya <b>viśeṣagāmitvaṃ</b> kuśala_<b>abhirāmatā</b> ca karma | medhāparipākam ārabhya ślokaḥ |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871318bi' class='paragraph'>
+							(6)釋曰。持耐忍謂名門數習成性。是名忍因。能(7)受極風寒等苦。是名忍體。隨勝生處恒修善(8)法。是名忍業。偈曰&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872866bi' class='paragraph'>
+							brtan pa (3) daṅ mi mjed pa daṅ bzod pa źes bya ba ni rnam graṅs te | yoṅs su smin pa la rigs daṅ so sor brtags te sgom pa ni rgyu’o || graṅ ba la sogs pa’i sdug bsṅal mi bzad pa rnams ji mi mjed pa ni raṅ bźin no || bzod pa khyad par du ’gro dbaṅ | dge ba la mṅon par ’dod pa (4) ni las so || yid gźuṅs pa yoṅs su smin pa las brtsam te tshigs su bcad pa |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874414bi' class='paragraph'>
+							Ferme, résistant, patient, sont la même Rubrique. Quant à cette Per-maturation, la raison en est la Famille, et la Pratique en-Comptant. La nature propre, c’est d’accepter les douleurs aiguës, froid etc. Son acte, c’est de donner au Patient une allure toute-particulière et de faire qu’il se délecte au bien.<br />Un vers sur la Per-maturation d’Aptitude.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869771bi' class='paragraph'>
+							vipākaśuddhiḥ śravaṇādyamoṣatā praviṣṭatā sūktaduruktayos tathā |<br />smṛter mahābuddhyudaye ca yogyatā sumedhatāyāḥ paripākalakṣaṇam || 7 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871319bi' class='paragraph'>
+							(9)報淨善隨順 極入善惡説<br />(10)能起大般若 説念成熟相&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872867bi' class='paragraph'>
+							rnam smin dag ciṅ thos sogs dran mi brjed || de bźin legs bśad ñes par smras pa dag |<br />| rab śes blo chen skye bar ruṅ ba ñid || śin tu yid gźuṅs yoṅs su smin pa’i mtshan |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874415bi' class='paragraph'>
+							7. Pureté de la Concoction, pas de défaillance de l’Audition, pénétration de ce qui est bien out mal dit, capacité de la mémoire pour former la grande Compréhension, c’est l’Indice de la Permaturation d’Aptitude.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869772bi' class='paragraph'>
+							tatra medhānukūlā <b>vipākaviśuddhiḥ</b> kāraṇaṃ | śrutacintitabhāvitacirakṛtacirabhāṣitānām <b>asaṃmoṣatā</b> subhāṣitadurbhāṣitārthasu<b>praviṣṭatā</b> ca <b>smṛter</b> medhāparipākasvabhāvaḥ | lokottaraprajñotpādanayogyatā karma | balavatvapratilambhaparipākam ārabhya ślokaḥ |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871320bi' class='paragraph'>
+							(11)釋曰。得清淨器。是名念因。隨所聞説善惡二(12)義。聞思修已深了不忘。是名念體。能生出(13)世般若。是名念業。偈曰&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872868bi' class='paragraph'>
+							de la (5) yid gźuṅs pa daṅ mthun pa’i rnam par smin pa dag ni rgyu’o || dran pas thos pa daṅ bsams pa daṅ bsgoms pa byas nas riṅ mo źig lon pa daṅ smras nas riṅ mo źig lon pa mi brjed pa daṅ | legs par bśad pa daṅ | ñes par smras pa don rab tu śes pa ni yid gźuṅs (6) pa yoṅs su smin pa’i raṅ bźin no || ’jig rten las ’das pa’i śes rab skye bar ruṅ ba ñid ni las so || mthu thob pa yoṅs su smin pa las brtsams te tshigs su bcad pa |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874416bi' class='paragraph'>
+							Sa raison, c’est la pureté de la Concoction qui seconde l’Aptitude. Sa nature propre, c’est que la Mémoire ne perd rien de ce qui a été entendu, médité, pratiqué, fait depuis longtemps, dit depuis longtemps, et qu’elle a bien pénétré le sens de ce qui a été dit bien ou mal. Son acte, c’est la capacité de produire une Sapience supra-mondaine.<br />Un vers sur la Per-maturation de Récupération de la vigueur.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869773bi' class='paragraph'>
+							śubhadvayena dvayadhātupuṣṭatā phalodaye cāśrayayogyatā parā |<br />manorathāptir jagadagrabhūtatā balopalambhe paripākalakṣaṇam || 8 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871321bi' class='paragraph'>
+							(14)二聚界圓滿 果起依最上<br />(15)世間得第一 説力成熟相&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872869bi' class='paragraph'>
+							dge ba gñis kyis khams gñis brtas pa daṅ || rten ni ’bras bu skye bar ruṅ ba’i mchog |<br />| yid (7) la bsam grub ’gro ba’i mchog gyur pa || mthu thob yoṅs su smin pa’i mtshan ñid do ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874417bi' class='paragraph'>
+							8. Nourrir les deux Principes par les deux Biens, rendre le Fond capable de produire le fruit, réussir dans ses désirs, naître au premier rang dans le monde, c’est là l’Indice de Per-maturation en fait de Susception de forces.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869774bi' class='paragraph'>
+							tatra puṇyajñānadvayena tasya puṇyajñānadvayasya bīja<b>puṣṭatā</b> tatparipāke kāraṇaṃ | adhigamaṃ praty<b>āśrayayogyatā</b> tatparipākasvabhāvaḥ | <b>manoratha</b>saṃpattir <b>jagadagrabhūtatā</b> ca karma | ahāryatāparipākam ārabhya ślokaḥ |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871322bi' class='paragraph'>
+							(16)釋曰。福智二聚種子充滿。是名力因。能得最(17)上依止。是名力體。世間第一隨意成熟。是名(18)力業。偈曰&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872870bi' class='paragraph'>
+							de la bsod nams daṅ ye śes gñis kyi bsod nams daṅ ye śes de gñis kyi sa bon brtas pa ni de yoṅs su smin pa’i rgyu’o || rten rtogs par bya bar ruṅ ba ni || de yoṅs su smin (150a1) pa’i raṅ bźin no || yid la bsam pa phun sum tshogs pa grub pa daṅ ’gro ba’i mchog tu gyur pa ni las so || mi ’phrogs pa yoṅs su smin pa las brtsams te tshigs su bcad pa |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874418bi' class='paragraph'>
+							Pour cette Per-maturation, sa raison, c’est que la semence du couple Mérite et-Savoir est fortifiée par le couple Mérite-etSavoir. Sa nature propre, c’est que le Fond est adapté à l’Acquis. Son acte, c’est la réussite des désirs et la naissance au premier rang dans le monde.<br />Un vers sur la Per-maturation de l’Inébranlabilité.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869775bi' class='paragraph'>
+							sudharmatāyuktivicāraṇāśayo viśeṣalābhaḥ parapakṣadūṣaṇam |<br />punaḥ sadā māranirantarāyatā ahāryatāyāḥ paripākalakṣaṇam || 9 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871323bi' class='paragraph'>
+							(19)深觀妙法理 諸魔不可奪<br />(20)能與異部過 説堅成熟相&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872871bi' class='paragraph'>
+							chos bzaṅs rigs pas rnam dpyad bsam pa can || rtag tu bdud kyis (2) bar chad byed pa med |<br />| khyad par rñed daṅ gźan gyi phyogs sun ’byin || mi ’phrogs yoṅs su smin pa’i mtshan ñid do ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874419bi' class='paragraph'>
+							9. Tendance à critiquer les Raisonnements sur la bonne Idéalité, profit tout-particulier. affaiblissement de l’Aile adverse, impuissance perpétuelle des Démons à faire obstacle, tel est l’Indice de la Per-maturation d’Inébranlabilité.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869776bi' class='paragraph'>
+							tatparipākasya saddharme <b>yuktivicāraṇā</b>kṛta <b>āśayaḥ</b> kāraṇaṃ | māranirantarāyatā svabhāvo yadā māro na punaḥ śaknoty antarāyaṃ kartuṃ | <b>viśeṣa</b>_adhigamaḥ <b>parapakṣadūṣaṇaṃ</b> ca karma | prāhāṇikāṅgasamanvāgamaparipākam adhikṛtya ślokaḥ |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871324bi' class='paragraph'>
+							(21)釋曰。妙法道理作心觀察。是名堅固。惡魔(22)波旬不能障礙。是名堅體。能與他部而作過(23)失。是名堅業。偈曰&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872872bi' class='paragraph'>
+							dam pa’i chos la rigs pas rnam par dpyad pa byas pa’i bsam pa ni de yoṅs su smin pa’i rgyu’o || lam la bdud kyi bar chad bya bar mi nus śiṅ bdud (3) kyi bar chad med pa ni raṅ bźin no || khyad par rtogs pa daṅ | gźan gyi phyogs sun ’byin pa ni las so || spoṅ pa’i yan lag daṅ ldan pa yoṅs su smin pa las brtsams te tshigs su bcad pa |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874420bi' class='paragraph'>
+							La raison de cette Per-maturation, c’est la Tendance produite par la critique des Raisonnements sur le Bon Idéal. Sa nature propre, c’est que les Démons sont impuissants a faire obstacle désormais; le Démon ne peut plus faire obstacle. Son acte, c’est l’Acquis tout particulier et l’affaiblissement de l’Aile adverse.<br />Un vers sur la Per-maturation d’intégralité des Membres de l’Abandon.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869777bi' class='paragraph'>
+							śubhācayo ’thāśrayayatnayogyatā vivekatodagraśubhābhirāmatā |<br />jinātmaje hy aṅgasamanvaye punar mataṃ hi samyakparipākalakṣaṇam || 10 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871325bi' class='paragraph'>
+							(24)所有善根聚 依勤能發起<br />(25)離惡及修善 説支成熟相&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872873bi' class='paragraph'>
+							dge ba bsags daṅ rten kyaṅ brtson par ruṅ || dben daṅ dge ba mchog la mṅon par (4) dga’ |<br />| rgyal ba’i sras kyi yan lag ldan pa yi || yaṅ dag yoṅs su smin pa’i mtshan ñid do ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874421bi' class='paragraph'>
+							10. Accumulation de Bien, capacité d’effort dans le Fond, discernement très éminent, délice au Bien, chez le fils des Vainqueurs, c’est là l’indice de la Per-maturation régulière en fait d’intégralité des Membres.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869778bi' class='paragraph'>
+							tatparipākasya kāraṇaṃ kuśalamūlopacayaḥ | <b>āśrayasya</b> vīryārambhakṣamatvaṃ svabhāvaḥ | <b>viveka</b>_utkṛṣṭatā kuśala_<b>abhirāmatā</b> ca karma | navavidhātmaparipākamāhātmyam ārabhya ślokaḥ |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871326bi' class='paragraph'>
+							(26)釋曰。彼成熟善根聚。是名支因。依此因能發(27)起上精進。是名支體。離諸不善樂修勝善。是(28)名支業。偈曰&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872874bi' class='paragraph'>
+							de yoṅs su smin pa’i rgyu ni dge ba’i rtsa ba bsags pa’o || rten brtson ’grus rtsom par bzod pa ni raṅ bźin no || dben pa daṅ dge ba’i mchog la mṅon par dga’ ba ni las so || bdag yoṅs su smin pa rnam pa (5) dgu’i cha ba’i bdag ñid las brtsams te tshigs su bcad pa ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874422bi' class='paragraph'>
+							La raison de cette Per-maturation, c’est l’accumulation des Racines de Bien. Sa nature propre, c’est l’endurance du Fond à se mettre à l’énergie. Son acte, c’est l’éminence du discernement et le délice au bien.<br />Il magnifie dans un vers les neuf espèces de Per-maturation.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869779bi' class='paragraph'>
+							iti navavidhavas tu pācitātmā paraparipācanayogyatām upetaḥ |<br />śubhadharmamayasatatapravardhitātmā bhavati sadā jagato ’grabandhubhūtaḥ || 11 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871327bi' class='paragraph'>
+							(29)如此九種物 自熟亦熟他<br />(601a1)増善増法身 如世極親者&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872875bi' class='paragraph'>
+							de ltar dṅos po rnam dgu smin pa’i bdag || pha rol yoṅs su smin byed ruṅ daṅ ldan |<br />| chos kyi raṅ bźin rgyun ’phel bdag ñid can || rtag tu ’gro ba’i gñen mchog la mṅon par dga’ ba ni las so ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874423bi' class='paragraph'>
+							11. Ainsi, mûri personnellement de neuf manières, devenu capable de per-mûrir les autres, continuellement accrû dans sa personne en uvres de bien, il devient toujours le premier parent du monde.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869780bi' class='paragraph'>
+							dvividhaṃ tanmāhātmyaṃ | paraparipāke pratiśaraṇatvaṃ | <b>satataṃ</b> dharmakāyavṛddhiś ca | tata eva <b>jagato ’grabandhubhūtaḥ</b> | satvaparipākavibhāge ekādaśa ślokāḥ |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871328bi' class='paragraph'>
+							(2)釋曰。欲等九物能自成熟亦成熟他。常増長(3)一切善根及増長法身。由此二種増故。如似(4)世間第一親者。已説菩薩自得成熟。次説菩(5)薩成熟衆生。偈曰&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872876bi' class='paragraph'>
+							bdag yoṅs su smin pa rnam pa???(6) te | gźan yoṅs su smin par bya ba’i ston par gyur pa daṅ | rtag tu chos kyi skus ’phel ba’o || de ñid kyi phyir ’gro ba’i gñen gyi mtshog tu gyur pa yin no || sems can yoṅs su smin pa rnam par dbye ba las brtsams te tshigs su bcad pa bcu gcig go ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874424bi' class='paragraph'>
+							Il a deux titres à l’éloge: il est la Ressource pour la Per-maturation des autres, il développe continuellement le Corps d’Idéal A ce titre, il est le premier parent du monde.<br />Onze vers sur la Per-maturation des créatures.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869781bi' class='paragraph'>
+							vraṇe ’pi bhojye paripāka iṣyate yathaiva tatsrāvaṇabhogayogyatā |<br />tathāśraye ’smin dvayapakṣaśāntatā tāṃ tathopabhogatvasuśāntapakṣatā || 12 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871329bi' class='paragraph'>
+							(6)癰熟則堪治 食熟則堪噉<br />(7)衆生熟亦爾 二分捨用故&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872877bi' class='paragraph'>
+							ji ltar rma daṅ zas la (7) de dag gi || gzag daṅ dpyad du ruṅ ba smin ’dod ltar |<br />| de bźin rten ’dir phyogs gñis źi ba daṅ || de bźin dpyad pa ñid du smin pa bstan ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874425bi' class='paragraph'>
+							12. On dit d’un abcès ou d’un plat qu’il est bien mûr ion cuit] quand il est bon à vider ou à manger. De même on reconnaît la maturité’ à la Pacification d’une des deux Ailes, à la sousPassivité de l’autre dans ce Fond.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869782bi' class='paragraph'>
+							anena paripākasvabhāvaṃ darśayati | yathā <b>vraṇasya</b> srāvaṇayogyatā <b>paripākaḥ</b> | <b>bhojanasya</b> ca bhogayogyatā | evaṃ satvānām <b>āśraye</b> vraṇabhojanasthānīye srāvaṇasthānīyaṃ <b>vipakṣaśamanaṃ</b> | bhogasthānīyaś ca pratipakṣopabhogaḥ | tadyogyatā āśrayasya paripāka iti | vipakṣapratipakṣāv atra pakṣadvayaṃ veditavyaṃ | dvitīyaḥ ślokaḥ |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871330bi' class='paragraph'>
+							(8)釋曰。二分者。一障分。二治分。障熟須捨。(9)如癰熟須潰。治熟須用。如食熟須噉。是名成(10)熟依止。已説成熟依止。次説成熟差別。偈曰&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872878bi' class='paragraph'>
+							’dis ni yoṅs su smin pa’i raṅ bźin ston te | ji ltar ma’i yoṅs su smin pa brtol ran pa yin pa daṅ | kha zas kyis yoṅs (150b1) su smin pa dpyad du ruṅ ba de bźin du | sems can rnams kyi rten rma daṅ kha zas lta bu la gzags pa lta bu mi mthun pa’i phyogs źi ba daṅ dpyad pa lta bu gñen po’i phyogs dpyad pa dag tu ruṅ ba ni rten yoṅs su smin pa ste | phyogs gñis ni ’dir mi mthun pa’i phyogs daṅ | gñen po’i (2) phyogs yin par rig par bya’o || tshigs su bcad pa gñis pa |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874426bi' class='paragraph'>
+							Il montre dans ce vers la nature propre de la Per-maturation. Par exemple, la Per-maturation d’art abcès, c’est qu’il est boit à vider; d’un plat, c’est qu’il est bon à manger, Ainsi, clans le Fond des créatures, qui représente l’abcès ou le plat, la Pacification des Adversaires représente le vidage de l’abcès; la sous-Passivité des Auxiliaires représente l’utilisation du plat. Cette appropriation du Fond, c’est sa Per-maturation, Les deux Ailes désignent ici les adversaires et les Auxiliaires.<br />Second vers.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869783bi' class='paragraph'>
+							vipācanoktā paripācanā tathā prapācanā cāpy anupācanāparā |<br />supācanā cāpy adhipācanā matā nipācanotpācananā ca dehiṣu || 13 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871331bi' class='paragraph'>
+							(11)捨普勝隨善 得常漸爲八<br />(12)如此諸成熟 是説差別種&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872879bi' class='paragraph'>
+							lus can bral bar smin byed de bźin du || yoṅs smin rab smin mthun par smin byed gźan |<br />| legs par smin byed rtogs pa smin byed daṅ || rtag smin goṅ du smin bye bśad par ’dod ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874427bi' class='paragraph'>
+							13. Il y a chez les êtres corporels Dis-Maturation, Per-maturation; Pro-maturation, Post-Maturation, Bonne-Maturation, Archi-Maturation, In-maturation, Ex-maturation.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869784bi' class='paragraph'>
+							anena paripākaprabhedaṃ darśayati | kleśavigamena pācananā <b>vipācanā</b> | sarvato yānatrayeṇa pācanā <b>paripācanā</b> | vāhyaparipākaviśiṣṭatvāt prakṛṣṭā pācanā <b>prapācanā</b> | yathāvineyadharmadeśanāt tadanurūpā pācanā <b>anupācanā</b> | satkṛtya pācanā <b>supācanā</b> | adhigamena pācanā <b>adhipācanā</b> aviparītārthena | nityā pācanā <b>nipācanā</b> aparihāṇīyārthena | krameṇottarottarapācanā <b>utpācanā</b> | ity ayam aṣṭaprakāraḥ paraparipākaprabhedaḥ | tṛtīyacaturthau ślokau |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871332bi' class='paragraph'>
+							(13)釋曰。成熟他相有八種。一者捨成熟。令滅煩(14)惱故。二者普成熟。化以三乘故。三者勝成熟。(15)過外道法故。四者隨成熟。應機説故。五者善(16)成熟心恭敬故。六者得成熟。令不倒解故。七(17)者常成熟。令永不退故。八者漸成熟。令次第(18)増長故。已説成熟差別。次説成熟心勝。偈曰&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872880bi' class='paragraph'>
+							’das ni yoṅs su (3) smin pa’i rab tu dbye ba ston te | ñon moṅs pa daṅ bral bar smin par byed pa ni bral bar smin par byed pa’o || thams cad du theg pa gsum gyis smin par byed pa ni yoṅs su smin par byed pa’o || phyi rol pa’i yoṅs su smin pa las khyad par du ’phags pa’i phyir mchog tu smin (4) par byed pa ni || rab tu smin par byed pa’o || gdul bya ji lta ba bźin du chos ston pa’i phyir | ’tsham par smin par byed pa ni mthun par smin par byed pa’o || gus par smin par byed pa ni legs par smin par byed pa’o || rtogs pas smin par byed pa ni rtogs pa smin par byed pa’o || (5) phyin ci ma log pa’i don gyis rtag tu smin par byed pa ni rtag tu smin par byed pa’o || yoṅs su ñams par mi ’gyur ba’i don gyis goṅ nas goṅ du rim gyis smin par byed pa ni goṅ nas goṅ du smin par byed pa ste | de ltar na rnam pa brgyad po ’i ni gźan yoṅs su smin pa’i rab tu dbya ba (6) yin no || tshigs su bcad pa gsum pa daṅ bźi pa |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874428bi' class='paragraph'>
+							Ce vers montre les divisions de la Per-maturation. La Dismaturation, c’est faire mûrir par l’expulsion des Souillures. La PerMaturation, c’est faire per-mûrir par les trois Véhicules. La Promaturation, c’est la maturation poussée avant, par suite de la Per-Maturation externe toute-particulière. La Post-Maturation, c’est faire mûrir en conformité, en prêchant l’Idéal selon les Disciplinables. La Bonne-Maturation, c’est l’aire mûrir par de bons traitements. L’Archi-Maturation, c’est faire mûrir par l’Acquis, en ne renversant pas le Sens. L’In-maturation, c’est faire mûrir à jamais, parce que le Sens ne peut pas se perdre. L’Ex-maturation, c’est faire mûrie- graduellement de plus en plus. Voilà les huit divisions de la Per-maturation d’autrui.<br />Troisième et quatrième vers.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869785bi' class='paragraph'>
+							hitāśayeneha yathā jinātmajo vyavasthitaḥ sarvajagadvipācayan |<br />tathā na mātā na pitā na bandhavaḥ suteṣu bandhuṣv api suvyavasthitāḥ || 14 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871333bi' class='paragraph'>
+							(19)利子及利親 利己三利勝<br />(20)菩薩利一切 過彼勝無比&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872881bi' class='paragraph'>
+							ji ltar rgyal sras pha pa’i bsam pas ’dir || ’gro kun rnam par smin byed gnas pas ltar |<br />| de bźin pha daṅ ma daṅ gñen ba śes rnams || bu daṅ gñen po rnams la legs mi gnas ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874429bi' class='paragraph'>
+							14. Comparés au fils des Vainqueurs, quand il fait mûrir le monde entier par sa Tendance au Salut, ni père. ni mère, ni parents ne sont aussi bien disposés pour leur fils ou leur parent,&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869786bi' class='paragraph'>
+							tathājano nātmani vatsalo mataḥ kuto ’pi susnigdhaparāśraye jane |<br />yathā kṛpātmā parasatvavatsalo hite sukhe caiva niyojanātmataḥ || 15 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871334bi' class='paragraph'>
+							(25)世間不自愛 何況能愛他<br />(26)菩薩自愛捨 但爲愛他故&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872882bi' class='paragraph'>
+							ji ltar brtse bdag bde daṅ (7) phan sbyor phyir || sems can gźan la byams ’dod de ltar ni |<br />| skye bo bdag la byams par mi ’dod na || rab sdug skye bo gźan bstan smos ci dgos ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874430bi' class='paragraph'>
+							15. Les gens n’ont pas autant de tendresse pour eux-mènes, – a fortiori pour les personnes les plus chères! – que le Compatissant a de tendresse pour les autres créatures, quand il les destine au bonheur et au salut.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869787bi' class='paragraph'>
+							ābhyāṃ kiṃ darśayati | yādṛśena_<b>āśayena</b> bodhisatvaḥ satvān paripācayati tam āśayaṃ darśayati | mātāpitṛbāndhavāśayaviśiṣṭaṃ lokātmavātsalyaviśiṣṭaṃ ca hitasukhasaṃyojanāt | ātmavatsalas tu loka ātmānaṃ hite ca sukhe ca saṃniyojayati | avaśiṣṭaiḥ ślokair yena prayogeṇa satvān paripācayati taṃ pāramitāpratipattyā saṃdarśayati | yādṛśena dānena yathā satvān paripācayati tad ārabhya ślokaḥ |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871335bi' class='paragraph'>
+							(21)釋曰。譬如世人安樂自子安樂自親安樂自(22)身。此心最勝。菩薩普欲成熟一切衆生。過彼(23)三心不可爲比。是故菩薩成熟衆生。其心最(24)勝。問此勝云何成立。偈曰<br />(Verse above)<br /><br />(27)釋曰。世人雖欲自愛尚不能自安利處。況能(28)愛他安他利處。菩薩不爾。捨於自愛但爲愛(29)他。是故成熟衆生勝過於彼。問用此心勝云(601b1)何成熟。偈曰&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872883bi' class='paragraph'>
+							’di gñis cis ci ston źe na | byaṅ chub sems dpa’ bsam pa ji lta bus sems can rnams yoṅs su smin par byed pa’i (151a1) bsam pa de ston par byed de | phan pa daṅ bde ba la yaṅ dag par sbyor pa’i phyir | pha ma daṅ gñen bśes kyi bsam pa las khyad par du ’phags pa daṅ | ’jig rten bdag la byams pa las khyad par du ’phags pa’i bsam pa yin no || ’jig rten bdag la (2) byams pa ni bdag ñid phan pa ma yin pa daṅ | bde ba ma yin pa la sbyor ro || tshigs su bcad pa lhag ma rnams kyis ni sbyor ba gaṅ gis sems can rnams yoṅs su smin par byed pa de pha rol tu phyin pa sgrub pas yaṅ dag par ston te | sbyin pa ji lta bus sems can rnams ji ltar (3) yoṅs su smin par byed pa de las brtsams te tshigs su bcad pa |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874431bi' class='paragraph'>
+							Que montre-t-il par ces deux vers? Il montre avec quelle Tendance le Bodhisattva fait per-mûrir les créatures. Cette Tendance surpasse celle d’un père, d’une mère, d’un parent, et aussi la tendresse qu’on a pour soi dans le monde, puisqu’elle unit au bonheur et au salut; tandis que, clans le monde, on ne destine que soi au bonheur et au salut. Dans le reste des vers, il montre ce que le Bodhisattva emploie pour per-mûrir les créatures, c’est à savoir l’Initiative des Perfections.<br />Par quelle sorte de Don et comment per-mûrit-il les créatures? Un vers.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869788bi' class='paragraph'>
+							na bodhisatvasya śarīrabhogayoḥ pareṣv adeyaṃ punar asti sarvathā |<br />anugraheṇa dvividhena pācayan paraṃ samair dānaguṇair na tṛpyate || 16 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871336bi' class='paragraph'>
+							(2)身財一切捨 平等及無厭<br />(3)所乏令充足 安立於善根&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872884bi' class='paragraph'>
+							byaṅ chub sems dpa’i lus daṅ loṅs spyod dag || gźan la mi sbyin pa ni yoṅ med de |<br />| phan ’dogs rnam pa gñis kyis gźan smin byed || mñam par sbyin pa’i yon tan ṅoms mi ’gyur ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874432bi' class='paragraph'>
+							16. Il n’y a rien absolument, corps et biens, qu’un Bodhisattva ne veuille donner pour les autres; en faisant mûrir autrui par deux sortes de faveurs, il n’est point rassasié des vertus toujours égales du Don.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869789bi' class='paragraph'>
+							trividhena dānena pācayati | sarvasva<b>śarīrabhoga</b>dānena aviṣamadānena atṛptidānena ca | kathaṃ paripācayati dṛṣṭadharmasaṃparāya_<b>anugraheṇa</b> | avighātenecchāparipūrṇāt | anāgatena ca saṃgṛhya kuśalapratiṣṭhāpanāt | yādṛśena śīlena yathā satvān paripācayati tad ārabhya ślokaḥ |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871337bi' class='paragraph'>
+							(4)釋曰。此偈顯示檀波羅蜜成熟衆生。檀有三(5)種。一資生檀。内外身財一切捨故。二平等檀。(6)於諸施田離高下故。三無厭檀。勇猛恒施不(7)疲倦故。以是三檀二世隨攝。於現在世皆令(8)充足。於未來世安立善根。偈曰&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872885bi' class='paragraph'>
+							sbyin pa rnam (4) pa gsum gyis sems can yoṅs su smin par byed de | raṅ gi lus daṅ loṅs spyod thams cad sbyin pa daṅ | mi mñam pa med par sbyin pa daṅ | ṅoms pa med par sbyin pas so || ji ltar yoṅs su smin par byed ce na | tshe ’di daṅ tshe phyi ma la phan ’dogs pas te | phoṅs pa med (5) par ’dod pa yoṅs su rdzogs par byed pa’i phyir daṅ | des bsdus nas dge ba la ’god pa’i phyir ro || tshul khrims ji lta bus sems can rnams ji ltar yoṅs su smin par byed pa de las brtsams nas tshigs su bcad pa |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874433bi' class='paragraph'>
+							Il fait mûrir par trois sortes de Dons: en donnant tout ce qu’il a, corps et biens, en donnant sans inégalité: en donnant sans en avoir jamais assez. Comment fait-il per-mûrir? Par une faveur de vie présente et une faveur de vie future, en remplissant. les désirs des êtres sans aucune indigence, et quand il les a Rapprochés par là, en les affermissant dans le bien.<br />Par quelle sorte de Moralité et comment per-mûrit-il les créatrues? Un vers.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869790bi' class='paragraph'>
+							sadā prakṛtyādhyavihiṃsakaḥ svayaṃrato ’pramatto ’tra paraṃ niveśayan |<br />paraṃparānugrahakṛt dvidhā pare vipākaniṣyandaguṇena pācakaḥ || 17 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871338bi' class='paragraph'>
+							(9)常與性及滿 自樂不放逸<br />(10)引入於戒足 二果常無盡&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872886bi' class='paragraph'>
+							bstan pa raṅ bźin lhag par ’tshe ba med || bdag (6) dga’ bag yod ’di la gźan ’god ciṅ |<br />| phan rnam gñis ’dogs rnam par smin pa daṅ || rgyu mthun yon tan brgyud pas gźan smin byed ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874434bi' class='paragraph'>
+							17. Toujours archi-Innocent par nature. satisfait en soi, sans Négligence, introduisant autrui, rendant service à autrui par transmission de deux façons, il fait mûrir par la vertu de la Concoction et de la coulée.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869791bi' class='paragraph'>
+							pañcavidhena śīlena | dhruvaśīlena <b>prakṛti</b>śīlena paripūrṇaśīlenādhyavihiṃsakatvāt | paripūrṇo hy avihiṃsako <b>’dhyavihiṃsakaḥ</b> | daśakuśalakarmapathaparipūritaḥ | yathoktaṃ dvitīyāyāṃ bhamau | adhigamaśīlena <b>svayaṃratatayā</b> nirantarāskhalitaśīlena cāpramattatayā | kathaṃ ca paripācayati | śīle saṃniveśanāt | <b>dvidhānugraha</b>kriyayā dṛṣṭadharme saṃparāye ca | saṃparāyānugrahaṃ pareṣu <b>vipākaniṣyandaguṇābhyāṃ</b> paraṃparayā karoti | tadvipākaniṣyandayor anyonyānukūlyenāvyavacchedāt | yādṛśyā kṣāntyā yathā satvān paripācayati tad ārabhya ślokaḥ |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871339bi' class='paragraph'>
+							(11)釋曰。此偈顯示尸波羅蜜成熟衆生。菩薩有(12)五種尸羅。一者常尸羅。生生常有故。二者自(13)性尸羅。無功用心住眞實體故。三者圓滿尸(14)羅。十善業道皆具足故。如十地經説。四者(15)自樂尸羅。恒自愛樂故。五者不放逸尸羅。念(16)念無犯故。以是五種尸羅二世隨攝。於現在(17)世安立戒品。於未來世令依報二果功徳無(18)絶。偈曰&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872887bi' class='paragraph'>
+							tshul khrims rnam pa lṅa ste | bstan pa’i tshul khrims daṅ | raṅ bźin gyi tshul khrims daṅ | lhag par ’tshe ba med pa’i (7) phyir yoṅs su rdzogs pa’i tshul khrims daṅ | dge ba bcu’i las kyi lam yoṅs su rdzogs pa’i phyir ’tshe ba med pa ni lhag par ’tshe ba med pa ste | sa gñis pa las ji skad ’byuṅ ba bźin no || bdag ñid de la dga’ ba’i phyir rtogs pa’i tshul khrims daṅ | bag yod (151b1) pa’i phyir rtag tu ’khrul pa med pa’i tshul khrims kyis so || ji ltar yoṅs su smin par byed ce na | tshul khrims la ’god pas tshe ’di daṅ phyi ma la phan pa rnam pa gñis byed pas so || gźan la tshe phyi ma la phan ’dogs pa ni rnam par smin pa daṅ rgyu mthun pa’i yon tan dag brgyud (2) pas byed de | de’i rnam par smin pa daṅ rgyu mthun ba dag phan tshun mthun pas rgyun mi ’chad pa’i phyir ro || bzod pa ji lta bus sems can rnams ji ltar yoṅs su smin par byed pa de las brtsams nas tshigs su bcad pa |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874435bi' class='paragraph'>
+							Sa Moralité est de cinq sortes: moralité fixe; moralité de nature; moralité complète puisqu’il est archi-Innocent. Archi-Innocent veut dire Innocent complet, puisqu’il parachève les dix Sentiers-d’Actes de Bien. Comme il est dit dans la Seconde Terre. Moralité d’Acquis, puisqu’il se plaît en soi. Moralité sans Achoppement et sans interruption, puisqu’il n’a pas de négligence. Et comment fait-il per-mûrir? En installant dans la Moralité, par l’accomplissement de deux sortes de faveurs: clans la vie présente et dans la vie Future. La faveur dans la vie future, il l’opère par transmission, au moyen des vertus de Concoction et de Coulée chez autrui; car la Concoction et la Coulée sont inséparables, puisqu’elles sont réciproquement solidaires.<br />Par quelle Patience et comment per-mûrit-il les créatures?&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869792bi' class='paragraph'>
+							pare ’pakāriṇyupakāribuddhimān pramarṣayann ugram api vyatikramam |<br />upāyacittair apakāramarṣaṇaiḥ śubhe samādāpayate ’pakāriṇaḥ || 18 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871340bi' class='paragraph'>
+							(19)不益得益想 極忍解方便<br />(20)令彼起隨順 及種諸善根&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872888bi' class='paragraph'>
+							gźan gnod byed la phan byed blo ldan pa || gnod (3) byed drag po dag kyaṅ rab tu bzod |<br />| thabs rig gnod byed bzod pa de dag gis || gnod byed dge ba yaṅ dag len du ’jug ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874436bi' class='paragraph'>
+							18. Si un autre lui fait tort, il le tient pour un bienfaiteur, eu supportant jusqu’au ])ont une offense, méme atroce: sachant les Moyens, par sa patience même contre l’offense, il engage les offenseurs au bien.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869793bi' class='paragraph'>
+							<b>apakāriṇi</b> pare upakāribuddhyā pragāḍhāpakāramarṣaṇakṣāntyā paripācayati | <b>upakāribuddhitvaṃ</b> punaḥ kṣāntipāramitāparipūryānukūlyavṛttitā veditavyaṃ | kathaṃ paripācayati | dṛṣṭadharmānugraheṇa cāpakāramarṣaṇāt | saṃparāyānugraheṇa ca_<b>upāya</b>jñas tair <b>apakāramarṣaṇair</b> āvarjyāpakāriṇāṃ kuśale samādāpanāt | yādṛśena vīryeṇa yathā satvān paripācayati tad ārabhya ślokaḥ |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871341bi' class='paragraph'>
+							(21)釋曰。此偈顯示羼提波羅蜜成熟衆生。若他(22)以不饒益事來向菩薩。菩薩於彼得饒益解(23)起極忍辱。何以故。由彼隨順令我忍波羅蜜(24)得増長故。亦以是忍二世隨攝。於現在世令(25)起歸向。於未來世令種善根。偈曰&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872889bi' class='paragraph'>
+							gźan gnod pa byed pa la phan pa byed pa’i blo daṅ ldan pa’i phyir || gnod pa byed pa drag po la ji mi sñam pa’i bzod pas yoṅs su smin par byed de | phan (4) pa byed pa’i blo ñid ni bzod pa’i pha rol tu phyin pa yoṅs su rdzogs par ’gyur ba daṅ mthun par ’jug pa las rig par bya’o || ji ltar yoṅs su smin par byed cen | na | gnod pa byed pa la mi mjed pa’i phyir tshe ’di la phan ’dogs pa daṅ | thabs śes pa gnod pa byed pa la mi mjed pa de (5) dag gis gnod pa byed pa rnams daṅ par byas nas dge ba yaṅ dag par len du ’jug pa’i phyir tshe phyi ma la phan ’dogs pas so || brtson ’grus ji lta bus sems can ji ltar yoṅs su smin par byed pa de las brtsams te tshigs su bcad pa |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874437bi' class='paragraph'>
+							Si un autre lui fait tort, il le per-mûrit par sa patience à supporter les injures les plus graves, avec cette idée que c’est un bienfait qu’il reçoit. Avoir idée que l’offenseur rend service, c’est se conduire d’accord avec le.parachèvement des Perfections. Comment per-mûrit-il? Par une faveur de vie présente; en supportant les torts; par une faveur de vie future, en amenant les offenseurs au bien, gagnés qu’ils sont par sa patience aux offenses, puisqu’il connaît les moyens.<br />Par quelle Énergie et comment per-mûrit-il les créatures?&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869794bi' class='paragraph'>
+							punaḥ sa yatnaṃ paramaṃ samāśrito na khidyate kalpasahasrakoṭibhiḥ |<br />jinātmajaḥ satvagaṇaṃ prapācayan paraikacittasya śubhasya kāraṇāt || 19 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871342bi' class='paragraph'>
+							(26)久劫行上勤 利物心無退<br />(27)令生一念善 況欲善無量&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872890bi' class='paragraph'>
+							rgyal sras brtson ’grus mchog la (6) brten pa ste || sems can tshogs rab smin par byed pa na |<br />| pha rol sems dge gcig gis phyir yaṅ ni || bskal pa bye ba stoṅ du ’aṅ skyo mi ’gyur ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874438bi' class='paragraph'>
+							19. Avant assumé la cache par excellence, le fils des Vainqueurs ne se lasse pas, pendant des myriades de milliers d’Éons, de faire per-mûrir la multitude, en produisant le Bien avec l’unique Pensée d’autrui.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869795bi' class='paragraph'>
+							adhimātradīrghakālākhede vīryeṇa dīrghakālākheditvam anantasatvaparipācanāt | <b>paraikacittasya</b> kuśalasyārthe <b>kalpasahasrakoṭibhir</b> akhedāt | ata evoktaṃ bhavati yathā paripācayati | kuśalacittasaṃniyojanāt dṛṣṭadharmasaṃparāyānugraheṇeti yādṛśena dhyānena yathā satvān paripācayati tad ārabhya ślokaḥ |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871343bi' class='paragraph'>
+							(28)釋曰。此偈顯示毘梨耶波羅蜜成熟衆生。菩(29)薩於億百千劫行最上精進。爲成熟無邊衆(601c1)生心無退轉。以是精進二世隨攝。於現在世(2)但令得生一念善心。況於未來令無量善根(3)皆得増益。偈曰&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872891bi' class='paragraph'>
+							brtson ’grus chen po yun riṅ por mi skyo bas te | yun riṅ por mi skyo ba ñid ni gźan gyi sems dge ba gcig gi phyir (7) yaṅ bskal pa bye ba stoṅ phrag tu mi skyo bas sems can mtha’ yas pa yoṅs su smin par byed pa’i phyir ro || de ñid kyi phyir ji ltar yoṅs su smin par byed ce na | sems dge ba la yaṅ dag par sbyor bas tshe ’di daṅ | tshe phyi ma la phan ’dogs pas so źes bśad par ’gyur (152a1) ro || bsam gtan ji lta bus sems can rnams ji ltar yoṅs su smin par byed pa de las brtsams te tshigs su bcad pa |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874439bi' class='paragraph'>
+							Par une énergie que la longueur démesurée du temps ne lasse pas. La longueur du temps ne la lasse pas, puisqu’il per-mûrit une infinité de créatures, puisqu’il ne se lasse pas pendant des myriades de milliers d’Ions d’agir dans le Sens du Bien avec l’unique Pensée d’autrui. Par suite, comment est-ce qu’il permûrit? Par une faveur de vie présente et de vie future, eu appliquant à la Pensée de Bien.<br />Par quelle Extase et comment per-mûrit-il les créatures’!&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869796bi' class='paragraph'>
+							vaśitvam āgamya manasy anuttaraṃ paraṃ samāvarjayate ’tra śāsane |<br />nihatya sarvām avamānakāmatāṃ śubhena saṃvardhayate ca taṃ punaḥ || 20 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871344bi' class='paragraph'>
+							(4)得上自在禪 離染及見慢<br />(5)現在令歸向 未來善法増&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872892bi' class='paragraph'>
+							yid kyi dbaṅ ni bla na med thob nas || gźan gyis mchod ’dod thams cad ṅes bcom ste |<br />| mchog gi bstan la gźan dag (2) ’dun byed ciṅ || de dag dge bas yaṅ dag ’phel bar byed ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874440bi' class='paragraph'>
+							20. Arrivé dans son esprit à la Souveraineté, il gagne autrui à la Religion; et comme il a abattu tout désir de dédain, il le fait ensuite grandir eu Bien.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869797bi' class='paragraph'>
+							prāpta_<b>anuttaravaśitvena</b> dhyānena nirāmiṣeṇa ca nihatasarvāvamānābhilāṣeṇa paripācayati | buddhaśāsane parasyāvarjanād āvarjitasya ca kuśaladharmasaṃvardhanāt paripācayati | yādṛśyā prajñayā yathā satvān paripācayati tadārabhya ślokaḥ |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871345bi' class='paragraph'>
+							(6)釋曰。此偈顯示禪波羅蜜成熟衆生。菩薩所(7)得禪定遠離愛見慢等故自在最上。以是禪(8)定二世隨攝。於現在世令歸向第一妙法。於(9)未來世令増長一切善根。偈曰&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872893bi' class='paragraph'>
+							bsam gtan gyi dbaṅ bla na med pa thob pa daṅ | zaṅ ziṅ med pa gźan gyis mchod par ’dod pa thams cad ṅes par bcom pas yoṅs su smin par byed de | gźan saṅs rgyas kyi bstan pa la ’dun par (3) byed pa daṅ | ’dun par byas pa la dge ba’i chos spel ba’i sgo nas yoṅs su smin par byed do || śes rab ji lta bus ji ltar yoṅs su smin par byed pa de las brtsams te tshigs su bcad pa |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874441bi' class='paragraph'>
+							Par une Extase arrivée à la Souveraineté et sans Amorces, puisqu’elle a abattu toute velléité de dédain, il fait la Per-maturation; il la fait en amenant autrui à la Religion du Bouddha et en faisant croître les Idéaux de Bien.<br />Par quelle Sapience et comment per-mûrit-il les créatures?&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869798bi' class='paragraph'>
+							sa tatvabhāvārthanaye suniścitaḥ karoti satvān suvinītasaṃśayān |<br />tataś ca te tajjinaśāsanād arād vivardhayante svaparaṃ guṇaiḥ śubhaiḥ || 21 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871346bi' class='paragraph'>
+							(10)知眞及知意 能斷一切疑<br />(11)於法令恭敬 自他功徳滿&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872894bi' class='paragraph'>
+							de ñid dgoṅs don tshul las rab ṅes te || sems can tha tshom śin tu sel (4) bar byed |<br />| de phyir rgyal ba’i bstan la de gus pas || raṅ gźan dge ba’i yon tan rnam ’phel byed ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874442bi' class='paragraph'>
+							21. Certain de la méthode qui mène au Sens Positif et au Sens Impliqué, il fait que les doutes des créatures se disciplinent; en conséquence, par respect pour la Religion du Vainqueur, elles se font grandir et font grandir autrui en vertus de Bien.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869799bi' class='paragraph'>
+							sa bodhisatvas <b>tatvārthanaye</b> cābhiprāyārthanaye ca <b>suviniścitayā</b> prajñayā paripācayati | kathaṃ paripācayati satvānāṃ saṃśayavinayanāt | tataś ca <b>śāsana</b>bahumānāt teṣām ātmaparaguṇasaṃvardhakatvena | niyamanaślokaḥ |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871347bi' class='paragraph'>
+							(12)釋曰。此偈顯示般若波羅蜜成熟衆生。知眞(13)者。解法不顛倒故。知意者。了達衆生心行(14)斷彼疑故。以是般若二世隨攝。於現在世令(15)向大法深生恭敬。於未來世令彼自身功徳(16)及他身功徳皆得圓滿。偈曰&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872895bi' class='paragraph'>
+							byaṅ chub sems dpa’ de de kho na’i don gyi tshul daṅ | dgoṅs pa’i don gyi tshul la śin tu rnam par ṅes pa’i śes rab kyis yoṅs su smin par byed do || ji ltar yoṅs (5) su smin par byed ce na | sems can rnams kyi the tshom rnam par sel ba’i phyir ro || de’i phyir de dag bstan pa la gus pas bdag daṅ gźan gyis yon tan yaṅ dag par ’phel bar byed pa ñid kyis so || mjug bsdu ba’i tshigs su bcad pa |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874443bi' class='paragraph'>
+							Le Bodhisattva fait per-mûrir par la Sapience. parce qu’il est certain de la méthode qui mène au Sens Positif et au Sens d’Intention. Comment fait-il per-mûrir? En disciplinant les doutes des créatures; alors, comme elles respectent la Religion, elles font croître les vertus en elles-mèmes et en autrui.<br />Un vers de conclusion.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869800bi' class='paragraph'>
+							iti sugatigatau śubhatraye vā jagad akhilaṃ kṛpayā sa bodhisatvaḥ |<br />tanuparamavimadhyamaprakārair vinayati lokasamānabhāvagatyā || 22 ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871348bi' class='paragraph'>
+							(17)善趣及三乘 大悲有三品<br />(18)盡於未來際 如是熟衆生&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872896bi' class='paragraph'>
+							de ltar byaṅ chub sems (6) dpa’ sñiṅ rje yis || ’gro kun bde ’gror ’gro ba ’am dge gsum la |<br />| rnam pa chuṅ daṅ mchog daṅ ’briṅ dag gis || ’jig rten yod daṅ mñam par ’jug pas ’dul ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874444bi' class='paragraph'>
+							22. Ainsi, sur le chemin de la Bourre Destination ou dans les trois Biens, le Bodhisattva discipline par compassion l’univers entier, avec des procédés menus, moyens, extrêmes, allant tant que le monde existe.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869801bi' class='paragraph'>
+							anena yatra ca vinayati <b>sugatigamane</b> yānatraye vā | yac ca vinayati <b>jagadakhilaṃ</b> | yena ca vinayati <b>kṛpayā</b> | yaś ca vinayati bodhisatvaḥ | yādṛśaiś ca paripācanaprakārais <b>tanuparamavimadhyamaprakāraiḥ</b> | yāvantaṃ ca kālaṃ tatparidīpanāt samāsena paripākamāhātmyaṃ darśayati | tatra tanuḥ prakāro ’dhimukticaryābhūmau bodhisatvasya paramo ’ṣṭamyādiṣu vimadhyamaḥ saptasu veditavyaḥ yāval lokasya bhāvas tatsamānayā gatyā atyantam ity arthaḥ |&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871349bi' class='paragraph'>
+							(19)釋曰。此偈顯示大成熟相有三種。一者位大。(20)謂窮四位安立善道及以三乘。二者品大。悲(21)極三品。下者信行地。中者初地至七地。上者(22)八九十地。三者時大。時節無邊盡未來際。(23)菩薩如是利益衆生。是名大成熟相。&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872897bi' class='paragraph'>
+							’dis ni sus ’dul ba ste | byaṅ chub sems dpa’ daṅ | gaṅ gis ’dul ba ste sñiṅ rje daṅ | (7) gaṅ ’dul ba ste ’gro ba mtha’ dag daṅ | gaṅ du ’dul ba ste bde ’gror ’gro ba ’am | theg pa gsum daṅ | yoṅs su smin par byed pa’i rnam pa ji lta bu dag daṅ | dus ji srid pa de dag yoṅs su bstan pas yoṅs su smin pa’i che ba’i bdag ñid mdor bstan to || de la rnam pa (152b1) chuṅ du ni mos pas spyod pa la gnas pa’i byaṅ chub sems dpa’i’o || mchog ni brgyad pa la sogs pa la gnas pa’i’o || ’briṅ ni bdun pa la gnas pa’i yin par rig par bya’o || ’jig rten yod pa ji srid pa de daṅ mñam par ’jug pas te | gtan du źes bya ba’i tha tshig (2) go ||&nbsp;</span></div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874445bi' class='paragraph'>
+							Où discipline-t-il? Sur le chemin de la Bonne. Destination. ou dans les trois Véhicules. Qui discipline-t-il? L’univers entier. Par quoi discipline-t-il? Par la compassion. Qui discipline’? Le Bodhisattva. Par des procédés de. Per-maturation de quelle sorte? Menus, extrêmes, moyens. Combien de temps, enfin’? En l’illustrant, il résume la grandeur de la Per-maturation. Les procédés menus, c’est dans la Terre de la Conduite par croyance; extrêmes, c’est dans la Huitième Terre et les suivantes; moyens, dans les sept premières. Allant tant que le monde existe, c’est-à-dire indéfiniment.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'><div class='Sanskrit'><span id='7869802bi' class='paragraph'>
+							mahāyānasūtrālaṃkāre paripākādhikāro ’ṣṭamaḥ&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "7869758";
+							kilderef = "Msa San: Lévi (1907)  8.0 - San: Lévi (1907) 23";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='textvar' style='width:24%;'><div class='Chinese'><span id='7871350bi' class='paragraph'>
+							成熟品(24)究竟(25)<br />大乘莊嚴經論卷第二(26)(27)(28)(29)(602a1)(2)(3)<br />大乘莊嚴經論卷第三<br />(4)無著菩薩造<br />(5)大唐天竺三藏波羅頗蜜多羅譯&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "7871306";
+							kilderef = "Msa Chi: T. 1604  600a27 - Chi: T. 1604 601c602";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='textvar' style='width:24%;'><div class='Tibetan'><span id='7872898bi' class='paragraph'>
+							yoṅs su smin pa’i skabs rdzogs so | || |&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "7872854";
+							kilderef = "Msa Tib: Tg sems tsam phi  148b1 - Tib: Tg sems tsam phi 152b2";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='textvar' style='width:24%;'><div class='French'><span id='7874446bi' class='paragraph'>
+							23. &nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "7874402";
+							kilderef = "Msa Fre: Lévi (1911)  - Fre: Lévi (1911) ";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:24%;'></div><div class='textvar' style='width:24%;'></div><div class='textvar' style='width:24%;'></div><div class='textvar' style='width:24%;'></div></div><div class='clear'></div><div class="fontboks"><a onClick=onOffdiv('permlink') name="permlink" href="#permlink">Permanent link</a></div><div class='clear'></div><div class='perm_felt' id='permlink'>http://www2.hf.uio.no/common/apps/permlink/permlink.php?app=polyglotta&amp;context=ctext&amp;uid=8f92ad8a-6e5a-11e0-be58-001cc4df1abe</div></div></div><!-- infofelt --></div><!-- divControl --><div class="clear"></div>
+<div style="clear:both"></div><div class="signatur"><div class="signatur_left">
+		<a href="https://wiki.uio.no/hf/dmlf/index.php/Kategori:Polyglotta:Documentation">Go to Wiki Documentation</a></br>Enhet: <a HREF=http://www.hf.uio.no>Det humanistiske fakultet</a> &nbsp; Utviklet av: <a href="http://www.hf.uio.no/tjenester/it">IT-seksjonen ved HF</a></div><!--signatur_left -->
+		<div class="signatur_right"><a href="/polyglotta/admin/index.php">Login</a></div>
+		<div style="clear:both"></div></div>
+</body></html><SCRIPT LANGUAGE="JAVASCRIPT">
+	
+	$("#tr_IA").click(function(){
+	    if ($("#toggle_container_IA").is(':hidden'))
+	    	$("#toggle_container_IA").show();
+	    else{
+	        $("#toggle_container_IA").hide();
+	    }
+	    return false;
+		});
+
+	$("#tr_lang").click(function(){
+	    if ($("#toggle_container_lan").is(':hidden'))
+	    	$("#toggle_container_lan").show();
+	    else{
+	        $("#toggle_container_lan").hide();
+	    }
+	    return false;
+	});
+
+	$("#tr_img").click(function(){
+	    if ($("#toggle_container_img").is(':hidden'))
+	    	$("#toggle_container_img").show();
+	    else{
+	        $("#toggle_container_img").hide();
+	    }
+	    return false;
+	});
+
+	$("#diac2button").click(function(){
+	   if ($("#ex3a").is(':hidden')){
+		   $("#ex3a").show();
+	       $("#diac2button").html("Hide&#32Diacritica-help");
+	   }else{
+	       $("#ex3a").hide();
+	       $("#diac2button").html("Diacritica-help");
+	   }
+	   return false;
+	});
+
+	$("#diacbutton").click(function(){
+	   if ($("#diacritical_sign").is(':hidden')){
+		   	$("#diacritical_sign").show();
+	      	$("#diacbutton").html("Hide&#32diacritica");
+	   }else{
+	        $("#diacritical_sign").hide();
+	        $("#diacbutton").html("Diacritica");
+	   }
+	   return false;
+    });
+
+	$('#toggle_container_IA').click(function(e) {
+	   e.stopPropagation();
+	});
+
+	$('#toggle_container_lan').click(function(e) {
+        e.stopPropagation();
+    });
+
+	$('#toggle_container_img').click(function(e) {
+        e.stopPropagation();
+    });
+
+	$('#ex3a').click(function(e) {
+	    e.stopPropagation();
+	});
+
+	$('#diacritical_sign').click(function(e) {
+        e.stopPropagation();
+    });
+
+	//Kode for å sette inn diakritiske tegn
+	$('#diacritical > tbody > tr > td').click(function() {
+	  	//alert('red');
+		$("#sokeboks").val($("#sokeboks").val() + $(this).text());
+	});
+
+	$('.diac2button').text(($('.diacbutton').text() == 'Diacritica-help') ? 'Hide Diacritica-help' : 'Diacritica-help');
+	
+	//Lukker alle åpnede pop'uper ved klikk på siden
+	$(document).click(function() {
+		$('#toggle_container_IA').hide();
+	    
+        $('#toggle_container_lan').hide();
+    
+        $('#toggle_container_img').hide();
+   
+   		$('#diacritical_sign').hide();
+   		$("#diacbutton").html("Diacritica");
+   
+       	$('#ex3a').hide();
+       	$("#diac2button").html("Diacritica-help");
+   });
+	</SCRIPT>

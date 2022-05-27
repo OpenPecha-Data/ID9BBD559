@@ -1,0 +1,112 @@
+id: ID9BBD559
+source: https://www2.hf.uio.no/polyglotta/index.php?page=library&bid=2
+source_file: null
+initial_creation_type: input
+imported: '2022-05-27T19:11:32.108001'
+last_modified: '2022-05-27T19:11:32.108017'
+parser: null
+source_metadata:
+  title: 'Asaṅga/Maitreya: Mahāyānasūtrālaṃkāra'
+  language: zh
+  base:
+    fED5E:
+      title: Title
+      base_file: fED5E.txt
+      order: 1
+    f45D5:
+      title: Preface
+      base_file: f45D5.txt
+      order: 2
+    fC883:
+      title: CI_Verses 21-40
+      base_file: fC883.txt
+      order: 3
+    f97DB:
+      title: Chapter II
+      base_file: f97DB.txt
+      order: 4
+    fAE66:
+      title: Chapter III
+      base_file: fAE66.txt
+      order: 5
+    f8391:
+      title: Chapter IV
+      base_file: f8391.txt
+      order: 6
+    fD77B:
+      title: Chapter V
+      base_file: fD77B.txt
+      order: 7
+    fD94D:
+      title: Chapter VI
+      base_file: fD94D.txt
+      order: 8
+    fBC04:
+      title: Chapter VII
+      base_file: fBC04.txt
+      order: 9
+    f4DAE:
+      title: Chapter VIII
+      base_file: f4DAE.txt
+      order: 10
+    f2FB8:
+      title: Chapter IX
+      base_file: f2FB8.txt
+      order: 11
+    f2CCE:
+      title: Chapter X
+      base_file: f2CCE.txt
+      order: 12
+    fA36E:
+      title: Chapter XI
+      base_file: fA36E.txt
+      order: 13
+    f15D5:
+      title: Chapter XII
+      base_file: f15D5.txt
+      order: 14
+    fA009:
+      title: Chapter XIII
+      base_file: fA009.txt
+      order: 15
+    fEDA8:
+      title: Chapter XIV
+      base_file: fEDA8.txt
+      order: 16
+    fA3B7:
+      title: Chapter XV
+      base_file: fA3B7.txt
+      order: 17
+    f2666:
+      title: Chapter XVI
+      base_file: f2666.txt
+      order: 18
+    f5D77:
+      title: Chapter XVII
+      base_file: f5D77.txt
+      order: 19
+    fA72B:
+      title: Chapter XVIII
+      base_file: fA72B.txt
+      order: 20
+    f9EEE:
+      title: Chapter XIX
+      base_file: f9EEE.txt
+      order: 21
+    fFEED:
+      title: Chapter XX-XXI
+      base_file: fFEED.txt
+      order: 22
+    fCA83:
+      title: Colophon
+      base_file: fCA83.txt
+      order: 23
+  chapter_to_tile:
+    CI: Chapter I
+statistics: {}
+quality: {}
+copyright:
+  status: Unknown
+  notice: ''
+  info_url: null
+license: null
